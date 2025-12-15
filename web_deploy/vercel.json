@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Permissions-Policy", "value": "geolocation=(self), microphone=(self), camera=(self), autoplay=(self)" }
+      ]
+    }
+  ]
+}
