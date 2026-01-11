@@ -1,33 +1,70 @@
-import dotenv from 'dotenv';
-import Redis from 'ioredis';
-import type { Server as SocketIOServer } from 'socket.io';
+import dotenv from "dotenv";
+import { FirebaseService } from "./services/firebase_service";
 
 dotenv.config();
 
-export let io: any = {
-  emit: (_event: string, _payload?: any) => {},
-  to: (_room: string) => ({ emit: (_event: string, _payload?: any) => {} }),
+// Firebase Adapter replacing Socket.IO
+export const io: any = {
+    emit: (event: string, payload: any) => {
+        // Global emit not supported in this adapter
+        // console.log(`[FirebaseAdapter] Global emit ignored: ${event}`);
+    },
+    to: (room: string) => ({
+        emit: (event: string, payload: any) => {
+            handleFirebaseRedirect(room, event, payload);
+        }
+    }),
+    in: (room: string) => ({
+        emit: (event: string, payload: any) => {
+            handleFirebaseRedirect(room, event, payload);
+        }
+    })
 };
 
-export function setIO(instance: SocketIOServer) {
-  io = instance as any;
+function handleFirebaseRedirect(room: string, event: string, payload: any) {
+    try {
+        if (room.startsWith('service:')) {
+            const serviceId = room.split(':')[1];
+            if (event === 'chat.message') {
+                FirebaseService.sendChatMessage(serviceId, payload);
+            } else {
+                // Capture ALL service events (status, updated, accepted, completed, edit_request, etc.)
+                const data = (payload && payload.service) ? payload.service : payload;
+
+                // Normalize data for Firestore
+                let updateData = typeof data === 'object' && data !== null ? { ...data } : { value: data };
+                updateData.last_event = event;
+                updateData.updated_at = new Date().toISOString();
+
+                FirebaseService.updateServiceStatus(serviceId, updateData);
+            }
+        } else if (room.startsWith('user:')) {
+            const userId = room.split(':')[1];
+            console.log(`[FirebaseAdapter] Redirecting event ${event} to RTDB events/${userId}`);
+            FirebaseService.sendUserEvent(userId, event, payload);
+        }
+    } catch (e) {
+        console.error('[FirebaseAdapter] Error processing event:', e);
+    }
 }
 
-const redisUrl = process.env.REDIS_URL;
-const redisEnabled = !!redisUrl;
-export const redis: any = redisEnabled
-  ? new Redis(redisUrl!, { lazyConnect: true, maxRetriesPerRequest: 0, enableOfflineQueue: true })
-  : {
-      _mem: new Map<string, string>(),
-      async get(key: string) { return this._mem.get(key) || null; },
-      async set(key: string, val: string, _ex?: string, _ttl?: number) { this._mem.set(key, val); },
-      async sadd(_key: string, _member: string) {},
-      async srem(_key: string, _member: string) {},
-      async del(key: string) { this._mem.delete(key); },
-    };
-
-if (redisEnabled) {
-  redis.on('error', (e: any) => console.warn('[redis] error', e?.message || e));
-  // Connect lazily; in serverless, connection may be short-lived
-  redis.connect().catch(() => {});
+export function setIO(instance: any) {
+    // Ignored
+    console.log('[platform] setIO ignored - Using Firebase Adapter');
 }
+
+// Redis removed in favor of MySQL GeoSpatial + In-Memory Presence
+export const redis: any = {
+    status: "disabled",
+    get: async () => null,
+    set: async () => "OK",
+    sadd: async () => 0,
+    srem: async () => 0,
+    del: async () => 0,
+    geoadd: async () => 0,
+    geosearch: async () => [],
+    quit: async () => "OK",
+    disconnect: async () => "OK",
+    on: () => { },
+    connect: async () => { },
+};

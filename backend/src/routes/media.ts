@@ -1,60 +1,59 @@
-import { Router, Request, Response } from 'express';
-import { authMiddleware, AuthRequest } from '../middleware/authMiddleware';
-import multer from 'multer';
+import { Router, Request, Response } from "express";
+import { authMiddleware, AuthRequest } from "../middleware/authMiddleware";
+import multer from "multer";
+import { v4 as uuidv4 } from "uuid";
+import admin from "../config/firebase";
+import { UserRepository } from "../repositories/userRepository";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let sharp: any = null;
-try { sharp = require('sharp'); } catch { sharp = null; }
-import { UserRepository } from '../repositories/userRepository';
-import { ServiceRepository } from '../repositories/serviceRepository';
-import { redis } from '../platform';
-import { Client as MinioClient } from 'minio';
-import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+try {
+  sharp = require("sharp");
+} catch {
+  sharp = null;
+}
 
 const router = Router();
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
-const userRepo = new UserRepository();
-const serviceRepo = new ServiceRepository();
-
-const endpoint = process.env.R2_ENDPOINT || '';
-const R2_BUCKET = process.env.R2_BUCKET || '';
-const accessKey = process.env.R2_ACCESS_KEY_ID || '';
-const secretKey = process.env.R2_SECRET_ACCESS_KEY || '';
-const storageEnabled = !!(endpoint && R2_BUCKET && accessKey && secretKey);
-const url = (() => { try { return new URL(endpoint); } catch { return null; } })();
-const r2 = storageEnabled
-  ? new MinioClient({
-      endPoint: url ? url.hostname : endpoint.replace(/^https?:\/\//, ''),
-      port: 443,
-      useSSL: true,
-      accessKey,
-      secretKey,
-    })
-  : null as any;
-
-router.post('/avatar', authMiddleware, upload.single('file'), async (req: Request, res: Response) => {
-  const user = (req as AuthRequest).user;
-  try {
-    if (!user) {
-      res.status(401).json({ success: false, message: 'Unauthorized' });
-      return;
-    }
-    if (!req.file) {
-      res.status(400).json({ success: false, message: 'No file provided' });
-      return;
-    }
-    if (!sharp) {
-      res.status(501).json({ success: false, message: 'Image processing unavailable' });
-      return;
-    }
-    const thumbWebp = await sharp(req.file.buffer).resize(128, 128, { fit: 'cover' }).webp({ quality: 80 }).toBuffer();
-    await userRepo.updateAvatarBlob(user.id!, thumbWebp);
-    res.status(201).json({ success: true });
-  } catch (error) {
-    res.status(500).json({ success: false, message: 'Upload failed' });
-  }
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 500 * 1024 * 1024 },
 });
+const userRepo = new UserRepository();
+const bucket = admin.storage().bucket();
 
-router.get('/avatar/me', authMiddleware, async (req: Request, res: Response) => {
+// Avatar endpoints (keeping blob storage for now as requested or until specifically asked to change avatars)
+router.post(
+  "/avatar",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    const user = (req as AuthRequest).user;
+    try {
+      if (!user) {
+        res.status(401).json({ success: false, message: "Unauthorized" });
+        return;
+      }
+      if (!req.file) {
+        res.status(400).json({ success: false, message: "No file provided" });
+        return;
+      }
+      if (!sharp) {
+        res.status(501).json({ success: false, message: "Image processing unavailable" });
+        return;
+      }
+      const thumbWebp = await sharp(req.file.buffer)
+        .resize(128, 128, { fit: "cover" })
+        .webp({ quality: 80 })
+        .toBuffer();
+      await userRepo.updateAvatarBlob(user.id!, thumbWebp);
+      res.status(201).json({ success: true });
+    } catch {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+router.get("/avatar/me", authMiddleware, async (req: Request, res: Response) => {
   try {
     const userId = (req as AuthRequest).user!.id!;
     const blob = await userRepo.getAvatarBlob(userId);
@@ -62,144 +61,227 @@ router.get('/avatar/me', authMiddleware, async (req: Request, res: Response) => 
       res.status(204).end();
       return;
     }
-    res.setHeader('Content-Type', 'image/webp');
-    res.setHeader('Cache-Control', 'private, max-age=60');
+    res.setHeader("Content-Type", "image/webp");
+    res.setHeader("Cache-Control", "private, max-age=60");
     res.status(200).send(blob);
   } catch {
-    res.status(500).json({ success: false, message: 'Failed to fetch avatar' });
+    res.status(500).json({ success: false, message: "Failed to fetch avatar" });
   }
 });
 
-// Upload chat image -> Cloudflare R2 (webp)
-router.post('/chat/image', authMiddleware, upload.single('file'), async (req: Request, res: Response) => {
+router.get("/avatar/:userId", async (req: Request, res: Response) => {
   try {
-    const user = (req as AuthRequest).user;
-    if (!user) {
-      res.status(401).json({ success: false, message: 'Unauthorized' });
+    const userId = Number(req.params.userId);
+    if (!userId) {
+      res.status(400).json({ success: false, message: "Invalid user ID" });
       return;
     }
-    if (!r2) {
-      res.status(503).json({ success: false, message: 'Media storage unavailable' });
+    const blob = await userRepo.getAvatarBlob(userId);
+    if (!blob) {
+      res.status(404).json({ success: false, message: "Avatar not found" });
       return;
     }
-    const serviceId = (req.body.serviceId || req.query.serviceId) as string | undefined;
-    if (!req.file || !serviceId) {
-      res.status(400).json({ success: false, message: 'Missing file or serviceId' });
-      return;
-    }
-    if (!sharp) {
-      res.status(501).json({ success: false, message: 'Image processing unavailable' });
-      return;
-    }
-    const key = `chat/${serviceId}/${uuidv4()}.webp`;
-    const webp = await sharp(req.file.buffer).resize(1920, 1920, { fit: 'inside' }).webp({ quality: 82 }).toBuffer();
-    await r2.putObject(R2_BUCKET, key, webp, webp.length, { 'Content-Type': 'image/webp' });
-    res.status(201).json({ success: true, key });
-  } catch (error) {
-    res.status(500).json({ success: false, message: 'Upload failed' });
+    res.setHeader("Content-Type", "image/webp");
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.status(200).send(blob);
+  } catch {
+    res.status(500).json({ success: false, message: "Failed to fetch avatar" });
   }
 });
 
-// Upload chat audio (mp3) -> Cloudflare R2
-router.post('/chat/audio', authMiddleware, upload.single('file'), async (req: Request, res: Response) => {
-  try {
-    const user = (req as AuthRequest).user;
-    if (!user) {
-      res.status(401).json({ success: false, message: 'Unauthorized' });
-      return;
-    }
-    if (!r2) {
-      res.status(503).json({ success: false, message: 'Media storage unavailable' });
-      return;
-    }
-    const serviceId = (req.body.serviceId || req.query.serviceId) as string | undefined;
-    if (!req.file || !serviceId) {
-      res.status(400).json({ success: false, message: 'Missing file or serviceId' });
-      return;
-    }
-    const allowed = new Set(['audio/mpeg', 'audio/webm', 'audio/wav', 'audio/aac', 'audio/mp4', 'audio/x-m4a']);
-    const mime = (req.file.mimetype || '').toLowerCase();
-    if (!allowed.has(mime)) {
-      res.status(415).json({ success: false, message: `Unsupported audio type: ${mime}` });
-      return;
-    }
-    const ext = mime === 'audio/mpeg' ? 'mp3'
-      : mime === 'audio/webm' ? 'webm'
-      : mime === 'audio/wav' ? 'wav'
-      : (mime === 'audio/mp4' || mime === 'audio/x-m4a') ? 'm4a'
-      : mime === 'audio/aac' ? 'aac'
-      : 'bin';
-    const key = `chat/${serviceId}/${uuidv4()}.${ext}`;
-    await r2.putObject(R2_BUCKET, key, req.file.buffer, req.file.size, { 'Content-Type': mime });
-    res.status(201).json({ success: true, key });
-  } catch (error) {
-    res.status(500).json({ success: false, message: 'Upload failed' });
-  }
-});
+// Chat Media (Firebase Storage)
+router.post(
+  "/chat/image",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      const user = (req as AuthRequest).user;
+      if (!user) {
+        res.status(401).json({ success: false, message: "Unauthorized" });
+        return;
+      }
+      const serviceId = (req.body.serviceId || req.query.serviceId) as string | undefined;
+      if (!req.file || !serviceId) {
+        res.status(400).json({ success: false, message: "Missing file or serviceId" });
+        return;
+      }
+      if (!sharp) {
+        res.status(501).json({ success: false, message: "Image processing unavailable" });
+        return;
+      }
+      const key = `chat/${serviceId}/${uuidv4()}.webp`;
+      const webp = await sharp(req.file.buffer)
+        .resize(1920, 1920, { fit: "inside" })
+        .webp({ quality: 82 })
+        .toBuffer();
 
-// Get signed view URL for a media key
-router.get('/view', authMiddleware, async (req: Request, res: Response) => {
-  try {
-    const key = (req.query.key as string) || '';
-    if (!key) {
-      res.status(400).json({ success: false, message: 'Missing key' });
-      return;
-    }
-    if (!r2) {
-      res.status(503).json({ success: false, message: 'Media storage unavailable' });
-      return;
-    }
-    const publicBase = (process.env.R2_PUBLIC_BASE_URL || '').replace(/\/$/, '');
-    if (publicBase) {
-      const signed = await r2.presignedGetObject(R2_BUCKET, key, 60 * 30);
-      res.json({ success: true, url: signed });
-      return;
-    }
-    const signed = await r2.presignedGetObject(R2_BUCKET, key, 60 * 30);
-    res.json({ success: true, url: signed });
-  } catch (error) {
-    res.status(500).json({ success: false, message: 'Failed to sign URL' });
-  }
-});
+      await bucket.file(key).save(webp, {
+        metadata: { contentType: "image/webp" }
+      });
 
-router.get('/content', authMiddleware, async (req: Request, res: Response) => {
+      res.status(201).json({ success: true, key });
+    } catch (error) {
+      console.error("Chat image upload error:", error);
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+router.post(
+  "/chat/video",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      const user = (req as AuthRequest).user;
+      if (!user) {
+        res.status(401).json({ success: false, message: "Unauthorized" });
+        return;
+      }
+      const serviceId = (req.body.serviceId || req.query.serviceId) as string | undefined;
+      if (!req.file || !serviceId) {
+        res.status(400).json({ success: false, message: "Missing file or serviceId" });
+        return;
+      }
+      const mime = req.file.mimetype;
+      const ext = mime.includes("webm") ? "webm" : (mime.includes("quicktime") ? "mov" : "mp4");
+      const key = `chat/${serviceId}/${uuidv4()}.${ext}`;
+
+      await bucket.file(key).save(req.file.buffer, {
+        metadata: { contentType: mime }
+      });
+      res.status(201).json({ success: true, key });
+    } catch (error) {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+router.post(
+  "/chat/audio",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      const user = (req as AuthRequest).user;
+      if (!user) {
+        res.status(401).json({ success: false, message: "Unauthorized" });
+        return;
+      }
+      const serviceId = (req.body.serviceId || req.query.serviceId || req.body.service_id || req.query.service_id) as string | undefined;
+      if (!req.file || !serviceId) {
+        res.status(400).json({ success: false, message: "Missing file or serviceId" });
+        return;
+      }
+      const mime = (req.file.mimetype || "").toLowerCase();
+      const ext = mime.includes("mpeg") ? "mp3" : (mime.includes("wav") ? "wav" : "m4a");
+      const key = `chat/${serviceId}/${uuidv4()}.${ext}`;
+
+      await bucket.file(key).save(req.file.buffer, {
+        metadata: { contentType: mime }
+      });
+      res.status(201).json({ success: true, key });
+    } catch {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+// Service Media (Firebase Storage)
+router.post(
+  "/service/image",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      if (!req.file) return res.status(400).json({ success: false, message: "No file" });
+      if (!sharp) return res.status(501).json({ success: false, message: "No sharp" });
+
+      const key = `service/temp/${uuidv4()}.webp`;
+      const webp = await sharp(req.file.buffer)
+        .resize(1920, 1920, { fit: "inside" })
+        .webp({ quality: 82 })
+        .toBuffer();
+
+      await bucket.file(key).save(webp, {
+        metadata: { contentType: "image/webp" }
+      });
+      res.status(201).json({ success: true, key });
+    } catch {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+router.post(
+  "/service/video",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      if (!req.file) return res.status(400).json({ success: false, message: "No file" });
+      const mime = req.file.mimetype;
+      const ext = mime.includes("webm") ? "webm" : (mime.includes("quicktime") ? "mov" : "mp4");
+      const key = `service/temp/${uuidv4()}.${ext}`;
+      await bucket.file(key).save(req.file.buffer, {
+        metadata: { contentType: mime }
+      });
+      res.status(201).json({ success: true, key });
+    } catch {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+router.post(
+  "/service/audio",
+  authMiddleware,
+  upload.single("file"),
+  async (req: Request, res: Response) => {
+    try {
+      if (!req.file) return res.status(400).json({ success: false, message: "No file" });
+      const mime = (req.file.mimetype || "").toLowerCase();
+      const ext = mime.includes("wav") ? "wav" : (mime.includes("mpeg") ? "mp3" : "m4a");
+      const key = `service/temp/${uuidv4()}.${ext}`;
+      await bucket.file(key).save(req.file.buffer, {
+        metadata: { contentType: mime || "audio/mp4" }
+      });
+      res.status(201).json({ success: true, key });
+    } catch {
+      res.status(500).json({ success: false, message: "Upload failed" });
+    }
+  },
+);
+
+// View / Content Endpoints
+router.get("/view", authMiddleware, async (req: Request, res: Response) => {
   try {
-    const key = (req.query.key as string) || '';
-    if (!key) {
-      res.status(400).json({ success: false, message: 'Missing key' });
-      return;
-    }
-    if (!r2) {
-      res.status(503).json({ success: false, message: 'Media storage unavailable' });
-      return;
-    }
-    if (!key.startsWith('chat/')) {
-      res.status(400).json({ success: false, message: 'Invalid key' });
-      return;
-    }
-    const parts = key.split('/');
-    const serviceId = parts[1];
-    const svc = await serviceRepo.findById(serviceId);
-    const user = (req as AuthRequest).user;
-    if (!svc || !user || (user.id !== svc.client_id && user.id !== (svc.provider_id || 0))) {
-      res.status(403).json({ success: false, message: 'Forbidden' });
-      return;
-    }
-    const mime = key.endsWith('.webp') ? 'image/webp' : key.endsWith('.mp3') ? 'audio/mpeg' : 'application/octet-stream';
-    res.setHeader('Content-Type', mime);
-    let signed = await redis.get(`media:url:${key}`);
-    if (!signed) {
-      signed = await r2.presignedGetObject(R2_BUCKET, key, 60);
-      await redis.set(`media:url:${key}`, signed, 'EX', 50);
-    }
-    const resp = await axios.get(signed, { responseType: 'stream' });
-    await new Promise<void>((resolve, reject) => {
-      resp.data.on('error', reject);
-      resp.data.on('end', () => resolve());
-      resp.data.pipe(res);
+    const key = (req.query.key as string) || "";
+    if (!key) return res.status(400).json({ success: false, message: "Missing key" });
+
+    const [signed] = await bucket.file(key).getSignedUrl({
+      action: 'read',
+      expires: Date.now() + 60 * 30 * 1000 // 30 minutes
     });
+    res.json({ success: true, url: signed });
+  } catch {
+    res.status(500).json({ success: false, message: "Failed to sign URL" });
+  }
+});
+
+router.get("/content", authMiddleware, async (req: Request, res: Response) => {
+  try {
+    const key = (req.query.key as string) || "";
+    if (!key) return res.status(400).json({ success: false, message: "Missing key" });
+
+    const [signed] = await bucket.file(key).getSignedUrl({
+      action: 'read',
+      expires: Date.now() + 3600 * 1000 // 1 hour
+    });
+    res.redirect(signed);
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Failed to fetch media' });
+    res.status(500).json({ success: false, message: "Failed to fetch media" });
   }
 });
 

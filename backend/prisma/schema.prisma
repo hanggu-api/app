@@ -1,0 +1,727 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model ai_embeddings {
+  id              Int       @id @default(autoincrement())
+  profession_id   Int
+  profession_name String?   @db.VarChar(255)
+  category_id     Int?
+  category_name   String?   @db.VarChar(255)
+  text            String?   @db.Text
+  embedding       Json?
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model ai_training_examples {
+  id            Int       @id @default(autoincrement())
+  profession_id Int
+  category_id   Int?
+  text          String    @db.VarChar(1000)
+  created_at    DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([category_id], map: "category_id")
+  @@index([profession_id], map: "profession_id")
+}
+
+model auth_users {
+  id       Int             @id @default(autoincrement())
+  email    String          @unique(map: "email") @db.VarChar(255)
+  password String          @db.VarChar(255)
+  role     auth_users_role
+}
+
+model categories {
+  id   Int     @id @default(autoincrement())
+  name String  @db.VarChar(255)
+  icon String? @default("box") @db.VarChar(50)
+  slug String? @db.VarChar(255)
+}
+
+model chat_messages {
+  id               BigInt              @id @default(autoincrement())
+  service_id       String              @db.VarChar(36)
+  sender_id        BigInt
+  content          String?             @db.Text
+  type             chat_messages_type? @default(text)
+  sent_at          DateTime?           @default(now()) @db.Timestamp(0)
+  read_at          DateTime?           @db.Timestamp(0)
+  service_requests service_requests    @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "chat_messages_ibfk_1")
+  users            users               @relation(fields: [sender_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "chat_messages_ibfk_2")
+
+  @@index([sender_id], map: "sender_id")
+  @@index([service_id], map: "service_id")
+}
+
+model conversations {
+  id          Int       @id @default(autoincrement())
+  client_id   Int
+  provider_id Int
+  request_id  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([client_id, provider_id], map: "idx_cp")
+  @@index([request_id], map: "idx_req")
+}
+
+model locations {
+  id         Int       @id @default(autoincrement())
+  service_id Int
+  lat        Float
+  lng        Float
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model messages {
+  id                  Int             @id @default(autoincrement())
+  service_id          Int
+  sender              messages_sender
+  text                String          @db.Text
+  created_at          DateTime?       @default(now()) @db.Timestamp(0)
+  seen_by_user_at     DateTime?       @db.Timestamp(0)
+  seen_by_provider_at DateTime?       @db.Timestamp(0)
+}
+
+model mission_media {
+  id         Int       @id @default(autoincrement())
+  mission_id Int
+  user_id    Int
+  kind       String    @db.VarChar(16)
+  s3_key     String    @db.VarChar(512)
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([mission_id], map: "idx_mission")
+}
+
+model missions {
+  id          Int       @id @default(autoincrement())
+  user_id     Int
+  title       String    @db.VarChar(255)
+  description String?   @db.Text
+  location    String?   @db.VarChar(255)
+  lat         Decimal?  @db.Decimal(9, 6)
+  lng         Decimal?  @db.Decimal(9, 6)
+  budget      Decimal?  @db.Decimal(10, 2)
+  status      String    @default("open") @db.VarChar(32)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  provider_id Int?
+  category    String?   @db.VarChar(64)
+
+  @@index([category], map: "idx_category")
+  @@index([created_at], map: "idx_created")
+  @@index([lat, lng], map: "idx_geo")
+  @@index([status], map: "idx_status")
+}
+
+model notification_devices {
+  id           Int       @id @default(autoincrement())
+  user_id      Int
+  token        String    @db.VarChar(256)
+  platform     String?   @db.VarChar(32)
+  last_seen_at DateTime? @db.Timestamp(0)
+
+  @@unique([user_id, token], map: "uniq_user_token")
+  @@index([user_id], map: "idx_user")
+}
+
+model notification_prefs {
+  user_id       Int       @id
+  allow_payment Int       @default(1) @db.TinyInt
+  allow_mission Int       @default(1) @db.TinyInt
+  allow_chat    Int       @default(1) @db.TinyInt
+  allow_general Int       @default(1) @db.TinyInt
+  updated_at    DateTime? @db.Timestamp(0)
+}
+
+model notifications {
+  id         BigInt    @id @default(autoincrement())
+  user_id    BigInt
+  title      String    @db.VarChar(255)
+  body       String?   @db.Text
+  type       String    @db.VarChar(50)
+  related_id String?   @db.VarChar(255)
+  read_at    DateTime? @db.Timestamp(0)
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+  data       Json?
+  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "notifications_ibfk_1")
+
+  @@index([user_id], map: "user_id")
+}
+
+model payments {
+  id                 Int       @id @default(autoincrement())
+  mission_id         String    @db.VarChar(36)
+  proposal_id        Int?
+  user_id            Int
+  provider_id        Int?
+  amount             Decimal   @db.Decimal(10, 2)
+  currency           String    @default("BRL") @db.VarChar(8)
+  status             String    @default("pending") @db.VarChar(32)
+  mp_preference_id   String?   @db.VarChar(64)
+  mp_payment_id      String?   @db.VarChar(64)
+  external_ref       String?   @db.VarChar(128)
+  created_at         DateTime? @default(now()) @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  status_detail      String?   @db.VarChar(64)
+  payment_method_id  String?   @db.VarChar(32)
+  payer_email        String?   @db.VarChar(255)
+  collector_id       String?   @db.VarChar(32)
+  net_received       Decimal?  @db.Decimal(10, 2)
+  fee_amount         Decimal?  @db.Decimal(10, 2)
+  installments       Int?
+  card_last_four     String?   @db.VarChar(8)
+  order_id           String?   @db.VarChar(64)
+  refund_status      String?   @db.VarChar(32)
+  refund_amount      Decimal?  @db.Decimal(10, 2)
+  refunded_at        DateTime? @db.Timestamp(0)
+  canceled_at        DateTime? @db.Timestamp(0)
+  money_release_date DateTime? @db.Timestamp(0)
+
+  @@index([external_ref], map: "idx_external")
+  @@index([mission_id], map: "idx_mission")
+  @@index([mp_payment_id], map: "idx_payment_id")
+  @@index([status], map: "idx_status")
+}
+
+model professions {
+  id               Int            @id @default(autoincrement())
+  name             String         @unique(map: "uniq_professions_name") @db.VarChar(128)
+  category_id      Int?
+  icon             String?        @db.VarChar(64)
+  keywords         String?        @db.Text
+  search_vector    Json?
+  popularity_score Int?           @default(0)
+  service_type     String         @default("standard") @db.VarChar(32)
+  task_catalog     task_catalog[]
+
+  @@fulltext([name, keywords], map: "ft_professions_name_keywords")
+  @@fulltext([name, keywords], map: "name")
+}
+
+model proposals {
+  id            Int       @id @default(autoincrement())
+  mission_id    Int
+  user_id       Int
+  price         Decimal   @db.Decimal(10, 2)
+  deadline_days Int
+  status        String    @default("sent") @db.VarChar(20)
+  created_at    DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model provider_media {
+  id         Int       @id @default(autoincrement())
+  user_id    Int
+  kind       String    @db.VarChar(16)
+  s3_key     String    @db.VarChar(512)
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([user_id], map: "idx_user")
+}
+
+model provider_penalties {
+  id          Int       @id @default(autoincrement())
+  provider_id Int
+  request_id  Int
+  reason      String?   @db.VarChar(255)
+  applied_at  DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model provider_professions {
+  provider_user_id BigInt
+  profession_id    Int
+  fixed_price      Decimal? @db.Decimal(10, 2)
+  hourly_rate      Decimal? @db.Decimal(10, 2)
+
+  @@id([provider_user_id, profession_id])
+}
+
+model providers {
+  user_id          BigInt                   @id
+  bio              String?                  @db.Text
+  rating_avg       Decimal?                 @default(0.00) @db.Decimal(3, 2)
+  rating_count     Int?                     @default(0)
+  wallet_balance   Decimal?                 @default(0.00) @db.Decimal(10, 2)
+  latitude         Decimal?                 @db.Decimal(10, 8)
+  longitude        Decimal?                 @db.Decimal(11, 8)
+  is_online        Boolean?                 @default(false)
+  document_type    providers_document_type?
+  document_value   String?                  @db.VarChar(20)
+  commercial_name  String?                  @db.VarChar(100)
+  users            users                    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "providers_ibfk_1")
+  service_requests service_requests[]
+
+  @@index([document_value], map: "idx_providers_document")
+}
+
+model reviews {
+  id          Int       @id @default(autoincrement())
+  mission_id  Int
+  provider_id Int
+  rater_id    Int
+  rating      Int       @db.TinyInt
+  comment     String?   @db.Text
+  status      String    @default("published") @db.VarChar(16)
+  moderated   Int       @default(0) @db.TinyInt
+  abuse_flags String?   @db.Text
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+
+  @@unique([mission_id, rater_id], map: "uniq_mission_rater")
+  @@index([mission_id], map: "idx_mission")
+  @@index([provider_id], map: "idx_provider")
+}
+
+model service_categories {
+  id               Int                @id @default(autoincrement())
+  name             String             @unique(map: "name") @db.VarChar(50)
+  icon_slug        String?            @db.VarChar(50)
+  service_requests service_requests[]
+}
+
+model service_conversations {
+  id          Int       @id @default(autoincrement())
+  client_id   Int
+  provider_id Int
+  request_id  Int?
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([client_id, provider_id], map: "idx_cp2")
+  @@index([request_id], map: "idx_req2")
+}
+
+model service_edit_requests {
+  id               BigInt                        @id @default(autoincrement())
+  service_id       String                        @db.VarChar(36)
+  provider_id      BigInt
+  reason           String                        @db.VarChar(255)
+  description      String?                       @db.Text
+  additional_value Decimal                       @db.Decimal(10, 2)
+  platform_fee     Decimal                       @db.Decimal(10, 2)
+  images_json      String?                       @db.Text
+  video_key        String?                       @db.VarChar(255)
+  status           service_edit_requests_status? @default(pending)
+  created_at       DateTime?                     @default(now()) @db.Timestamp(0)
+  decided_at       DateTime?                     @db.Timestamp(0)
+  service_requests service_requests              @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "service_edit_requests_ibfk_1")
+  users            users                         @relation(fields: [provider_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "service_edit_requests_ibfk_2")
+
+  @@index([provider_id], map: "provider_id")
+  @@index([service_id], map: "service_id")
+}
+
+model service_dispatches {
+  id                     Int       @id @default(autoincrement())
+  service_id             String    @db.VarChar(36)
+  provider_list          Json
+  status                 String    @default("active") @db.VarChar(20)
+  current_cycle          Int       @default(1)
+  current_provider_index Int       @default(0)
+  history                Json?
+  last_attempt_at        DateTime? @db.Timestamp(0)
+  next_retry_at          DateTime? @db.Timestamp(0)
+  created_at             DateTime? @default(now()) @db.Timestamp(0)
+  updated_at             DateTime? @updatedAt @db.Timestamp(0)
+
+  @@index([status], map: "idx_service_dispatches_status")
+  @@index([service_id], map: "idx_service_dispatches_service_id")
+}
+
+model service_media {
+  id               BigInt                   @id @default(autoincrement())
+  service_id       String                   @db.VarChar(36)
+  media_key        String                   @db.VarChar(255)
+  media_type       service_media_media_type
+  created_at       DateTime?                @default(now()) @db.Timestamp(0)
+  service_requests service_requests         @relation(fields: [service_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "service_media_ibfk_1")
+
+  @@index([service_id], map: "service_id")
+}
+
+model service_messages {
+  id              Int       @id @default(autoincrement())
+  conversation_id Int
+  sender_id       Int
+  content         String    @db.Text
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([conversation_id], map: "idx_conv2")
+}
+
+model service_rejections {
+  id          Int       @id @default(autoincrement())
+  service_id  String    @db.VarChar(36)
+  provider_id Int
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@unique([service_id, provider_id], map: "unique_rejection")
+}
+
+model service_requests {
+  id                    String                  @id @db.VarChar(36)
+  client_id             BigInt
+  category_id           Int
+  profession            String?                 @db.VarChar(128)
+  provider_id           BigInt?
+  description           String?                 @db.Text
+  status                service_requests_status @default(waiting_payment)
+  latitude              Decimal?                @db.Decimal(10, 8)
+  longitude             Decimal?                @db.Decimal(11, 8)
+  address               String?                 @db.Text
+  price_estimated       Decimal?                @db.Decimal(10, 2)
+  price_upfront         Decimal?                @db.Decimal(10, 2)
+  scheduled_at          DateTime?               @db.Timestamp(0)
+  created_at            DateTime?               @default(now()) @db.Timestamp(0)
+  chat_messages         chat_messages[]
+  service_edit_requests service_edit_requests[]
+  service_media         service_media[]
+  users                 users                   @relation(fields: [client_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "service_requests_ibfk_1")
+  service_categories    service_categories      @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "service_requests_ibfk_2")
+  providers             providers?              @relation(fields: [provider_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "service_requests_ibfk_3")
+  service_tasks         service_tasks[]
+  transactions          transactions[]
+
+  @@index([category_id], map: "category_id")
+  @@index([client_id], map: "client_id")
+  @@index([provider_id], map: "provider_id")
+}
+
+model service_reviews {
+  id          Int       @id @default(autoincrement())
+  request_id  Int
+  client_id   Int
+  provider_id Int
+  rating      Int
+  comment     String?   @db.VarChar(255)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([provider_id], map: "idx_provider")
+  @@index([request_id], map: "idx_req2")
+}
+
+model service_tasks {
+  id               BigInt           @id @default(autoincrement())
+  service_id       String           @db.VarChar(36)
+  name             String           @db.VarChar(255)
+  quantity         Decimal          @default(1.00) @db.Decimal(10, 2)
+  unit_price       Decimal          @db.Decimal(10, 2)
+  subtotal         Decimal          @db.Decimal(10, 2)
+  created_at       DateTime?        @default(now()) @db.Timestamp(0)
+  service_requests service_requests @relation(fields: [service_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "service_tasks_ibfk_1")
+
+  @@index([service_id], map: "idx_service_tasks_service")
+}
+
+model services {
+  id          Int       @id @default(autoincrement())
+  client_id   Int
+  provider_id Int?
+  category    String    @db.VarChar(255)
+  description String?   @db.Text
+  status      String    @db.VarChar(32)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model task_catalog {
+  id            Int                       @id @default(autoincrement())
+  profession_id Int
+  name          String                    @db.VarChar(255)
+  pricing_type  task_catalog_pricing_type @default(fixed)
+  unit_name     String?                   @db.VarChar(64)
+  unit_price    Decimal                   @db.Decimal(10, 2)
+  keywords      String?                   @db.VarChar(1000)
+  active        Boolean?                  @default(true)
+  created_at    DateTime?                 @default(now()) @db.Timestamp(0)
+  professions   professions               @relation(fields: [profession_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "task_catalog_ibfk_1")
+
+  @@index([profession_id], map: "idx_task_catalog_profession")
+}
+
+model transactions {
+  id               BigInt               @id @default(autoincrement())
+  service_id       String               @db.VarChar(36)
+  user_id          BigInt
+  amount           Decimal              @db.Decimal(10, 2)
+  type             transactions_type
+  status           transactions_status? @default(pending)
+  provider_ref     String?              @db.VarChar(255)
+  created_at       DateTime?            @default(now()) @db.Timestamp(0)
+  service_requests service_requests     @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_ibfk_1")
+  users            users                @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_ibfk_2")
+
+  @@index([service_id], map: "service_id")
+  @@index([user_id], map: "user_id")
+}
+
+model user_devices {
+  id          BigInt                @id @default(autoincrement())
+  user_id     BigInt
+  token       String                @db.VarChar(512)
+  platform    user_devices_platform @default(web)
+  last_active DateTime?             @default(now()) @db.Timestamp(0)
+  created_at  DateTime?             @default(now()) @db.Timestamp(0)
+  users       users                 @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "user_devices_ibfk_1")
+
+  @@unique([user_id, token], map: "idx_user_token")
+}
+
+model users {
+  id                    BigInt                  @id @default(autoincrement())
+  firebase_uid          String?                 @unique(map: "firebase_uid") @db.VarChar(128)
+  email                 String                  @unique(map: "email") @db.VarChar(255)
+  password_hash         String                  @db.VarChar(255)
+  full_name             String                  @db.VarChar(100)
+  role                  users_role              @default(client)
+  phone                 String?                 @db.VarChar(20)
+  avatar_url            String?                 @db.Text
+  created_at            DateTime?               @default(now()) @db.Timestamp(0)
+  is_verified           Boolean?                @default(false)
+  avatar_blob           Bytes?
+  avatar_mime           String?                 @db.VarChar(64)
+  chat_messages         chat_messages[]
+  notifications         notifications[]
+  providers             providers?
+  service_edit_requests service_edit_requests[]
+  service_requests      service_requests[]
+  transactions          transactions[]
+  user_devices          user_devices[]
+  provider_schedules    provider_schedules[]
+  provider_custom_services provider_custom_services[]
+  provider_schedule_exceptions provider_schedule_exceptions[]
+  agency_profile        agency_profiles?
+
+  @@index([firebase_uid], map: "idx_firebase_uid")
+}
+
+model provider_schedule_exceptions {
+  id          Int       @id @default(autoincrement())
+  provider_id BigInt
+  date        DateTime  @db.Date
+  start_time  String?   @db.VarChar(5)
+  end_time    String?   @db.VarChar(5)
+  reason      String?   @db.VarChar(255)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  users       users     @relation(fields: [provider_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "provider_schedule_exceptions_ibfk_1")
+
+  @@index([provider_id], map: "idx_provider_schedule_exceptions_provider")
+  @@unique([provider_id, date], map: "uniq_provider_date")
+}
+
+model provider_locations {
+  provider_id BigInt    @id
+  latitude    Decimal   @db.Decimal(10, 8)
+  longitude   Decimal   @db.Decimal(11, 8)
+  updated_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([latitude, longitude], map: "idx_lat_lng")
+}
+
+model provider_schedules {
+  id          Int       @id @default(autoincrement())
+  provider_id BigInt
+  day_of_week Int
+  start_time  String    @db.VarChar(5)
+  end_time    String    @db.VarChar(5)
+  break_start String?   @db.VarChar(5)
+  break_end   String?   @db.VarChar(5)
+  is_enabled  Boolean   @default(true)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  users       users     @relation(fields: [provider_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "provider_schedules_ibfk_1")
+
+  @@index([provider_id], map: "idx_provider_schedules_provider")
+}
+
+model provider_custom_services {
+  id          Int       @id @default(autoincrement())
+  provider_id BigInt
+  name        String    @db.VarChar(255)
+  description String?   @db.Text
+  duration    Int
+  price       Decimal   @db.Decimal(10, 2)
+  category    String?   @db.VarChar(50)
+  active      Boolean   @default(true)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  users       users     @relation(fields: [provider_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "provider_custom_services_ibfk_1")
+
+  @@index([provider_id], map: "idx_provider_custom_services_provider")
+}
+
+enum messages_sender {
+  client
+  provider
+}
+
+enum auth_users_role {
+  client
+  provider
+}
+
+enum service_media_media_type {
+  image
+  video
+  audio
+}
+
+enum task_catalog_pricing_type {
+  fixed
+  per_unit
+}
+
+enum user_devices_platform {
+  android
+  ios
+  web
+}
+
+enum chat_messages_type {
+  text
+  image
+  audio
+  location
+  video
+}
+
+enum transactions_type {
+  deposit
+  final_payment
+  payout
+  refund
+}
+
+enum users_role {
+  client
+  provider
+  admin
+}
+
+enum transactions_status {
+  pending
+  success
+  failed
+}
+
+enum service_requests_status {
+  waiting_payment
+  pending
+  accepted
+  in_progress
+  completed
+  cancelled
+}
+
+enum providers_document_type {
+  cpf
+  cnpj
+}
+
+enum service_edit_requests_status {
+  pending
+  accepted
+  declined
+}
+
+model agency_profiles {
+  id              Int       @id @default(autoincrement())
+  user_id         BigInt    @unique(map: "uniq_user_id")
+  company_name    String    @db.VarChar(255)
+  description     String?   @db.Text
+  segment         String?   @db.VarChar(100)
+  city            String?   @db.VarChar(100)
+  state           String?   @db.VarChar(100)
+  contact_data    Json?     // { "whatsapp": "", "insta": "", ... }
+  branding_data   Json?     // { "colors": [], "tone": "", ... }
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+  users           users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model agency_products {
+  id              Int       @id @default(autoincrement())
+  user_id         BigInt
+  name            String    @db.VarChar(255)
+  description     String?   @db.Text
+  price           Decimal?  @db.Decimal(10, 2)
+  category        String?   @db.VarChar(100)
+  image_url       String?   @db.VarChar(512)
+  active          Boolean   @default(true)
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([user_id], map: "idx_agency_products_user")
+}
+
+
+model agency_campaigns {
+  id              Int       @id @default(autoincrement())
+  user_id         BigInt
+  company_id      Int?      // Optional relation to profile
+  name            String    @db.VarChar(255)
+  description     String?   @db.Text
+  objective       String?   @db.VarChar(50) // 'sales', 'branding', etc.
+  status          String    @default("active") @db.VarChar(20)
+  current_version Int?      // ID of the active version
+  created_at      DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([user_id], map: "idx_agency_campaigns_user")
+}
+
+model agency_campaign_versions {
+  id               Int       @id @default(autoincrement())
+  campaign_id      Int
+  version_major    Int       @default(1)
+  version_minor    Int       @default(0)
+  status           String    @default("draft") @db.VarChar(20) // draft, active, archived, testing
+  change_reason    String?   @db.VarChar(255) // Why this version exists
+  created_by       String?   @db.VarChar(20)  // 'AI', 'user', 'system'
+  is_active        Boolean   @default(false)
+  ab_group         String?   @db.VarChar(1)   // 'A', 'B' or null
+  created_at       DateTime? @default(now()) @db.Timestamp(0)
+  
+  // Relations to assets and copy
+  // assets         agency_assets[]
+  // copy           agency_campaign_copy[]
+
+  @@index([campaign_id], map: "idx_agency_versions_campaign")
+  @@unique([campaign_id, version_major, version_minor], map: "uniq_version")
+}
+
+model agency_assets {
+  id                  Int       @id @default(autoincrement())
+  campaign_version_id Int
+  type                String    @db.VarChar(20) // 'image', 'video', 'banner'
+  url                 String    @db.Text
+  metadata            Json?     // { "platform": "instagram", "format": "9:16" }
+  created_at          DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([campaign_version_id], map: "idx_agency_assets_version")
+}
+
+model agency_campaign_copy {
+  id                  Int       @id @default(autoincrement())
+  campaign_version_id Int
+  headline            String?   @db.Text
+  body_text           String?   @db.Text
+  cta                 String?   @db.VarChar(100)
+  hashtags            String?   @db.Text
+  script_content      String?   @db.Text // For video scripts
+  created_at          DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([campaign_version_id], map: "idx_agency_copy_version")
+}
+
+model agency_audit_log {
+  id                  Int       @id @default(autoincrement())
+  campaign_version_id Int?
+  campaign_id         Int?
+  action              String    @db.VarChar(50) // created, edited, published, reverted
+  description         String?   @db.Text
+  author              String?   @db.VarChar(50) // 'AI', 'User: 123'
+  created_at          DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([campaign_id], map: "idx_audit_campaign")
+}
+

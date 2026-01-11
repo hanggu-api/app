@@ -1,5 +1,26 @@
-import app from '../src/app';
+export default async function handler(req: any, res: any) {
+  try {
+    // URL rewrite removed to match Express routes which include /api prefix
+    // if (typeof req.url === "string") {
+    //   req.url = req.url.replace(/^\/api(\/|$)/, "/");
+    // }
+  } catch (e) {
+    console.error("URL Rewrite error:", e);
+  }
 
-export default function handler(req: any, res: any) {
-  (app as any)(req, res);
+  try {
+    // Dynamic import to catch initialization errors
+    const appModule = await import("../src/app");
+    const app = appModule.default;
+    (app as any)(req, res);
+  } catch (e: any) {
+    console.error("App invocation/initialization error:", e);
+    res
+      .status(500)
+      .json({ 
+        error: "Function Invocation Failed", 
+        message: e.message,
+        stack: e.stack 
+      });
+  }
 }

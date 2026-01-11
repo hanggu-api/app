@@ -4,3 +4,11 @@ dist/
 .DS_Store
 npm-debug.log*
 .vercel
+.env*.local
+
+/src/generated/prisma
+serviceAccountKey.json
+credentials.json
+
+.vercel
+.env*.local
