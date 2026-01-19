@@ -1,0 +1,8 @@
+[project]
+name = "ai-service-python"
+version = "0.1.0"
+description = "AI service on Cloudflare Workers (Python) using Workers AI + Vectorize"
+requires-python = ">=3.10"
+
+[tool.uv]
+dev-dependencies = ["workers-py"]

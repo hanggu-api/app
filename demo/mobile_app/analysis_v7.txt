@@ -1,0 +1,16 @@
+Analyzing mobile_app...                                         
+
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:173:41 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:315:45 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:318:52 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:359:58 - use_build_context_synchronously
+  error - 'finally' can't be used as an identifier because it's a keyword - lib\features\provider\widgets\provider_profile_widgets.dart:363:37 - expected_identifier_but_got_keyword
+  error - Expected to find ',' - lib\features\provider\widgets\provider_profile_widgets.dart:363:37 - expected_token
+  error - Too many positional arguments: 0 expected, but 2 found - lib\features\provider\widgets\provider_profile_widgets.dart:363:37 - extra_positional_arguments_could_be_named
+  error - Undefined name 'finally' - lib\features\provider\widgets\provider_profile_widgets.dart:363:37 - undefined_identifier
+  error - Expected to find ',' - lib\features\provider\widgets\provider_profile_widgets.dart:363:45 - expected_token
+  error - Expected to find '}' - lib\features\provider\widgets\provider_profile_widgets.dart:364:82 - expected_token
+  error - Expected to find ')' - lib\features\provider\widgets\provider_profile_widgets.dart:366:33 - expected_token
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:474:35 - use_build_context_synchronously
+  error - The function 'debugPrint' isn't defined - test\firebase_test_config.dart:54:5 - undefined_function
+

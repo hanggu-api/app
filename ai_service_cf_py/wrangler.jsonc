@@ -1,0 +1,19 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "ai-service-python",
+	"main": "src/entry.py",
+	"compatibility_date": "2025-12-01",
+	"compatibility_flags": [
+		"python_workers"
+	],
+	"ai": {
+		"binding": "AI"
+	},
+	"vectorize": [
+		{
+			"binding": "VECTORIZE",
+			"index_name": "embeddings-index",
+			"remote": true
+		}
+	]
+}

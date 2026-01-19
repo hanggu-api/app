@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Layout Híbrido - SDUI</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Moldura do Celular */
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background-color: #fff;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            border: 12px solid #333;
+        }
+
+        /* Simulando o Mapa de Fundo */
+        .map-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e5e3df; /* Cor típica de fundo do Google Maps */
+            background-image: 
+                linear-gradient(90deg, transparent 95%, #fff 95%),
+                linear-gradient(transparent 95%, #fff 95%);
+            background-size: 100px 100px;
+            z-index: 1;
+        }
+
+        /* Ruas e Elementos do Mapa (Simulação) */
+        .map-road {
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 2px rgba(0,0,0,0.1);
+        }
+        .road-1 { top: 30%; left: 0; width: 100%; height: 15px; transform: rotate(10deg); }
+        .road-2 { top: 0; left: 60%; width: 15px; height: 100%; transform: rotate(-5deg); }
+        
+        /* Pins no Mapa */
+        .map-pin {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .map-pin::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        
+        /* Veículos em movimento */
+        .vehicle-marker {
+            position: absolute;
+            width: 24px;
+            height: 12px;
+            background-color: #333;
+            border-radius: 4px;
+            z-index: 2;
+        }
+        .moto-marker {
+            width: 10px;
+            height: 20px;
+            background-color: #007bff;
+        }
+
+        /* Interface SDUI Overlay */
+        .ui-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Flutuante */
+        .header-search {
+            margin: 50px 20px 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .menu-icon { width: 20px; height: 2px; background: #333; position: relative; }
+        .menu-icon::before { content:''; position: absolute; top: -6px; width: 20px; height: 2px; background: #333; }
+        .menu-icon::after { content:''; position: absolute; top: 6px; width: 20px; height: 2px; background: #333; }
+        
+        .search-placeholder {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Bottom Sheet (Painel Inferior) */
+        .bottom-sheet {
+            background: #fff;
+            border-radius: 24px 24px 0 0;
+            padding: 24px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .handle-bar {
+            width: 40px;
+            height: 4px;
+            background-color: #ddd;
+            border-radius: 2px;
+            margin: 0 auto 20px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        /* Grid de Ações Principais */
+        .action-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .action-card {
+            background-color: #f8f9fa;
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.1s, background-color 0.2s;
+        }
+        .action-card:active { transform: scale(0.98); background-color: #eee; }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .icon-transport { background-color: #e3f2fd; color: #1976d2; }
+        .icon-service { background-color: #e8f5e9; color: #2e7d32; }
+
+        .card-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Lista de Atalhos */
+        .shortcuts-title {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .shortcut-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #eee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .shortcut-info {
+            flex: 1;
+        }
+        .shortcut-name { font-weight: 600; font-size: 14px; color: #333; }
+        .shortcut-address { font-size: 12px; color: #888; }
+
+        /* Indicador de Status */
+        .status-badge {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #2e7d32;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .status-dot { width: 6px; height: 6px; background-color: #2e7d32; border-radius: 50%; }
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <!-- Mapa de Fundo -->
+        <div class="map-background">
+            <div class="map-road road-1"></div>
+            <div class="map-road road-2"></div>
+            
+            <!-- Pin do Usuário (Centro) -->
+            <div class="map-pin" style="top: 45%; left: 45%; background-color: #000; transform: rotate(-45deg);"></div>
+            
+            <!-- Moto de Entregador -->
+            <div class="vehicle-marker moto-marker" style="top: 35%; left: 65%; transform: rotate(15deg);"></div>
+            
+            <!-- Carro de Transporte -->
+            <div class="vehicle-marker" style="top: 25%; left: 30%; transform: rotate(45deg);"></div>
+        </div>
+
+        <!-- Camada de UI (SDUI) -->
+        <div class="ui-layer">
+            
+            <!-- Header -->
+            <div>
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    APP ONLINE
+                </div>
+                
+                <div class="header-search">
+                    <div class="menu-icon"></div>
+                    <div class="search-placeholder">Para onde vamos ou o que precisa?</div>
+                </div>
+            </div>
+
+            <!-- Bottom Sheet -->
+            <div class="bottom-sheet">
+                <div class="handle-bar"></div>
+                
+                <div class="greeting">Olá, Cliente 👋</div>
+
+                <div class="action-grid">
+                    <!-- Opção Transporte -->
+                    <div class="action-card">
+                        <div class="icon-circle icon-transport">🚗</div>
+                        <span class="card-label">Viajar</span>
+                    </div>
+
+                    <!-- Opção Serviços -->
+                    <div class="action-card">
+                        <div class="icon-circle icon-service">🛠️</div>
+                        <span class="card-label">Serviços</span>
+                    </div>
+                </div>
+
+                <div class="shortcuts-title">Atalhos Recentes</div>
+                
+                <div class="shortcut-item">
+                    <div class="shortcut-icon">🏠</div>
+                    <div class="shortcut-info">
+                        <div class="shortcut-name">Casa</div>
+                        <div class="shortcut-address">Rua das Flores, 123</div>
+                    </div>
+                </div>
+
+                <div class="shortcut-item">
+                    <div class="shortcut-icon">💼</div>
+                    <div class="shortcut-info">
+                        <div class="shortcut-name">Trabalho</div>
+                        <div class="shortcut-address">Av. Paulista, 1000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+Analyzing mobile_app...                                         
+
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:173:41 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:315:45 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:318:52 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:359:58 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:473:35 - use_build_context_synchronously
+

@@ -1,0 +1,11 @@
+PRAGMA defer_foreign_keys = ON;
+DELETE FROM reviews;
+DELETE FROM payments;
+DELETE FROM provider_professions;
+DELETE FROM service_tasks;
+DELETE FROM service_requests;
+DELETE FROM providers;
+DELETE FROM professions;
+DELETE FROM service_categories;
+DELETE FROM users;
+PRAGMA defer_foreign_keys = OFF;

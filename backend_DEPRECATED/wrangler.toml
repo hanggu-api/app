@@ -1,0 +1,44 @@
+name = "projeto-central-backend"
+main = "worker/index.ts"
+compatibility_date = "2024-04-03"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-service-db"
+database_id = "f257cffb-ffc2-4ecc-92d2-2e571c7d626e"
+
+[[r2_buckets]]
+binding = "AVATARS"
+bucket_name = "hanggu"
+
+[vars]
+NODE_ENV = "production"
+AI_SERVICE_URL = "https://ai-service.carrobomebarato.workers.dev"
+USE_REMOTE_AI = "true"
+MP_ACCESS_TOKEN = "APP_USR-5920955064244671-122309-86c7c2f4c4172856415a8f98de468bb6-82191608"
+MP_PUBLIC_KEY = "APP_USR-146c3bc4-631d-44cb-aec3-81cc7b6026d9"
+MP_WEBHOOK_SECRET = "a61afccceaf0cba68f28e569e1598d83a926b700a415f00e18fc5a5d880a3215"
+
+[[services]]
+binding = "AI_SERVICE"
+service = "ai-service"
+
+[define]
+"process.env.NODE_ENV" = "\"production\""
+"process.env.VERCEL" = "\"true\""
+
+[[durable_objects.bindings]]
+name = "DISPATCH_MANAGER"
+class_name = "DispatchManager"
+
+[[migrations]]
+tag = "v1-sqlite-do"
+new_sqlite_classes = ["DispatchManager"]
+
+[triggers]
+crons = ["*/2 * * * *"]  # Every 2 minutes
+
+[[kv_namespaces]]
+binding = "LOCATION_CACHE"
+id = "65d5e0315f0049c2be9bf57665bf979d"

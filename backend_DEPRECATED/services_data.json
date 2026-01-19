@@ -1,0 +1,247 @@
+[
+    {
+        "id": 159,
+        "provider_id": 832,
+        "name": "Barba (Barboterapia)",
+        "duration": 30,
+        "price": 40.00
+    },
+    {
+        "id": 160,
+        "provider_id": 832,
+        "name": "Barba (Barboterapia/Toalha Quente)",
+        "duration": 30,
+        "price": 40.00
+    },
+    {
+        "id": 161,
+        "provider_id": 832,
+        "name": "Barba Completa",
+        "duration": 30,
+        "price": 40.01
+    },
+    {
+        "id": 162,
+        "provider_id": 832,
+        "name": "Barba Simples (Máquina/Navalha)",
+        "duration": 20,
+        "price": 30.00
+    },
+    {
+        "id": 163,
+        "provider_id": 832,
+        "name": "Barboterapia",
+        "duration": 45,
+        "price": 50.00
+    },
+    {
+        "id": 164,
+        "provider_id": 832,
+        "name": "Barboterapia (Toalha Quente)",
+        "duration": 40,
+        "price": 53.00
+    },
+    {
+        "id": 165,
+        "provider_id": 832,
+        "name": "Camuflagem de Fios",
+        "duration": 20,
+        "price": 40.00
+    },
+    {
+        "id": 166,
+        "provider_id": 832,
+        "name": "Combo: Cabelo + Barba",
+        "duration": 75,
+        "price": 80.00
+    },
+    {
+        "id": 167,
+        "provider_id": 832,
+        "name": "Combo: Corte + Barba",
+        "duration": 70,
+        "price": 80.00
+    },
+    {
+        "id": 168,
+        "provider_id": 832,
+        "name": "Corte Degradê (Fade)",
+        "duration": 45,
+        "price": 53.00
+    },
+    {
+        "id": 169,
+        "provider_id": 832,
+        "name": "Corte Masculino (Social)",
+        "duration": 30,
+        "price": 38.00
+    },
+    {
+        "id": 170,
+        "provider_id": 832,
+        "name": "Corte Social",
+        "duration": 40,
+        "price": 42.00
+    },
+    {
+        "id": 171,
+        "provider_id": 832,
+        "name": "Degradê (Fade)",
+        "duration": 55,
+        "price": 45.00
+    },
+    {
+        "id": 172,
+        "provider_id": 832,
+        "name": "Pezinho (Acabamento)",
+        "duration": 15,
+        "price": 18.00
+    },
+    {
+        "id": 173,
+        "provider_id": 832,
+        "name": "Pezinho (Contorno)",
+        "duration": 15,
+        "price": 15.00
+    },
+    {
+        "id": 174,
+        "provider_id": 832,
+        "name": "Pigmentação de Barba/Cabelo",
+        "duration": 30,
+        "price": 40.00
+    },
+    {
+        "id": 175,
+        "provider_id": 832,
+        "name": "Sobrancelha (Navalha)",
+        "duration": 15,
+        "price": 20.00
+    },
+    {
+        "id": 176,
+        "provider_id": 833,
+        "name": "Cauterização Capilar",
+        "duration": 80,
+        "price": 150.00
+    },
+    {
+        "id": 177,
+        "provider_id": 833,
+        "name": "Botox Capilar",
+        "duration": 90,
+        "price": 120.00
+    },
+    {
+        "id": 178,
+        "provider_id": 833,
+        "name": "Coloração (Só aplicação)",
+        "duration": 45,
+        "price": 60.00
+    },
+    {
+        "id": 179,
+        "provider_id": 833,
+        "name": "Corte Degradê (Fade)",
+        "duration": 50,
+        "price": 50.00
+    },
+    {
+        "id": 180,
+        "provider_id": 833,
+        "name": "Corte Feminino",
+        "duration": 60,
+        "price": 70.00
+    },
+    {
+        "id": 181,
+        "provider_id": 833,
+        "name": "Corte Feminino (Lavado)",
+        "duration": 60,
+        "price": 80.00
+    },
+    {
+        "id": 182,
+        "provider_id": 833,
+        "name": "Corte Masculino (Simples)",
+        "duration": 45,
+        "price": 40.00
+    },
+    {
+        "id": 183,
+        "provider_id": 833,
+        "name": "Corte Masculino (Simples/Social)",
+        "duration": 40,
+        "price": 40.00
+    },
+    {
+        "id": 184,
+        "provider_id": 833,
+        "name": "Escova (Brushing)",
+        "duration": 50,
+        "price": 60.00
+    },
+    {
+        "id": 185,
+        "provider_id": 833,
+        "name": "Escova + Chapinha",
+        "duration": 50,
+        "price": 65.00
+    },
+    {
+        "id": 186,
+        "provider_id": 833,
+        "name": "Hidratação Profunda",
+        "duration": 40,
+        "price": 70.00
+    },
+    {
+        "id": 187,
+        "provider_id": 833,
+        "name": "Luzes / Mechas",
+        "duration": 240,
+        "price": 425.00
+    },
+    {
+        "id": 188,
+        "provider_id": 833,
+        "name": "Matização",
+        "duration": 30,
+        "price": 50.00
+    },
+    {
+        "id": 189,
+        "provider_id": 833,
+        "name": "Progressiva / Selagem",
+        "duration": 120,
+        "price": 185.00
+    },
+    {
+        "id": 190,
+        "provider_id": 833,
+        "name": "Selagem / Progressiva",
+        "duration": 150,
+        "price": 225.00
+    },
+    {
+        "id": 191,
+        "provider_id": 833,
+        "name": "Coloração (Aplicação)",
+        "duration": 60,
+        "price": 70.00
+    },
+    {
+        "id": 192,
+        "provider_id": 849,
+        "name": "Barba (Barboterapia)",
+        "duration": 30,
+        "price": 40.00
+    },
+    {
+        "id": 209,
+        "provider_id": 873,
+        "name": "Barba (Barboterapia)",
+        "duration": 30,
+        "price": 40.00
+    }
+]

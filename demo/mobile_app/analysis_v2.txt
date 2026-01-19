@@ -1,0 +1,107 @@
+Analyzing mobile_app...                                         
+
+   info - Unnecessary use of multiple underscores - lib\features\client\refund_request_screen.dart:187:41 - unnecessary_underscores
+warning - The value of the field '_isRecording' isn't used - lib\features\client\refund_request_screen.dart:325:8 - unused_field
+  error - The method 'uploadServiceVideoFromPath' isn't defined for the type 'ApiService' - lib\features\provider\finish_service_screen.dart:99:35 - undefined_method
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\finish_service_screen.dart:144:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\finish_service_screen.dart:226:43 - deprecated_member_use
+  error - Invalid constant value - lib\features\provider\finish_service_screen.dart:267:124 - invalid_constant
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\finish_service_screen.dart:305:57 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\finish_service_screen.dart:363:70 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\finish_service_screen.dart:398:76 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:193:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:213:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:380:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:423:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:463:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:469:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\medical_agenda_view.dart:499:45 - deprecated_member_use
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\provider\medical_home_screen.dart:40:19 - unnecessary_null_comparison
+  error - Undefined name '_pageController' - lib\features\provider\provider_home_screen.dart:138:5 - undefined_identifier
+  error - Undefined name '_isLoading' - lib\features\provider\provider_home_screen.dart:410:24 - undefined_identifier
+  error - Undefined name '_isLoading' - lib\features\provider\provider_home_screen.dart:1727:20 - undefined_identifier
+  error - Undefined name '_isLoading' - lib\features\provider\provider_home_screen.dart:1747:24 - undefined_identifier
+warning - Unused import: 'package:intl/intl.dart' - lib\features\provider\provider_profile_content.dart:7:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\provider_schedule_settings_screen.dart:263:65 - deprecated_member_use
+   info - The private field _schedules could be 'final' - lib\features\provider\schedule_edit_screen.dart:16:30 - prefer_final_fields
+warning - The value of the local variable 'schedulesData' isn't used - lib\features\provider\schedule_edit_screen.dart:46:31 - unused_local_variable
+  error - Undefined name 'existing' - lib\features\provider\schedule_edit_screen.dart:48:36 - undefined_identifier
+  error - Undefined name 'existing' - lib\features\provider\schedule_edit_screen.dart:49:20 - undefined_identifier
+  error - Undefined name 'existing' - lib\features\provider\schedule_edit_screen.dart:49:51 - undefined_identifier
+  error - Undefined name 'index' - lib\features\provider\schedule_edit_screen.dart:50:20 - undefined_identifier
+  error - Undefined name 'index' - lib\features\provider\schedule_edit_screen.dart:50:34 - undefined_identifier
+  error - Undefined name 'existing' - lib\features\provider\schedule_edit_screen.dart:52:20 - undefined_identifier
+  error - Undefined name 'existing' - lib\features\provider\schedule_edit_screen.dart:53:45 - undefined_identifier
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:53:54 - missing_identifier
+  error - Expected to find ':' - lib\features\provider\schedule_edit_screen.dart:53:54 - expected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:53:73 - expected_token
+warning - Dead code - lib\features\provider\schedule_edit_screen.dart:54:17 - dead_code
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:54:17 - missing_identifier
+  error - Unexpected text ';' - lib\features\provider\schedule_edit_screen.dart:54:17 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:55:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:55:34 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:55:34 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:55:36 - expected_token
+  error - Undefined name 'index' - lib\features\provider\schedule_edit_screen.dart:55:36 - undefined_identifier
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:55:41 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:55:41 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:56:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:56:33 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:56:33 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:56:35 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:56:42 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:56:42 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:57:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:57:31 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:57:31 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:57:33 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:57:40 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:57:40 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:58:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:58:34 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:58:34 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:58:36 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:58:43 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:58:43 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:59:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:59:32 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:59:32 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:59:34 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:59:41 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:59:41 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:60:21 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:60:33 - missing_identifier
+  error - Unexpected text ':' - lib\features\provider\schedule_edit_screen.dart:60:33 - unexpected_token
+  error - Expected to find ';' - lib\features\provider\schedule_edit_screen.dart:60:35 - expected_token
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:60:44 - missing_identifier
+  error - Unexpected text ',' - lib\features\provider\schedule_edit_screen.dart:60:44 - unexpected_token
+   info - Unnecessary empty statement - lib\features\provider\schedule_edit_screen.dart:61:20 - empty_statements
+warning - The value of the local variable 'is' isn't used - lib\features\provider\schedule_edit_screen.dart:103:13 - unused_local_variable
+  error - 'is' can't be used as an identifier because it's a keyword - lib\features\provider\schedule_edit_screen.dart:103:13 - expected_identifier_but_got_keyword
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:108:31 - missing_identifier
+  error - The argument type 'bool' can't be assigned to the parameter type 'String'.  - lib\features\provider\schedule_edit_screen.dart:108:31 - argument_type_not_assignable
+  error - Expected a type name - lib\features\provider\schedule_edit_screen.dart:108:33 - expected_type_name
+  error - Expected to find ',' - lib\features\provider\schedule_edit_screen.dart:108:33 - expected_token
+  error - Too many positional arguments: 1 expected, but 2 found - lib\features\provider\schedule_edit_screen.dart:108:33 - extra_positional_arguments_could_be_named
+  error - Expected an identifier - lib\features\provider\schedule_edit_screen.dart:108:55 - missing_identifier
+  error - The argument type 'bool' can't be assigned to the parameter type 'String'.  - lib\features\provider\schedule_edit_screen.dart:108:55 - argument_type_not_assignable
+  error - Expected a type name - lib\features\provider\schedule_edit_screen.dart:108:57 - expected_type_name
+  error - Expected to find ',' - lib\features\provider\schedule_edit_screen.dart:108:57 - expected_token
+  error - Too many positional arguments: 1 expected, but 2 found - lib\features\provider\schedule_edit_screen.dart:108:57 - extra_positional_arguments_could_be_named
+  error - Undefined name '_navigationTimer' - lib\features\provider\service_details_screen_fixed.dart:224:5 - undefined_identifier
+  error - Undefined name '_pollingTimer' - lib\features\provider\service_details_screen_fixed.dart:225:5 - undefined_identifier
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\provider\service_details_screen_fixed.dart:768:46 - deprecated_member_use
+  error - Expected an identifier - lib\features\provider\widgets\provider_profile_widgets.dart:74:28 - missing_identifier
+  error - Invalid constant value - lib\features\provider\widgets\provider_profile_widgets.dart:74:28 - invalid_constant
+  error - Expected an identifier - lib\features\provider\widgets\provider_profile_widgets.dart:122:32 - missing_identifier
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:173:41 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\provider\widgets\provider_profile_widgets.dart:316:45 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:320:52 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:360:60 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\provider\widgets\provider_profile_widgets.dart:475:35 - use_build_context_synchronously
+warning - A value of type 'void' can't be returned by the 'onError' handler because it must be assignable to 'FutureOr<Null>' - lib\main.dart:220:32 - invalid_return_type_for_catch_error
+warning - The value of the field '_envApiUrl' isn't used - lib\services\api_service.dart:15:23 - unused_field
+   info - Don't invoke 'print' in production code - test\firebase_test_config.dart:54:5 - avoid_print
+   info - The imported package 'firebase_core_platform_interface' isn't a dependency of the importing package - test\mock_firebase.dart:3:8 - depend_on_referenced_packages
+warning - Unused import: 'package:firebase_core_platform_interface/firebase_core_platform_interface.dart' - test\mock_firebase.dart:3:8 - unused_import
+

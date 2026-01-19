@@ -1,0 +1,1130 @@
+"id","profession_id","profession_name","category_id","category_name","text","embedding","created_at"
+"id","profession_id","category_id","text","created_at"
+"1","4283","1","pneu do carro muchou","2026-01-26 13:02:04"
+"id","provider_id","client_id","service_request_id","start_time","end_time","status","notes","created_at","updated_at"
+"26","832","531","9934c260-6af4-4416-9ceb-e72e08d135af","2026-01-19 19:00:00","2026-01-19 20:00:00","busy","Service: 1 - ServiÃ§o: Barba Completa
+quero fazer a barba","2026-01-19 18:03:58","2026-01-22 23:50:01"
+"27","832","531","441ae629-3fe2-4957-ac47-6ac6f6c13a4c","2026-01-22 09:00:00","2026-01-22 10:00:00","waiting_payment","Service: 1 - ServiÃ§o: Barba Completa
+quero fazer a barba","2026-01-21 22:27:27","2026-01-21 22:27:27"
+"28","832","531","f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8","2026-01-22 14:30:00","2026-01-22 15:30:00","waiting_payment","Service: 1 - ServiÃ§o: Barba Completa
+quero fazer a barba","2026-01-22 13:27:47","2026-01-22 13:27:47"
+"29","832","531","888e7434-c181-4242-8ae4-a45cf291f9ee","2026-01-23 09:00:00","2026-01-23 10:00:00","scheduled","Service: 1 - ServiÃ§o: Corte DegradÃª (Fade)
+Agendamento de Corte","2026-01-22 23:36:00","2026-01-23 00:03:41"
+"30","832","531","808386e1-42f5-4e5e-a6eb-958471c863a6","2026-01-23 12:00:00","2026-01-23 13:00:00","waiting_payment","Service: 1 - ServiÃ§o: Barba Simples (MÃ¡quina/Navalha)
+Agendamen","2026-01-22 23:43:56","2026-01-22 23:43:56"
+"31","832","531","f30f8308-ded6-465f-a764-394d79a71bc0","2026-01-23 12:00:00","2026-01-23 13:00:00","scheduled","Service: 1 - ServiÃ§o: Corte Social 
+Agendamento de Corte Social","2026-01-22 23:55:11","2026-01-22 23:55:21"
+"32","832","531","1ad1f9a6-58cc-4943-9529-d96132cb5178","2026-01-23 16:00:00","2026-01-23 17:00:00","scheduled","Service: 1 - ServiÃ§o: Barba (Barboterapia)
+Agendamento de Barba","2026-01-23 14:30:22","2026-01-23 14:30:32"
+"33","832","531","6b82f28c-0876-4ac1-a927-d34bce350cc0","2026-01-26 16:30:00","2026-01-26 17:30:00","scheduled","Service: 1 - ServiÃ§o: Pezinho (Acabamento)
+quero fazer o pezinh","2026-01-26 13:14:21","2026-01-26 13:14:36"
+"34","832","531","31097f51-4fb7-44d6-bf7b-c1f5ddeb4eb6","2026-01-26 20:30:00","2026-01-26 21:30:00","scheduled","Service: 1 - ServiÃ§o: Pezinho (Acabamento)
+quero fazer o pezinh","2026-01-26 13:48:27","2026-01-26 13:48:36"
+"id","user_id","action","entity_type","entity_id","details","ip_address","user_agent","created_at"
+"1","531","login","user","531","{""email"":""105@gmail.com""}","::ffff:127.0.0.1","Dart/3.10 (dart:io)","2026-01-26 12:31:37"
+"2","531","login","user","531","{""email"":""105@gmail.com""}","::ffff:127.0.0.1","Dart/3.10 (dart:io)","2026-01-26 13:12:21"
+"3","531","login","user","531","{""email"":""105@gmail.com""}","::ffff:127.0.0.1","Dart/3.10 (dart:io)","2026-01-26 13:34:55"
+"id","email","password","role"
+"1","client.teste@conserta.local","$2a$10$nB6vkLj7LF2WB2qvCwErru6LslPTIvY2kxbaYDe9L01MUaykVe7kO","client"
+"2","provider.teste@conserta.local","$2a$10$nB6vkLj7LF2WB2qvCwErru6LslPTIvY2kxbaYDe9L01MUaykVe7kO","provider"
+"id","name","icon","slug"
+"1","ManutenÃ§Ã£o e Reparos","wrench","manutencao"
+"2","Limpeza e Diaristas","sparkles","limpeza"
+"3","Reformas e Obras","hammer","reformas"
+"4","InstalaÃ§Ã£o TÃ©cnica","settings","instalacao"
+"5","Automotivo","car","automotivo"
+"6","Tecnologia","laptop","tecnologia"
+"7","Beleza e Bem-estar","smile","beleza"
+"8","ServiÃ§os DomÃ©sticos","home","domesticos"
+"9","Outros","box","outros"
+"10","ManutenÃ§Ã£o e Reparos","wrench","manutencao"
+"11","Limpeza e Diaristas","sparkles","limpeza"
+"12","Reformas e Obras","hammer","reformas"
+"13","InstalaÃ§Ã£o TÃ©cnica","settings","instalacao"
+"14","Automotivo","car","automotivo"
+"15","Tecnologia","laptop","tecnologia"
+"16","Beleza e Bem-estar","smile","beleza"
+"17","ServiÃ§os DomÃ©sticos","home","domesticos"
+"18","Outros","box","outros"
+"id","service_id","sender_id","content","type","sent_at","read_at"
+"30","9934c260-6af4-4416-9ceb-e72e08d135af","832","oi","text","2026-01-22 13:22:52",NULL
+"id","client_id","provider_id","request_id","created_at"
+"id","service_id","lat","lng","created_at"
+"id","service_id","sender","text","created_at","seen_by_user_at","seen_by_provider_at"
+"id","user_id","title","description","location","lat","lng","budget","status","created_at","provider_id","category"
+"id","mission_id","user_id","kind","s3_key","created_at"
+"id","user_id","title","body","type","related_id","read_at","created_at","data"
+"id","user_id","token","platform","last_seen_at"
+"user_id","allow_payment","allow_mission","allow_chat","allow_general","updated_at"
+"id","mission_id","proposal_id","user_id","provider_id","amount","currency","status","mp_preference_id","mp_payment_id","external_ref","created_at","updated_at","status_detail","payment_method_id","payer_email","collector_id","net_received","fee_amount","installments","card_last_four","order_id","refund_status","refund_amount","refunded_at","canceled_at","money_release_date"
+"62","3ad6e1e6-86c1-46db-a25f-6fb62814f7ad",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140147751300",NULL,"2025-12-31 08:22:08","2025-12-31 08:23:27","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"63","dde555a4-08ad-406c-a784-a12ca3fbc6e1",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139501839763",NULL,"2025-12-31 08:58:11","2025-12-31 09:00:05","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"64","a596d9ad-4f8f-4455-9b8e-fa1070e83791",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140152727012",NULL,"2025-12-31 09:14:13","2025-12-31 09:17:37","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"65","c44f45c3-c710-498e-be29-de92ffc454d1",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139510060815",NULL,"2025-12-31 09:56:02","2025-12-31 09:56:41","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"66","cd67c00b-03e7-46b2-b29e-62b31e340505",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139514853491",NULL,"2025-12-31 10:42:01","2025-12-31 10:42:42","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"67","3e9a7900-4aa6-4c67-9bff-2d18a3a8c9a7",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139520246035",NULL,"2025-12-31 11:29:01","2025-12-31 11:29:57","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"68","869e5ff8-2f74-4741-9686-a1c3d801bece",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140175962976",NULL,"2025-12-31 11:47:04","2025-12-31 11:48:01","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"69","5edf17b2-5b2d-4ec6-b2b8-64395759d7d6",NULL,"531",NULL,"3.00","BRL","cancelled",NULL,"139533894525",NULL,"2025-12-31 12:10:06","2026-01-01 12:15:49","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"70","a3338842-f5a0-49bb-b9f5-1d8e66c967e0",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139533418981",NULL,"2025-12-31 12:13:12","2025-12-31 12:13:48","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"71","f198e2ad-6fa6-4a02-b0d4-225d67ca7eaa",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140207138974",NULL,"2025-12-31 14:49:34","2025-12-31 14:50:27","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"72","215ac0d6-84a0-4665-9b3e-70aeeb5e65b7",NULL,"531",NULL,"3.00","BRL","rejected",NULL,"139563142973",NULL,"2025-12-31 15:18:54","2025-12-31 15:18:55","cc_rejected_high_risk","master","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"73","215ac0d6-84a0-4665-9b3e-70aeeb5e65b7",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140209433836",NULL,"2025-12-31 15:20:28","2025-12-31 15:21:17","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"74","d27599c0-0f90-4038-98c6-9cf9e5181c02",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139584436647",NULL,"2025-12-31 17:58:16","2025-12-31 18:01:42","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"75","4394b762-889f-4b6b-bf9b-cbffcca0aaca",NULL,"531",NULL,"3.00","BRL","approved",NULL,"140233954696",NULL,"2025-12-31 18:10:16","2025-12-31 18:10:51","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"76","e362b469-9d7d-47e4-84f9-a8afe936a5d2",NULL,"543",NULL,"3.00","BRL","cancelled",NULL,"140242596684",NULL,"2025-12-31 19:17:21","2026-01-01 19:21:35","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"77","f1084643-0a89-4142-8b5f-d187c6eeca3a",NULL,"543",NULL,"3.00","BRL","cancelled",NULL,"140252076162",NULL,"2025-12-31 20:25:54","2026-01-01 20:31:02","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"78","e325d883-7a44-43dc-ae0d-435d2765714a",NULL,"555",NULL,"3.00","BRL","cancelled",NULL,"140450972656",NULL,"2026-01-02 20:24:07","2026-01-03 20:25:57","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"79","628c6efe-9490-4e06-9b9d-d1cec5e59022",NULL,"558",NULL,"3.00","BRL","cancelled",NULL,"139802922477",NULL,"2026-01-02 20:28:52","2026-01-03 20:30:49","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"80","9691a3c5-eff0-4196-8f8f-11d2c3ab65ba",NULL,"560",NULL,"3.00","BRL","rejected",NULL,"140455386194",NULL,"2026-01-02 20:51:22","2026-01-02 20:51:23","cc_rejected_high_risk","master","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"81","9691a3c5-eff0-4196-8f8f-11d2c3ab65ba",NULL,"560",NULL,"3.00","BRL","pending",NULL,"549400694",NULL,"2026-01-02 20:51:54",NULL,"pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"82","681664ae-b8b0-4216-bc22-ff458115cbec",NULL,"578",NULL,"100.00","BRL","approved",NULL,"459930921",NULL,"2026-01-02 23:10:25",NULL,"accredited","pix","client_pedreiro_test_1767406224059@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"83","395346db-59bb-406b-9329-1e17e3db0ca9",NULL,"579",NULL,"100.00","BRL","approved",NULL,"390669556",NULL,"2026-01-02 23:12:42",NULL,"accredited","pix","client_pedreiro_test_1767406361283@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"84","c15bcd79-bfb3-4c00-9e0c-9cdbcce470bb",NULL,"580",NULL,"100.00","BRL","approved",NULL,"922586130",NULL,"2026-01-02 23:27:50",NULL,"accredited","pix","client_pedreiro_test_1767407269015@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"85","aed87f18-e3fd-456f-af99-243de384cf14",NULL,"581",NULL,"100.00","BRL","approved",NULL,"791128740",NULL,"2026-01-02 23:37:55",NULL,"accredited","pix","client_pedreiro_test_1767407874666@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"86","dc9b0461-adfe-46af-9abb-68e3c25446b7",NULL,"582",NULL,"100.00","BRL","approved",NULL,"469706817",NULL,"2026-01-02 23:41:24",NULL,"accredited","pix","client_pedreiro_test_1767408082834@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"87","d31b8f67-b625-41e2-a686-eb5f716fe554",NULL,"583",NULL,"100.00","BRL","approved",NULL,"895311873",NULL,"2026-01-02 23:43:23",NULL,"accredited","pix","client_pedreiro_test_1767408202431@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"88","cf23bb0c-7983-4470-943f-b0692e88df56",NULL,"584",NULL,"100.00","BRL","approved",NULL,"825948990",NULL,"2026-01-02 23:45:44",NULL,"accredited","pix","client_pedreiro_test_1767408343034@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"89","87d4865d-97bb-49e5-88b9-d9c86f745bd9",NULL,"585",NULL,"100.00","BRL","approved",NULL,"489607369",NULL,"2026-01-02 23:52:24",NULL,"accredited","pix","client_pedreiro_test_1767408742954@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"90","33376e4e-bcaa-449a-9402-cc7dc6369345",NULL,"586",NULL,"100.00","BRL","approved",NULL,"663555983",NULL,"2026-01-03 00:11:16",NULL,"accredited","pix","client_pedreiro_test_1767409874752@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"91","0b99d302-a856-4dfd-aadf-41d8a195bf92",NULL,"587",NULL,"100.00","BRL","approved",NULL,"883632804",NULL,"2026-01-03 00:12:43",NULL,"accredited","pix","client_pedreiro_test_1767409961731@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"92","2054633c-89e6-451c-95a7-70a47716f1cb",NULL,"531",NULL,"3.00","BRL","approved",NULL,"139857375783",NULL,"2026-01-03 12:06:27","2026-01-03 12:07:18","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"93","d5fbccad-7a1a-46e1-9827-c3c0c4e26da6",NULL,"588",NULL,"100.00","BRL","approved",NULL,"588388113",NULL,"2026-01-04 00:36:56",NULL,"accredited","pix","client_pedreiro_test_1767497813087@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"94","d3421ef0-3b48-48ab-85f0-e4fe941c211d",NULL,"589",NULL,"100.00","BRL","approved",NULL,"890875770",NULL,"2026-01-04 00:40:06",NULL,"accredited","pix","client_pedreiro_test_1767498003604@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"95","46cc886e-c9f8-4a2d-94c3-79df85a604d3",NULL,"590",NULL,"100.00","BRL","approved",NULL,"819787339",NULL,"2026-01-04 00:46:55",NULL,"accredited","pix","client_pedreiro_test_1767498412674@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"96","49db1ae5-7317-40cd-93cb-eb98c92d130f",NULL,"591",NULL,"100.00","BRL","approved",NULL,"726346898",NULL,"2026-01-04 01:16:55",NULL,"accredited","pix","client_pedreiro_test_1767500213079@test.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"97","ebc7589a-9d7a-4244-9be6-ec131ab9b947",NULL,"531",NULL,"3.00","BRL","cancelled",NULL,"139956715001",NULL,"2026-01-04 09:56:47","2026-01-05 10:01:59","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"98","fda89c9a-6315-47f7-9aa4-6f3ec8b434fa",NULL,"531",NULL,"3.00","BRL","cancelled",NULL,"139972418797",NULL,"2026-01-04 12:49:21","2026-01-05 12:57:08","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"99","605b8214-8296-434f-8098-0d803347c635",NULL,"610",NULL,"10.00","BRL","approved",NULL,"141004346958",NULL,"2026-01-07 09:31:27","2026-01-07 09:31:28","accredited","master","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"100","605b8214-8296-434f-8098-0d803347c635",NULL,"610",NULL,"10.00","BRL","approved",NULL,"518536448",NULL,"2026-01-07 09:31:58",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"101","b4907694-b086-463e-a73b-80fdd7e9d01d",NULL,"612",NULL,"10.00","BRL","approved",NULL,"141004859024",NULL,"2026-01-07 09:36:32","2026-01-07 09:36:33","accredited","master","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"102","b4907694-b086-463e-a73b-80fdd7e9d01d",NULL,"612",NULL,"10.00","BRL","approved",NULL,"94028709",NULL,"2026-01-07 09:37:03",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"103","86caa449-9189-4c55-85ff-9dcb72bbb1eb",NULL,"825",NULL,"1.00","BRL","approved",NULL,"929360022",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"104","ecaf46cc-8488-41bf-aba4-30ab7a1fafec",NULL,"825",NULL,"1.00","BRL","approved",NULL,"514642008",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"105","98a340e1-5232-41f1-9615-580b718a26d9",NULL,"825",NULL,"1.00","BRL","approved",NULL,"53829730",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"106","eea20e21-ec4d-49b2-b315-9fd3e73eec6e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"787784822",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"107","f86fb7b1-cefd-4072-a1d1-14ae67eeba77",NULL,"825",NULL,"1.00","BRL","approved",NULL,"271862169",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"108","7a6e9ca5-2723-418d-8ea4-695f0d2080df",NULL,"825",NULL,"1.00","BRL","approved",NULL,"542322433",NULL,"2026-01-07 17:52:58",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"109","9f083a17-367a-4f07-8f92-2ec7609672f3",NULL,"825",NULL,"1.00","BRL","approved",NULL,"99400832",NULL,"2026-01-07 17:52:59",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"110","023407b5-b109-4ba9-8836-2ec2d3b1293a",NULL,"825",NULL,"1.00","BRL","approved",NULL,"135087930",NULL,"2026-01-07 17:52:59",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"111","55ab0763-35d0-4011-a1cc-a6b689354aa7",NULL,"825",NULL,"1.00","BRL","approved",NULL,"646999432",NULL,"2026-01-07 17:52:59",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"112","50a03514-75f1-44a4-aff7-5856c7f43f6b",NULL,"825",NULL,"1.00","BRL","approved",NULL,"111212683",NULL,"2026-01-07 17:52:59",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"113","f53335e0-2808-4ab4-b2ed-ac98526a97bb",NULL,"825",NULL,"1.00","BRL","approved",NULL,"972998786",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"114","ac6b1be7-8ef3-48a1-9763-5c69ac66750d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"198846986",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"115","a4e7a75c-29c9-4182-8f50-edb997f91ad8",NULL,"825",NULL,"1.00","BRL","approved",NULL,"892828009",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"116","76c4e352-0172-4ed5-92b7-c82d5fe69e67",NULL,"825",NULL,"1.00","BRL","approved",NULL,"21745542",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"117","0ba37938-2257-4cc3-ac9e-d32731f5ddb1",NULL,"825",NULL,"1.00","BRL","approved",NULL,"335827911",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"118","aa860692-b88a-4d01-ab79-bfae7f18bb7a",NULL,"825",NULL,"1.00","BRL","approved",NULL,"868861026",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"119","99450ed8-a4ea-4501-8d8d-c741a2c5c85e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"441066501",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"120","8aecb269-dbeb-4a47-b23e-861d9c0cb146",NULL,"825",NULL,"1.00","BRL","approved",NULL,"563077002",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"121","b1da88f4-94a2-419c-9efc-801c7cad1790",NULL,"825",NULL,"1.00","BRL","approved",NULL,"936634070",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"122","19e0f494-ce03-4318-942d-7aa65228ed34",NULL,"825",NULL,"1.00","BRL","approved",NULL,"607546316",NULL,"2026-01-07 17:53:15",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"123","7f65d843-5ba1-4dab-a949-d44c74510d14",NULL,"825",NULL,"1.00","BRL","approved",NULL,"787757842",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"124","cc62a9b4-81c6-4822-a368-beb18c91c239",NULL,"825",NULL,"1.00","BRL","approved",NULL,"10405577",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"125","41ec45b0-8676-4030-bb13-7724e609b620",NULL,"825",NULL,"1.00","BRL","approved",NULL,"320783686",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"126","642dad6d-91cb-4005-bfa7-d3bfed8fb514",NULL,"825",NULL,"1.00","BRL","approved",NULL,"28180639",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"127","5f21e064-9735-45f0-81b7-b747e4f272d2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"634609093",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"128","adf2fb2a-affa-4f4c-a12a-6dccf607a563",NULL,"825",NULL,"1.00","BRL","approved",NULL,"286573423",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"129","5328f523-6da9-4dc2-b37e-cf5f8063ac25",NULL,"825",NULL,"1.00","BRL","approved",NULL,"185388179",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"130","17875b9c-eccb-4def-abb1-13d29f505659",NULL,"825",NULL,"1.00","BRL","approved",NULL,"793196949",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"131","8f15ae4a-3eb8-4ad0-b3a4-9eadbb6ed526",NULL,"825",NULL,"1.00","BRL","approved",NULL,"585096650",NULL,"2026-01-07 17:53:31",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"132","a9bee2d1-5581-4299-97e2-ada0c02d9ab2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"474262494",NULL,"2026-01-07 17:53:32",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"133","5f4ef3eb-ef7b-4c9f-8910-f1bd8b63cba2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"810409920",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"134","27e828ec-7f6a-4dd7-b1af-6efb39c4d65f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"430156058",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"135","aed73e03-b3c5-4f3b-80ae-00aff6832d21",NULL,"825",NULL,"1.00","BRL","approved",NULL,"177770567",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"136","489770f5-0355-4b35-afed-0d8ebd61340f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"15346080",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"137","19f1f811-a95d-4fbf-af2e-53968887275b",NULL,"825",NULL,"1.00","BRL","approved",NULL,"96228515",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"138","fe03da1f-916d-4142-af8b-7d7ff136fc42",NULL,"825",NULL,"1.00","BRL","approved",NULL,"240518130",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"139","1c92146f-472b-4116-a7f8-0350dfa07925",NULL,"825",NULL,"1.00","BRL","approved",NULL,"430057169",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"140","32f6d2e1-f6db-4cb2-9b52-69f23d05f0c1",NULL,"825",NULL,"1.00","BRL","approved",NULL,"119076398",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"141","dad6f468-139b-400a-b493-4b016c4526c3",NULL,"825",NULL,"1.00","BRL","approved",NULL,"530219495",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"142","8beadf59-db93-4c50-ad4d-faa1307adba0",NULL,"825",NULL,"1.00","BRL","approved",NULL,"812502656",NULL,"2026-01-07 17:53:47",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"143","8c8f69df-86e9-4964-ba01-8650553c583d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"105429089",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"144","09ed31fb-9300-405f-a39f-e943b2eb182e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"865060101",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"145","ba20ed7f-27e4-414c-b7c1-482b3e3c50a9",NULL,"825",NULL,"1.00","BRL","approved",NULL,"222740172",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"146","8d2fef3b-4504-425e-baeb-c7dba3dd4eac",NULL,"825",NULL,"1.00","BRL","approved",NULL,"545270614",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"147","c9bcd1cc-ef81-4cc5-a9e9-5520213706aa",NULL,"825",NULL,"1.00","BRL","approved",NULL,"758698992",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"148","c1e2eae6-32d6-4500-b235-0c92ae9dd719",NULL,"825",NULL,"1.00","BRL","approved",NULL,"431494969",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"149","e1d1a87c-e9af-4157-ab50-39e1f314bd4f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"821871220",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"150","ad24e00b-646e-47c9-a331-7898db9097ff",NULL,"825",NULL,"1.00","BRL","approved",NULL,"30329076",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"151","af5926bf-5889-46fa-9863-ed36647103f2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"983219048",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"152","16e9691e-8409-4091-ad71-9dabc233bca6",NULL,"825",NULL,"1.00","BRL","approved",NULL,"138951763",NULL,"2026-01-07 17:54:03",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"153","aefedc30-00d2-4bc5-a181-21ec299465da",NULL,"825",NULL,"1.00","BRL","approved",NULL,"581235206",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"154","4dc1a88b-b628-4c4d-b89c-090a070d54a2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"919882340",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"155","28a2c10d-7dfb-4092-8f70-aedeb1ed8497",NULL,"825",NULL,"1.00","BRL","approved",NULL,"341899954",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"156","f51a0e00-1326-45a5-af11-b5d39fa96a43",NULL,"825",NULL,"1.00","BRL","approved",NULL,"908334056",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"157","1f01aa56-cfd1-4900-a53b-90f3e75ae5be",NULL,"825",NULL,"1.00","BRL","approved",NULL,"893047494",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"158","abf06134-23e8-4c14-b8c4-fae02204718b",NULL,"825",NULL,"1.00","BRL","approved",NULL,"774779352",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"159","8ade347c-3343-4b19-a2f5-3a99bfedf5ce",NULL,"825",NULL,"1.00","BRL","approved",NULL,"396952201",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"160","fc50227a-6ef2-44f8-b5dd-9c241002cf3d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"234404995",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"161","ea5f3d4f-9864-4ac5-9bf6-908efbfcd233",NULL,"825",NULL,"1.00","BRL","approved",NULL,"4528401",NULL,"2026-01-07 17:54:18",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"162","56da2fd4-300e-49ee-82a4-b4812f3ccffd",NULL,"825",NULL,"1.00","BRL","approved",NULL,"66122195",NULL,"2026-01-07 17:54:19",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"163","788966f4-ab07-40f0-9007-4dff40a037ed",NULL,"825",NULL,"1.00","BRL","approved",NULL,"314229995",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"164","313d8495-a527-4425-a99b-5e830b2f0a2f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"700129503",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"165","2aef1ad8-b1d2-4cd2-a14e-b887e5f3b0d7",NULL,"825",NULL,"1.00","BRL","approved",NULL,"545642067",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"166","a369ccfe-c5f2-45ce-a0f7-53cb6e263d67",NULL,"825",NULL,"1.00","BRL","approved",NULL,"826602091",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"167","e31c15e7-41b4-4299-acdf-a90837c85f73",NULL,"825",NULL,"1.00","BRL","approved",NULL,"872960988",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"168","830de9d1-8680-437d-9421-95c828cbe2dc",NULL,"825",NULL,"1.00","BRL","approved",NULL,"410457896",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"169","f9859499-ab6c-43d4-ba1c-747e04303008",NULL,"825",NULL,"1.00","BRL","approved",NULL,"801809249",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"170","f40e3aee-b279-4b63-9b5c-b42792891464",NULL,"825",NULL,"1.00","BRL","approved",NULL,"672391418",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"171","7807b333-35b1-4de9-ae25-0e0ad3d226ac",NULL,"825",NULL,"1.00","BRL","approved",NULL,"341375137",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"172","0f9dfc92-395a-486c-b626-29b3672864f2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"696784649",NULL,"2026-01-07 17:54:34",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"173","134e37c0-d72e-46d7-9957-361f2117c3b5",NULL,"825",NULL,"1.00","BRL","approved",NULL,"823139615",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"174","2bc116e2-19aa-4ea0-b792-89055aecaf9f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"611169927",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"175","09153923-659c-4693-ada8-71c10ed7b38c",NULL,"825",NULL,"1.00","BRL","approved",NULL,"868933109",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"176","ec738d35-33d8-4324-9cc6-4e2434da5b29",NULL,"825",NULL,"1.00","BRL","approved",NULL,"450702003",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"177","dc871e71-e914-40d4-93a8-57f4b1416984",NULL,"825",NULL,"1.00","BRL","approved",NULL,"805971563",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"178","6b3f92e7-316e-454c-938f-ef694493a199",NULL,"825",NULL,"1.00","BRL","approved",NULL,"257835507",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"179","7862c7db-95f9-47a8-853d-d96cf75f5f0d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"830084550",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"180","811cae88-4613-4b61-ab74-86f3b3367327",NULL,"825",NULL,"1.00","BRL","approved",NULL,"965457365",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"181","2cd8db27-2470-416e-bd5d-1238e114a437",NULL,"825",NULL,"1.00","BRL","approved",NULL,"954332571",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"182","c9e78747-ed98-49ba-9000-45066a657dcf",NULL,"825",NULL,"1.00","BRL","approved",NULL,"432818463",NULL,"2026-01-07 17:54:50",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"183","d69ae658-ea29-484a-a1a9-3662d5e1b2a7",NULL,"825",NULL,"1.00","BRL","approved",NULL,"980926082",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"184","cec50649-9e41-46a3-b05f-3d9f282993bc",NULL,"825",NULL,"1.00","BRL","approved",NULL,"785195155",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"185","8c9b6032-cc3f-4f38-8233-10f6d4ed89df",NULL,"825",NULL,"1.00","BRL","approved",NULL,"979030941",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"186","1425dae5-4431-4dbd-a185-a8d8a246be06",NULL,"825",NULL,"1.00","BRL","approved",NULL,"636222787",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"187","1f794a94-b6c0-468b-95d6-c74f7b4adf1e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"932694877",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"188","b75acf24-d16f-41d8-a3ea-10b39c96c18a",NULL,"825",NULL,"1.00","BRL","approved",NULL,"200971424",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"189","6498ab2a-f362-4489-bd32-0c55fa100123",NULL,"825",NULL,"1.00","BRL","approved",NULL,"509456440",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"190","6f1367eb-2880-443c-a3d0-61e33e5ae810",NULL,"825",NULL,"1.00","BRL","approved",NULL,"124156914",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"191","fb6e11a6-31b3-4bac-8433-7f529d9d47bd",NULL,"825",NULL,"1.00","BRL","approved",NULL,"368191333",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"192","9a85e88d-e3a2-4034-8115-7451005cd61f",NULL,"825",NULL,"1.00","BRL","approved",NULL,"466166402",NULL,"2026-01-07 17:55:05",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"193","ffcf4b8e-a49a-4f5a-8bb9-4b3788f03197",NULL,"825",NULL,"1.00","BRL","approved",NULL,"596409165",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"194","ec5da3a3-7a7f-4416-814d-290cb44ea14b",NULL,"825",NULL,"1.00","BRL","approved",NULL,"481757114",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"195","016578e9-9e56-433a-8f77-a5fb70fe0b7d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"57197204",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"196","9b2ae43b-0b32-4299-9144-992d4818620e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"126692811",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"197","4fca067f-f532-4c03-b0b9-6b00335c521c",NULL,"825",NULL,"1.00","BRL","approved",NULL,"846652622",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"198","99f7b9a9-c40b-478c-a1c8-7e44ffaef39d",NULL,"825",NULL,"1.00","BRL","approved",NULL,"466275162",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"199","fbbbdaaa-6e3d-44b2-bc59-f468678f73b2",NULL,"825",NULL,"1.00","BRL","approved",NULL,"828663049",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"200","26b5b1e2-e12b-4784-986e-bff25ddb578e",NULL,"825",NULL,"1.00","BRL","approved",NULL,"751803160",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"201","63900a6b-4479-453f-a361-83a8d6b4f47c",NULL,"825",NULL,"1.00","BRL","approved",NULL,"84552134",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"202","1480348f-016c-4305-9c0d-6f64b875d041",NULL,"825",NULL,"1.00","BRL","approved",NULL,"94074821",NULL,"2026-01-07 17:55:21",NULL,"accredited","pix","stress_client_1767819161565@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"203","745f3a00-72df-48d4-964c-00295f1868ae",NULL,"827",NULL,"1.00","BRL","approved",NULL,"483679792",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"204","a6b0a3dd-038e-4b57-948f-3e2cccddaf55",NULL,"827",NULL,"1.00","BRL","approved",NULL,"368132490",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"205","9e957c52-0abc-4592-b2d7-4b1f37f6bf10",NULL,"827",NULL,"1.00","BRL","approved",NULL,"311706950",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"206","05ac7a0e-725a-44ce-8482-15056e585236",NULL,"827",NULL,"1.00","BRL","approved",NULL,"921548232",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"207","de17e154-b029-434e-b621-62eb2b01b693",NULL,"827",NULL,"1.00","BRL","approved",NULL,"602633505",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"208","1386896c-dc8f-432c-b50b-2ed0a5a90258",NULL,"827",NULL,"1.00","BRL","approved",NULL,"601240147",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"209","75d7dede-d140-46c4-a533-1a13fdf12273",NULL,"827",NULL,"1.00","BRL","approved",NULL,"712353791",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"210","df0fd5b0-d3ff-4245-93a6-c03c96ded576",NULL,"827",NULL,"1.00","BRL","approved",NULL,"794726239",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"211","e6571508-a3e7-49aa-bc65-5316ce3ec076",NULL,"827",NULL,"1.00","BRL","approved",NULL,"566553941",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"212","72a7ba9a-5751-4d42-be82-dfb5f5a96854",NULL,"827",NULL,"1.00","BRL","approved",NULL,"704822651",NULL,"2026-01-07 18:04:05",NULL,"accredited","pix","stress_client_1767819828191@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"213","40011e27-d310-4dc0-8746-5ffda15cf350",NULL,"829",NULL,"1.00","BRL","approved",NULL,"912659309",NULL,"2026-01-07 18:09:40",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"214","d2e7348c-bb7c-49b7-91e7-3aacedadb968",NULL,"829",NULL,"1.00","BRL","approved",NULL,"34371233",NULL,"2026-01-07 18:09:40",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"215","84d97024-0b0b-47cf-951a-2f46150ea52b",NULL,"829",NULL,"1.00","BRL","approved",NULL,"296975850",NULL,"2026-01-07 18:09:40",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"216","f7aa510b-6bd3-4ced-a5ad-226b7f70d753",NULL,"829",NULL,"1.00","BRL","approved",NULL,"488473058",NULL,"2026-01-07 18:09:40",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"217","1805740a-7461-43f8-b755-f07f6bd14457",NULL,"829",NULL,"1.00","BRL","approved",NULL,"731608413",NULL,"2026-01-07 18:09:40",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"218","0d350345-70ac-450f-9c4c-a772204cde5e",NULL,"829",NULL,"1.00","BRL","approved",NULL,"907162746",NULL,"2026-01-07 18:09:41",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"219","fa6f5603-2d34-4544-8c2a-482cb22f7e69",NULL,"829",NULL,"1.00","BRL","approved",NULL,"789778175",NULL,"2026-01-07 18:09:41",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"220","cdea598c-1f55-48c0-88ec-06f724eca741",NULL,"829",NULL,"1.00","BRL","approved",NULL,"891076594",NULL,"2026-01-07 18:09:41",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"221","c5d294e7-d42a-4302-a98f-a9ec581f8842",NULL,"829",NULL,"1.00","BRL","approved",NULL,"665270167",NULL,"2026-01-07 18:09:41",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"222","11165032-68f4-4be6-942f-1fcfaf993408",NULL,"829",NULL,"1.00","BRL","approved",NULL,"268160360",NULL,"2026-01-07 18:09:41",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"223","bcd77fbe-3bec-4ea5-8134-01b1f8c602af",NULL,"829",NULL,"1.00","BRL","approved",NULL,"426867941",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"224","c926e422-55e0-426a-9eea-2c1c7a867cb5",NULL,"829",NULL,"1.00","BRL","approved",NULL,"808465615",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"225","3faf48f5-c71d-42af-808d-91373d5d3f48",NULL,"829",NULL,"1.00","BRL","approved",NULL,"702172406",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"226","0bbb81fc-3bd0-44bf-8b0a-79f450205962",NULL,"829",NULL,"1.00","BRL","approved",NULL,"358831781",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"227","728ffaa2-952f-4d06-8d50-7c62422a5299",NULL,"829",NULL,"1.00","BRL","approved",NULL,"300948100",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"228","27d02129-5f5a-40ee-8c8c-e0ae03f31607",NULL,"829",NULL,"1.00","BRL","approved",NULL,"946567522",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"229","8cb23b95-41e7-4652-81c6-1a393b8e1048",NULL,"829",NULL,"1.00","BRL","approved",NULL,"938623345",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"230","2b51d91a-892e-4427-bdc2-802a33b52da4",NULL,"829",NULL,"1.00","BRL","approved",NULL,"94721210",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"231","2f960ca8-f5e3-458b-8efd-41d4c14f242e",NULL,"829",NULL,"1.00","BRL","approved",NULL,"778706214",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"232","7b0d338a-daba-4645-b0d8-039718235018",NULL,"829",NULL,"1.00","BRL","approved",NULL,"824845319",NULL,"2026-01-07 18:10:01",NULL,"accredited","pix","stress_client_1767820164961@cardapyia.test",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"233","bdab8bb6-efcc-4d5c-bb12-f9562e821645",NULL,"531",NULL,"10.00","BRL","approved",NULL,"916499579",NULL,"2026-01-08 11:35:30",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"234","276884ff-d510-4130-9d29-10ef7c9fd50d",NULL,"531",NULL,"10.00","BRL","approved",NULL,"519252109",NULL,"2026-01-08 16:12:18",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"235","a4738262-643b-40e1-94ca-0025a48e235b",NULL,"531",NULL,"10.00","BRL","approved",NULL,"747218149",NULL,"2026-01-08 16:48:12",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"236","18aa91fc-f5a0-4aba-bdfc-fd554e749c06",NULL,"531",NULL,"24.30","BRL","approved",NULL,"282307635",NULL,"2026-01-08 18:29:24",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"237","8cae9e11-f614-4e25-ac01-9a2adfcc55ad",NULL,"531",NULL,"4.05","BRL","cancelled",NULL,"141304204270",NULL,"2026-01-09 09:15:07","2026-01-16 16:30:55","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"238","83f59ff6-7f59-4f33-bda7-1884aa4d3145",NULL,"531",NULL,"4.05","BRL","approved",NULL,"542160496",NULL,"2026-01-10 05:37:05",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"239","8ea2130c-08af-459c-b728-890c5507d359",NULL,"531",NULL,"4.05","BRL","approved",NULL,"489038748",NULL,"2026-01-10 05:58:31",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"240","62f35bb4-3928-4629-b72b-df0c750842bd",NULL,"531",NULL,"4.05","BRL","approved",NULL,"784388190",NULL,"2026-01-10 07:05:50",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"241","cf09ae44-ea31-4fe9-8da5-a037bc4c900a",NULL,"531",NULL,"4.05","BRL","approved",NULL,"492579415",NULL,"2026-01-10 07:18:11",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"242","36de5abb-f76c-4bab-8aa6-a44d69f69ab7",NULL,"531",NULL,"4.50","BRL","pending",NULL,"963995752",NULL,"2026-01-10 09:13:16",NULL,"pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"243","5f256fc3-c878-4116-9dff-6fa4d2168c4b",NULL,"531",NULL,"4.50","BRL","pending",NULL,"297867548",NULL,"2026-01-10 09:18:05",NULL,"pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"244","3520edd4-d0ec-49ca-968b-d62c039df965",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"141485837152",NULL,"2026-01-10 14:36:41","2026-01-13 21:45:42","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"245","5f9474b8-d83f-46bf-bb1f-73ee5647cc3e",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"140907015323",NULL,"2026-01-11 05:33:01","2026-01-14 12:41:17","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"246","cb7539ff-b44a-4e8f-9ae2-cd1c7ffa7cf3",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"140906949729",NULL,"2026-01-11 05:54:25","2026-01-14 13:06:34","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"247","1b03bbff-a2a1-4c70-9935-e281c221f433",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"140907280041",NULL,"2026-01-11 06:19:30","2026-01-18 13:36:01","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"248","46cdc0b8-98de-4bb6-8fae-56251376a2bc",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"141650688960",NULL,"2026-01-11 22:34:43","2026-01-15 05:45:29","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"249","fc47e6b0-c4b4-4a58-88de-3d75c30e8134",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"140995702091",NULL,"2026-01-12 00:08:10","2026-01-15 07:15:36","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"250","733cc8cd-edb2-4600-9def-eeffb996fbd9",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"141002801431",NULL,"2026-01-12 01:55:31","2026-01-15 09:05:23","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"251","be422d73-22c8-433b-b701-5110feecb578",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"141002415719",NULL,"2026-01-12 02:02:18","2026-01-15 09:10:28","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"252","c724200d-14d7-4c73-936f-831f8b56f334",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141002281813",NULL,"2026-01-12 02:04:43","2026-01-14 09:10:40","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"253","0b75294f-d74e-4538-85a7-9fb5b6cf8951",NULL,"531",NULL,"67.50","BRL","approved",NULL,"141003023613",NULL,"2026-01-12 02:20:05","2026-01-14 09:25:31","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"254","9ca8efe0-5940-4151-8223-79c1b8a1ea17",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141666874146",NULL,"2026-01-12 02:30:20","2026-01-14 09:36:39","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"255","b05b052b-8925-4552-ad71-ad651b19d1e0",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"141666674286",NULL,"2026-01-12 02:34:52","2026-01-15 09:40:34","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"256","58e6aa59-9f7a-4360-8b78-e89035576bc0",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141663791792",NULL,"2026-01-12 02:54:18","2026-01-14 10:02:04","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"257","23a961dd-7d1a-4e84-b7c8-39a1f4f84c95",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141666574832",NULL,"2026-01-12 03:16:08","2026-01-14 10:21:16","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"258","d749dbf2-b2b0-4930-bd01-6658fdf8104c",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141665593658",NULL,"2026-01-12 03:48:49","2026-01-14 10:51:22","accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"259","c32cb450-fa75-4276-b337-f2233727a888",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141049088315",NULL,"2026-01-12 11:37:37","2026-01-14 18:41:36","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"260","5519193a-59cf-42f2-96f1-f6d26f875f40",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141137079993",NULL,"2026-01-12 23:19:15","2026-01-15 06:25:21","accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"261","054aa0c4-69a1-44d2-86b6-3f703e985176",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141142376405",NULL,"2026-01-13 00:06:11","2026-01-15 07:10:28","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"262","8dbf239e-c2d8-4e9c-a8c3-898dda8f5179",NULL,"531",NULL,"4.50","BRL","cancelled",NULL,"141802974850",NULL,"2026-01-13 00:10:34","2026-01-14 00:15:38","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"263","e8cae1c8-a24e-41f1-bb57-0eb3419141ca",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141803385140",NULL,"2026-01-13 00:23:37","2026-01-15 07:25:43","accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"264","03573cf0-da7b-467d-ad04-a9c22be38058",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141827204532",NULL,"2026-01-13 07:50:36","2026-01-13 14:50:46","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"265","99c9e547-9328-4cba-a997-4ef9fa7ade7a",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141837396968",NULL,"2026-01-13 09:35:19","2026-01-13 10:36:14","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"266","b72be314-156d-497f-9478-848d695b3b07",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141840826104",NULL,"2026-01-13 09:56:33","2026-01-13 10:15:48","accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"267","2d30cea7-8c6d-49e4-a4d5-83a3f28c0057",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141841220004",NULL,"2026-01-13 10:21:31","2026-01-13 10:22:09","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"268","bd8a54b3-6def-4400-8a9d-3d00da753728",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141862633476",NULL,"2026-01-13 12:52:28","2026-01-13 12:53:26","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"269","ad39bb9c-e1eb-4207-8c97-2c11b797b29d",NULL,"531",NULL,"4.50","BRL","approved",NULL,"141948782008",NULL,"2026-01-14 03:54:22","2026-01-14 03:55:06","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"270","ad39bb9c-e1eb-4207-8c97-2c11b797b29d",NULL,"531",NULL,"10.50","BRL","approved",NULL,"141289333347",NULL,"2026-01-14 04:37:37","2026-01-14 04:38:15","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"271","ac9ae1c2-5ad8-4b1c-ae21-26a77b2772d0",NULL,"531",NULL,"24.00","BRL","approved",NULL,"142571059236",NULL,"2026-01-18 18:02:28","2026-01-18 18:03:46","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"272","38d4d88a-8fb4-4141-9590-10e59b10b85b",NULL,"531",NULL,"45.00","BRL","approved",NULL,"141911652221",NULL,"2026-01-18 19:18:31","2026-01-18 19:19:18","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"273","8b2b736f-8eba-4eb2-9f02-6ba04c7385f9",NULL,"531",NULL,"45.00","BRL","approved",NULL,"141941331589",NULL,"2026-01-19 02:08:31","2026-01-19 02:09:11","accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"274","fb4716b8-81da-404c-b739-d976fa82594f",NULL,"531",NULL,"24.00","BRL","cancelled",NULL,"141989040807",NULL,"2026-01-19 12:05:40","2026-01-20 12:10:48","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"275","f9bc95cc-8392-4a2f-bd5f-c7cb2a89d09b",NULL,"531",NULL,"24.00","BRL","cancelled",NULL,"141989247443",NULL,"2026-01-19 12:11:31","2026-01-20 12:15:55","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"276","bfefa30d-a378-43d4-8570-005879a8217d",NULL,"531",NULL,"24.00","BRL","cancelled",NULL,"141994045453",NULL,"2026-01-19 12:46:24","2026-01-20 12:52:00","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"277","0c822ae8-301e-4649-82d5-1f19909b5579",NULL,"531",NULL,"24.00","BRL","cancelled",NULL,"142665828182",NULL,"2026-01-19 12:51:15","2026-01-20 12:55:52","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"278","0c822ae8-301e-4649-82d5-1f19909b5579",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"141993972003",NULL,"2026-01-19 12:52:47","2026-01-20 12:56:26","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"279","0c822ae8-301e-4649-82d5-1f19909b5579",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"142666168220",NULL,"2026-01-19 12:53:54","2026-01-20 13:00:04","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"280","0c822ae8-301e-4649-82d5-1f19909b5579",NULL,"531",NULL,"45.00","BRL","cancelled",NULL,"141995385285",NULL,"2026-01-19 12:55:05","2026-01-20 13:00:58","pending_waiting_transfer","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"281","0c822ae8-301e-4649-82d5-1f19909b5579",NULL,"531",NULL,"45.00","BRL","approved",NULL,"158508170",NULL,"2026-01-19 12:58:56",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"282","9c6cea93-d725-48c5-82a0-4333cc18735c",NULL,"531",NULL,"24.00","BRL","approved",NULL,"554556509",NULL,"2026-01-19 15:52:20",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"283","bd69095c-2f7c-4bd6-b064-436200db3bb6",NULL,"531",NULL,"24.00","BRL","approved",NULL,"755395951",NULL,"2026-01-19 17:47:24",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"284","9934c260-6af4-4416-9ceb-e72e08d135af",NULL,"531",NULL,"12.00","BRL","approved",NULL,"939209492",NULL,"2026-01-19 18:04:01",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"285","441ae629-3fe2-4957-ac47-6ac6f6c13a4c",NULL,"531",NULL,"12.00","BRL","approved",NULL,"216057719",NULL,"2026-01-21 22:27:31",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"286","f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8",NULL,"531",NULL,"12.00","BRL","approved",NULL,"223467912",NULL,"2026-01-22 13:27:56",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"287","888e7434-c181-4242-8ae4-a45cf291f9ee",NULL,"531",NULL,"15.90","BRL","approved",NULL,"78595031",NULL,"2026-01-22 23:36:07",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"288","808386e1-42f5-4e5e-a6eb-958471c863a6",NULL,"531",NULL,"9.00","BRL","approved",NULL,"849278507",NULL,"2026-01-22 23:44:02",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"289","f30f8308-ded6-465f-a764-394d79a71bc0",NULL,"531",NULL,"12.60","BRL","approved",NULL,"123335565",NULL,"2026-01-22 23:55:16",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"290","1ad1f9a6-58cc-4943-9529-d96132cb5178",NULL,"531",NULL,"12.00","BRL","approved",NULL,"467802506",NULL,"2026-01-23 14:30:27",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"291","6b82f28c-0876-4ac1-a927-d34bce350cc0",NULL,"531",NULL,"5.40","BRL","approved",NULL,"375480047",NULL,"2026-01-26 13:14:31",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"292","31097f51-4fb7-44d6-bf7b-c1f5ddeb4eb6",NULL,"531",NULL,"5.40","BRL","approved",NULL,"762303208",NULL,"2026-01-26 13:48:31",NULL,"accredited","pix","usuario@exemplo.com",NULL,NULL,NULL,"1","PIX",NULL,NULL,NULL,NULL,NULL,NULL
+"id","name","category_id","icon","keywords","search_vector","popularity_score","service_type"
+"3728","Eletricista","2",NULL,"elÃ©trica,fiaÃ§Ã£o,tomada,disjuntor,chuveiro,luz,instalaÃ§Ã£o elÃ©trica",NULL,"0","on_site"
+"3729","Encanador",NULL,NULL,"hidrÃ¡ulica,cano,vazamento,torneira,caixa d'Ã¡gua,esgoto,bombeiro hidrÃ¡ulico",NULL,"0","on_site"
+"3730","Pintor","3",NULL,"pintura,parede,tinta,acabamento,textura,massa corrida",NULL,"0","on_site"
+"3731","Pedreiro","6",NULL,"construÃ§Ã£o,reforma,obras,pedreiro,alvenaria,telhadista,azulejista,mestre de obras",NULL,"0","on_site"
+"3732","Carpinteiro","4",NULL,"madeira,mÃ³veis,portas,reforma,carpinteiro,montador de mÃ³veis,marceneiro,deck",NULL,"0","on_site"
+"3735","Vidraceiro",NULL,NULL,"vidro,janela,box,espelho,cortina de vidro,fechamento de varanda",NULL,"0","on_site"
+"3736","Chaveiro","5",NULL,"chaves,fechadura,abertura,codificaÃ§Ã£o,seguranÃ§a,cadeado,chaveiro 24h",NULL,"0","on_site"
+"3737","Gesseiro","5",NULL,"gesso,drywall,sanca,forro,moldura,parede,reforma",NULL,"0","on_site"
+"3740","Serralheiro","5",NULL,"ferro,portÃ£o,grade,solda,estrutura metÃ¡lica,alumÃ­nio",NULL,"0","on_site"
+"3742","Diarista","6",NULL,"limpeza,faxina,casa,organizaÃ§Ã£o,passar roupa,cozinhar",NULL,"0","on_site"
+"3744","TÃ©cnico de RefrigeraÃ§Ã£o","5",NULL,"ar condicionado,refrigeraÃ§Ã£o,climatizaÃ§Ã£o,split,manutenÃ§Ã£o,instalaÃ§Ã£o de ar,geladeira,freezer",NULL,"0","on_site"
+"4187","Fisioterapeuta",NULL,NULL,"fisioterapia,reabilitaÃ§Ã£o,massagem,dor,coluna,pilates",NULL,"0","at_provider"
+"4189","Nutricionista",NULL,NULL,"dieta,alimentaÃ§Ã£o,saÃºde,emagrecimento,nutriÃ§Ã£o",NULL,"0","at_provider"
+"4190","PsicÃ³logo",NULL,NULL,"terapia,saÃºde mental,ansiedade,depressÃ£o,acompanhamento",NULL,"0","at_provider"
+"4196","Barbeiro",NULL,NULL,"cabelo,barba,bigode,corte masculino,degradÃª",NULL,"80","at_provider"
+"4202","Cabeleireiro",NULL,NULL,"cabelo,corte,pintura,mechas,escova,progressiva,cabelereira",NULL,"0","at_provider"
+"4220","Esteticista",NULL,NULL,"pele,limpeza de pele,massagem,drenagem,depilaÃ§Ã£o,sobrancelha",NULL,"0","at_provider"
+"4242","Jardinagem",NULL,NULL,"jardim,grama,poda,plantas,paisagismo,corte de grama",NULL,"0","on_site"
+"4248","Maquiadora",NULL,NULL,"maquiagem,makeup,festa,noiva,social,beleza,makeup artist",NULL,"0","at_provider"
+"4249","MÃ©dico",NULL,NULL,"saÃºde,consulta,doenÃ§a,exame,clÃ­nico geral,pediatra,cardiologista",NULL,"0","at_provider"
+"4253","Dentista",NULL,NULL,"dente,odontologia,boca,clareamento,aparelho,canal,extraÃ§Ã£o",NULL,"0","at_provider"
+"4254","Enfermeiro",NULL,NULL,"enfermagem,cuidados,curativo,injeÃ§Ã£o,home care,idosos",NULL,"0","on_site"
+"4273","seguranÃ§a privado","9",NULL,NULL,NULL,"0","on_site"
+"4274","segurnaÃ§a privada","9",NULL,NULL,NULL,"0","on_site"
+"4275","TÃ©cnico de FogÃ£o de GÃ¡s",NULL,NULL,NULL,NULL,"0","on_site"
+"4278","Motorista particular",NULL,NULL,NULL,NULL,"0","on_site"
+"4279","Montador de ImÃ³veis",NULL,NULL,NULL,NULL,"0","on_site"
+"4280","Design de Sobrancelhas",NULL,NULL,NULL,NULL,"0","on_site"
+"4282","TÃ©cnico de seguranÃ§a eletrÃ´nica",NULL,NULL,NULL,NULL,"0","on_site"
+"4283","Borracheiro",NULL,NULL,"pneu,roda,estepe,furado,remendo,vulcanizaÃ§Ã£o,balanceamento",NULL,"0","on_site"
+"4284","Cilios",NULL,NULL,NULL,NULL,"0","on_site"
+"4285","MecÃ¢nico",NULL,NULL,"carro,motor,freio,suspensÃ£o,Ã³leo,bateria,alinhamento,mecÃ¢nica",NULL,"0","on_site"
+"4287","TÃ©cnico de InformÃ¡tica",NULL,NULL,"notebook,computador,windows,formataÃ§Ã£o,wi-fi,impressora,software,ti",NULL,"0","on_site"
+"4288","Personal Trainer",NULL,NULL,"academia,treino,fitness,saÃºde,emagrecimento,musculaÃ§Ã£o,dieta,personal",NULL,"0","on_site"
+"4290","Pet Shop",NULL,NULL,"cachorro,gato,banho,tosa,pet,animal,adestramento,veterinÃ¡rio",NULL,"0","at_provider"
+"4291","Fretes e MudanÃ§as",NULL,NULL,"mudanÃ§a,carreto,transporte,caminhÃ£o,frete,entrega",NULL,"0","on_site"
+"4293","Manicure","7","hand",NULL,NULL,"0","on_site"
+"id","mission_id","user_id","price","deadline_days","status","created_at"
+"user_id","bio","address","rating_avg","rating_count","wallet_balance","latitude","longitude","is_online","document_type","document_value","commercial_name"
+"528",,NULL,"0.00","0","0.00",NULL,NULL,"0","cpf","756.756.756-75","lima redormas "
+"531","Fake Provider",NULL,"0.00","0","0.00",NULL,NULL,"1",NULL,NULL,NULL
+"832",NULL,"Rua Antonio Nunes, 9 - Centro, Imperatriz - MaranhÃ£o (65909-655)","0.00","0","0.00","-23.55052000","-46.63330800","0",NULL,NULL,"barba ruiva"
+"833",NULL,"Rua Tocantins, 30 - Parque das Palmeiras, Imperatriz - MaranhÃ£o (65911-773)","0.00","0","0.00","-23.55052000","-46.63330800","0",NULL,NULL,"cabelo"
+"834",NULL,NULL,"0.00","0","0.00","-23.55052000","-46.63330800","1",NULL,NULL,NULL
+"835",NULL,NULL,"0.00","0","0.00","-23.55052000","-46.63330800","1",NULL,NULL,NULL
+"849",NULL,"Loc: -5.52791, -47.47927","0.00","0","0.00","-23.55052000","-46.63330800","0",NULL,NULL,"Lucas cabelira"
+"850",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"852",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"854",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"856",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"858",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"860",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"862",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"864",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"866",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"868",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"870",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"872",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"873",NULL,"Rua JoÃ£o Walcacer de Oliveira, 16 - Parque das Palmeiras, Imperatriz - MaranhÃ£o (65911-773)","0.00","0","0.00","-23.55052000","-46.63330800","0",NULL,NULL,"stjwtnqf"
+"874",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"877",NULL,NULL,"0.00","0","0.00",NULL,NULL,"0",NULL,NULL,NULL
+"878",NULL,NULL,"4.90","85","0.00","-23.54552000","-46.62830800","0",NULL,NULL,"Ana Manicure & Nail Art"
+"id","provider_id","name","description","duration","price","category","active","created_at"
+"159","832","Barba (Barboterapia)",NULL,"30","40.00",NULL,"1","2026-01-09 18:32:13"
+"160","832","Barba (Barboterapia/Toalha Quente)",NULL,"30","40.00",NULL,"1","2026-01-09 18:32:13"
+"161","832","Barba Completa",NULL,"30","40.01",NULL,"1","2026-01-09 18:32:14"
+"162","832","Barba Simples (MÃ¡quina/Navalha)",NULL,"20","30.00",NULL,"1","2026-01-09 18:32:14"
+"163","832","Barboterapia",NULL,"45","50.00",NULL,"1","2026-01-09 18:32:15"
+"164","832","Barboterapia (Toalha Quente)",NULL,"40","53.00",NULL,"1","2026-01-09 18:32:15"
+"165","832","Camuflagem de Fios",NULL,"20","40.00",NULL,"1","2026-01-09 18:32:15"
+"166","832","Combo: Cabelo + Barba",NULL,"75","80.00",NULL,"1","2026-01-09 18:32:16"
+"167","832","Combo: Corte + Barba",NULL,"70","80.00",NULL,"1","2026-01-09 18:32:16"
+"168","832","Corte DegradÃª (Fade)",NULL,"45","53.00",NULL,"1","2026-01-09 18:32:17"
+"169","832","Corte Masculino (Social)",NULL,"30","38.00",NULL,"1","2026-01-09 18:32:18"
+"170","832","Corte Social",NULL,"40","42.00",NULL,"1","2026-01-09 18:32:18"
+"171","832","DegradÃª (Fade)",NULL,"55","45.00",NULL,"1","2026-01-09 18:32:19"
+"172","832","Pezinho (Acabamento)",NULL,"15","18.00",NULL,"1","2026-01-09 18:32:19"
+"173","832","Pezinho (Contorno)",NULL,"15","15.00",NULL,"1","2026-01-09 18:32:20"
+"174","832","PigmentaÃ§Ã£o de Barba/Cabelo",NULL,"30","40.00",NULL,"1","2026-01-09 18:32:20"
+"175","832","Sobrancelha (Navalha)",NULL,"15","20.00",NULL,"1","2026-01-09 18:32:20"
+"176","833","CauterizaÃ§Ã£o Capilar",NULL,"80","150.00",NULL,"1","2026-01-09 21:30:03"
+"177","833","Botox Capilar",NULL,"90","120.00",NULL,"1","2026-01-09 21:30:03"
+"178","833","ColoraÃ§Ã£o (SÃ³ aplicaÃ§Ã£o)",NULL,"45","60.00",NULL,"1","2026-01-09 21:30:04"
+"179","833","Corte DegradÃª (Fade)",NULL,"50","50.00",NULL,"1","2026-01-09 21:30:04"
+"180","833","Corte Feminino",NULL,"60","70.00",NULL,"1","2026-01-09 21:30:05"
+"181","833","Corte Feminino (Lavado)",NULL,"60","80.00",NULL,"1","2026-01-09 21:30:05"
+"182","833","Corte Masculino (Simples)",NULL,"45","40.00",NULL,"1","2026-01-09 21:30:06"
+"183","833","Corte Masculino (Simples/Social)",NULL,"40","40.00",NULL,"1","2026-01-09 21:30:06"
+"184","833","Escova (Brushing)",NULL,"50","60.00",NULL,"1","2026-01-09 21:30:07"
+"185","833","Escova + Chapinha",NULL,"50","65.00",NULL,"1","2026-01-09 21:30:07"
+"186","833","HidrataÃ§Ã£o Profunda",NULL,"40","70.00",NULL,"1","2026-01-09 21:30:08"
+"187","833","Luzes / Mechas",NULL,"240","425.00",NULL,"1","2026-01-09 21:30:08"
+"188","833","MatizaÃ§Ã£o",NULL,"30","50.00",NULL,"1","2026-01-09 21:30:09"
+"189","833","Progressiva / Selagem",NULL,"120","185.00",NULL,"1","2026-01-09 21:30:09"
+"190","833","Selagem / Progressiva",NULL,"150","225.00",NULL,"1","2026-01-09 21:30:10"
+"191","833","ColoraÃ§Ã£o (AplicaÃ§Ã£o)",NULL,"60","70.00",NULL,"1","2026-01-09 21:30:10"
+"192","849","Barba (Barboterapia)",NULL,"30","40.00",NULL,"1","2026-01-11 10:17:48"
+"193","849","Barba (Barboterapia/Toalha Quente)",NULL,"30","40.00",NULL,"1","2026-01-11 10:17:49"
+"194","849","Barba Completa",NULL,"30","40.01",NULL,"1","2026-01-11 10:17:50"
+"195","849","Barba Simples (MÃ¡quina/Navalha)",NULL,"20","30.00",NULL,"1","2026-01-11 10:17:50"
+"196","849","Barboterapia",NULL,"45","50.00",NULL,"1","2026-01-11 10:17:51"
+"197","849","Barboterapia (Toalha Quente)",NULL,"40","53.00",NULL,"1","2026-01-11 10:17:51"
+"198","849","Camuflagem de Fios",NULL,"20","40.00",NULL,"1","2026-01-11 10:17:52"
+"199","849","Combo: Cabelo + Barba",NULL,"75","80.00",NULL,"1","2026-01-11 10:17:52"
+"200","849","Combo: Corte + Barba",NULL,"70","80.00",NULL,"1","2026-01-11 10:17:53"
+"201","849","Corte DegradÃª (Fade)",NULL,"45","53.00",NULL,"1","2026-01-11 10:17:54"
+"202","849","Corte Masculino (Social)",NULL,"30","38.00",NULL,"1","2026-01-11 10:17:54"
+"203","849","Corte Social",NULL,"40","42.00",NULL,"1","2026-01-11 10:17:55"
+"204","849","DegradÃª (Fade)",NULL,"55","45.00",NULL,"1","2026-01-11 10:17:56"
+"205","849","Pezinho (Acabamento)",NULL,"15","18.00",NULL,"1","2026-01-11 10:17:56"
+"206","849","Pezinho (Contorno)",NULL,"15","15.00",NULL,"1","2026-01-11 10:17:57"
+"207","849","PigmentaÃ§Ã£o de Barba/Cabelo",NULL,"30","40.00",NULL,"1","2026-01-11 10:17:58"
+"208","849","Sobrancelha (Navalha)",NULL,"15","20.00",NULL,"1","2026-01-11 10:17:58"
+"209","873","Barba (Barboterapia)",NULL,"30","40.00",NULL,"1","2026-01-11 22:53:53"
+"210","873","Barba (Barboterapia/Toalha Quente)",NULL,"30","40.00",NULL,"1","2026-01-11 22:53:54"
+"211","873","Barba Completa",NULL,"30","40.01",NULL,"1","2026-01-11 22:53:54"
+"212","873","Barba Simples (MÃ¡quina/Navalha)",NULL,"20","30.00",NULL,"1","2026-01-11 22:53:55"
+"213","873","Barboterapia",NULL,"45","50.00",NULL,"1","2026-01-11 22:53:55"
+"214","873","Barboterapia (Toalha Quente)",NULL,"40","53.00",NULL,"1","2026-01-11 22:53:56"
+"215","873","Camuflagem de Fios",NULL,"20","40.00",NULL,"1","2026-01-11 22:53:56"
+"216","873","Combo: Cabelo + Barba",NULL,"75","80.00",NULL,"1","2026-01-11 22:53:57"
+"217","873","Combo: Corte + Barba",NULL,"70","80.00",NULL,"1","2026-01-11 22:53:58"
+"218","873","Corte DegradÃª (Fade)",NULL,"45","53.00",NULL,"1","2026-01-11 22:53:58"
+"219","873","Corte Masculino (Social)",NULL,"30","38.00",NULL,"1","2026-01-11 22:53:59"
+"220","873","Corte Social",NULL,"40","42.00",NULL,"1","2026-01-11 22:53:59"
+"221","873","DegradÃª (Fade)",NULL,"55","45.00",NULL,"1","2026-01-11 22:54:00"
+"222","873","Pezinho (Acabamento)",NULL,"15","18.00",NULL,"1","2026-01-11 22:54:00"
+"223","873","Pezinho (Contorno)",NULL,"15","15.00",NULL,"1","2026-01-11 22:54:01"
+"224","873","PigmentaÃ§Ã£o de Barba/Cabelo",NULL,"30","40.00",NULL,"1","2026-01-11 22:54:01"
+"225","873","Sobrancelha (Navalha)",NULL,"15","20.00",NULL,"1","2026-01-11 22:54:02"
+"provider_id","latitude","longitude","updated_at"
+"528","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"531","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"550","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"554","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"564","-23.55050000","-46.63330000","2026-01-02 22:25:50"
+"572","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"609","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"723","-23.54102985","-46.63330306","2026-01-07 23:43:05"
+"724","-23.54735833","-46.62847156","2026-01-07 23:43:43"
+"725","-23.54619530","-46.62459507","2026-01-07 23:43:44"
+"831","-23.54552000","-46.62830800","2026-01-08 16:11:19"
+"832","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"834","-23.55052000","-46.63330800","2026-01-26 17:21:07"
+"835","-5.50598310","-47.45349620","2026-01-26 17:31:07"
+"878","-23.54552000","-46.62830800","2026-01-26 16:39:55"
+"id","user_id","kind","s3_key","created_at"
+"id","provider_id","request_id","reason","applied_at"
+"provider_user_id","profession_id","fixed_price","hourly_rate"
+"211","3731",NULL,NULL
+"211","3732",NULL,NULL
+"214","3731",NULL,NULL
+"219","3731",NULL,NULL
+"220","3729",NULL,NULL
+"221","3729",NULL,NULL
+"227","3731",NULL,NULL
+"228","3731",NULL,NULL
+"229","3731",NULL,NULL
+"230","3731",NULL,NULL
+"231","3731",NULL,NULL
+"232","3731",NULL,NULL
+"233","3731",NULL,NULL
+"234","3731",NULL,NULL
+"235","3731",NULL,NULL
+"236","3731",NULL,NULL
+"237","3731",NULL,NULL
+"238","3731",NULL,NULL
+"239","3731",NULL,NULL
+"240","3731",NULL,NULL
+"241","3731",NULL,NULL
+"242","3731",NULL,NULL
+"243","3731",NULL,NULL
+"244","3731",NULL,NULL
+"245","3731",NULL,NULL
+"246","3731",NULL,NULL
+"247","3731",NULL,NULL
+"248","3731",NULL,NULL
+"249","3731",NULL,NULL
+"250","3731",NULL,NULL
+"251","3731",NULL,NULL
+"252","3731",NULL,NULL
+"253","3731",NULL,NULL
+"254","3731",NULL,NULL
+"255","3731",NULL,NULL
+"256","3731",NULL,NULL
+"468","3731",NULL,NULL
+"469","3731",NULL,NULL
+"470","3731",NULL,NULL
+"471","3731",NULL,NULL
+"472","3731",NULL,NULL
+"473","3731",NULL,NULL
+"474","3731",NULL,NULL
+"475","3731",NULL,NULL
+"476","3731",NULL,NULL
+"477","3731",NULL,NULL
+"478","3731",NULL,NULL
+"479","3731",NULL,NULL
+"480","3731",NULL,NULL
+"481","3731",NULL,NULL
+"482","3731",NULL,NULL
+"483","3731",NULL,NULL
+"484","3731",NULL,NULL
+"485","3731",NULL,NULL
+"486","3731",NULL,NULL
+"487","3731",NULL,NULL
+"488","3731",NULL,NULL
+"489","3731",NULL,NULL
+"490","3731",NULL,NULL
+"491","3731",NULL,NULL
+"492","3731",NULL,NULL
+"493","3731",NULL,NULL
+"494","3731",NULL,NULL
+"495","3731",NULL,NULL
+"496","3731",NULL,NULL
+"497","3731",NULL,NULL
+"507","3728",NULL,NULL
+"507","3729",NULL,NULL
+"509","3728",NULL,NULL
+"509","3729",NULL,NULL
+"511","3728",NULL,NULL
+"511","3729",NULL,NULL
+"513","3728",NULL,NULL
+"513","3729",NULL,NULL
+"515","3728",NULL,NULL
+"515","3729",NULL,NULL
+"517","3728",NULL,NULL
+"517","3729",NULL,NULL
+"519","3728",NULL,NULL
+"519","3729",NULL,NULL
+"521","3728",NULL,NULL
+"521","3729",NULL,NULL
+"523","3728",NULL,NULL
+"523","3729",NULL,NULL
+"525","3728",NULL,NULL
+"525","3729",NULL,NULL
+"528","3736",NULL,NULL
+"528","3744",NULL,NULL
+"547","4196",NULL,NULL
+"548","4202",NULL,NULL
+"549","4202",NULL,NULL
+"550","3728",NULL,NULL
+"551","4202",NULL,NULL
+"552","3731",NULL,NULL
+"553","3731",NULL,NULL
+"554","3736",NULL,NULL
+"564","3731",NULL,NULL
+"572","3731",NULL,NULL
+"594","4196",NULL,NULL
+"596","4196",NULL,NULL
+"598","4196",NULL,NULL
+"600","4196",NULL,NULL
+"602","4196",NULL,NULL
+"604","4196",NULL,NULL
+"606","4196",NULL,NULL
+"608","4196",NULL,NULL
+"609","3731",NULL,NULL
+"722","1",NULL,NULL
+"722","2",NULL,NULL
+"723","1",NULL,NULL
+"723","2",NULL,NULL
+"723","4196",NULL,NULL
+"724","1",NULL,NULL
+"724","2",NULL,NULL
+"724","4196",NULL,NULL
+"725","1",NULL,NULL
+"725","2",NULL,NULL
+"725","4196",NULL,NULL
+"726","1",NULL,NULL
+"726","2",NULL,NULL
+"727","1",NULL,NULL
+"727","2",NULL,NULL
+"728","1",NULL,NULL
+"728","2",NULL,NULL
+"729","1",NULL,NULL
+"729","2",NULL,NULL
+"730","1",NULL,NULL
+"730","2",NULL,NULL
+"731","1",NULL,NULL
+"731","2",NULL,NULL
+"732","1",NULL,NULL
+"732","2",NULL,NULL
+"733","1",NULL,NULL
+"733","2",NULL,NULL
+"734","1",NULL,NULL
+"734","2",NULL,NULL
+"735","1",NULL,NULL
+"735","2",NULL,NULL
+"736","1",NULL,NULL
+"736","2",NULL,NULL
+"737","1",NULL,NULL
+"737","2",NULL,NULL
+"738","1",NULL,NULL
+"738","2",NULL,NULL
+"739","1",NULL,NULL
+"739","2",NULL,NULL
+"740","1",NULL,NULL
+"740","2",NULL,NULL
+"741","1",NULL,NULL
+"741","2",NULL,NULL
+"742","1",NULL,NULL
+"742","2",NULL,NULL
+"743","1",NULL,NULL
+"743","2",NULL,NULL
+"744","1",NULL,NULL
+"744","2",NULL,NULL
+"745","1",NULL,NULL
+"745","2",NULL,NULL
+"746","1",NULL,NULL
+"746","2",NULL,NULL
+"747","1",NULL,NULL
+"747","2",NULL,NULL
+"748","1",NULL,NULL
+"748","2",NULL,NULL
+"749","1",NULL,NULL
+"749","2",NULL,NULL
+"750","1",NULL,NULL
+"750","2",NULL,NULL
+"751","1",NULL,NULL
+"751","2",NULL,NULL
+"752","1",NULL,NULL
+"752","2",NULL,NULL
+"753","1",NULL,NULL
+"753","2",NULL,NULL
+"754","1",NULL,NULL
+"754","2",NULL,NULL
+"755","1",NULL,NULL
+"755","2",NULL,NULL
+"756","1",NULL,NULL
+"756","2",NULL,NULL
+"757","1",NULL,NULL
+"757","2",NULL,NULL
+"758","1",NULL,NULL
+"758","2",NULL,NULL
+"759","1",NULL,NULL
+"759","2",NULL,NULL
+"760","1",NULL,NULL
+"760","2",NULL,NULL
+"761","1",NULL,NULL
+"761","2",NULL,NULL
+"762","1",NULL,NULL
+"762","2",NULL,NULL
+"763","1",NULL,NULL
+"763","2",NULL,NULL
+"764","1",NULL,NULL
+"764","2",NULL,NULL
+"765","1",NULL,NULL
+"765","2",NULL,NULL
+"766","1",NULL,NULL
+"766","2",NULL,NULL
+"792","1",NULL,NULL
+"831","4203",NULL,NULL
+"832","4196",NULL,NULL
+"834","3744",NULL,NULL
+"835","3736",NULL,NULL
+"835","3744",NULL,NULL
+"849","4196",NULL,NULL
+"850","4242",NULL,NULL
+"873","4196",NULL,NULL
+"874","3731",NULL,NULL
+"878","4292",NULL,NULL
+"id","provider_id","day_of_week","start_time","end_time","break_start","break_end","slot_duration","is_enabled","created_at","updated_at"
+"67","832","0","06:00:00","02:30:00","13:00:00","15:00:00","30","0","2026-01-09 18:32:11","2026-01-19 08:32:22"
+"68","832","1","10:00:00","22:00:00","13:00:00","14:00:00","30","1","2026-01-09 18:32:12","2026-01-19 08:28:38"
+"69","832","2","09:00:00","18:00:00",NULL,NULL,"30","1","2026-01-09 18:32:12",NULL
+"70","832","3","09:00:00","18:00:00",NULL,NULL,"30","1","2026-01-09 18:32:12",NULL
+"71","832","4","09:00:00","18:00:00",NULL,NULL,"30","1","2026-01-09 18:32:12",NULL
+"72","832","5","09:00:00","18:00:00",NULL,NULL,"30","1","2026-01-09 18:32:12",NULL
+"73","833","0","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:01",NULL
+"74","833","1","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:01",NULL
+"75","833","2","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:01",NULL
+"76","833","3","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:02",NULL
+"77","833","4","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:02",NULL
+"78","833","5","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:02",NULL
+"79","833","6","12:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-09 21:30:02",NULL
+"80","849","0","09:00:00","20:00:00","00:00:00","00:00:00","30","1","2026-01-11 10:17:47",NULL
+"81","849","1","11:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 10:17:47",NULL
+"82","849","2","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 10:17:47",NULL
+"83","849","3","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 10:17:47",NULL
+"84","849","4","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 10:17:47",NULL
+"85","849","5","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 10:17:47",NULL
+"86","873","3","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:52",NULL
+"87","873","4","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:52",NULL
+"88","873","5","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:52",NULL
+"89","873","1","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:52",NULL
+"90","873","2","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:53",NULL
+"91","873","0","09:00:00","18:00:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:53",NULL
+"92","873","6","00:00:00","23:05:00","12:00:00","13:00:00","30","1","2026-01-11 22:53:53",NULL
+"99","832","6","08:00:00","18:00:00","13:00:00","13:50:00","30","0","2026-01-18 08:43:16","2026-01-19 08:32:22"
+"240","878","1","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:55","2026-01-26 16:39:55"
+"241","878","2","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:55","2026-01-26 16:39:55"
+"242","878","3","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:56","2026-01-26 16:39:56"
+"243","878","4","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:56","2026-01-26 16:39:56"
+"244","878","5","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:56","2026-01-26 16:39:56"
+"245","878","6","09:00:00","18:00:00","12:00:00","13:00:00","45","1","2026-01-26 16:39:56","2026-01-26 16:39:56"
+"id","provider_id","day_of_week","start_time","end_time","is_active","created_at","updated_at","lunch_start","lunch_end","slot_duration"
+"id","provider_id","date","start_time","end_time","is_closed","reason","created_at"
+"id","service_id","reviewer_id","reviewee_id","rating","comment","created_at"
+"id","client_id","provider_id","category","description","status","created_at"
+"id","name","icon_slug"
+"1","Encanamento","droplets"
+"2","ElÃ©trica","zap"
+"3","Pintura","paintbrush"
+"4","Marcenaria","hammer"
+"5","ManutenÃ§Ã£o","wrench"
+"6","Geral","home"
+"id","client_id","provider_id","request_id","created_at"
+"id","service_id","provider_list","status","current_cycle","current_provider_index","history","last_attempt_at","next_retry_at","created_at","updated_at"
+"50","5f9474b8-d83f-46bf-bb1f-73ee5647cc3e","[834, 835]","failed","3","1","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T08:57:54.333Z"", ""provider_id"": 834}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:21:58.457Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:22:30.231Z"", ""provider_id"": 834}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:01.956Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:32.855Z"", ""provider_id"": 834}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:04.429Z"", ""provider_id"": 835}]","2026-01-11 20:23:33","2026-01-11 20:54:05","2026-01-11 05:33:00",NULL
+"51","cb7539ff-b44a-4e8f-9ae2-cd1c7ffa7cf3","[554, 835, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T08:57:54.482Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:21:58.616Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:22:31.080Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:01.990Z"", ""provider_id"": 554}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:33.585Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:05.205Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:36.205Z"", ""provider_id"": 554}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:07.728Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:39.233Z"", ""provider_id"": 528}]","2026-01-11 20:25:08","2026-01-11 20:55:39","2026-01-11 05:54:23",NULL
+"52","simulated_1768122377947","[835, 554, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:21:59.126Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:22:30.079Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:01.711Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:33.228Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:04.363Z"", ""provider_id"": 554}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:36.027Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:07.758Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:38.701Z"", ""provider_id"": 554}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:26:10.374Z"", ""provider_id"": 528}]","2026-01-11 20:25:39","2026-01-11 20:56:11","2026-01-11 06:06:20",NULL
+"53","simulated_1768122640439","[835, 554, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:21:59.298Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:22:30.217Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:01.825Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:33.384Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:04.429Z"", ""provider_id"": 554}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:35.967Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:07.696Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:38.580Z"", ""provider_id"": 554}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:26:10.200Z"", ""provider_id"": 528}]","2026-01-11 20:25:39","2026-01-11 20:56:10","2026-01-11 06:10:42",NULL
+"54","simulated_1768123047045","[835, 554, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""reject"", ""timestamp"": ""2026-01-11T09:18:00.237Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:21:59.434Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:22:30.918Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:02.633Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:23:33.570Z"", ""provider_id"": 554}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:05.108Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:24:36.780Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:07.652Z"", ""provider_id"": 554}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-11T23:25:39.311Z"", ""provider_id"": 528}]","2026-01-11 20:25:08","2026-01-11 20:55:39","2026-01-11 06:17:30",NULL
+"55","1b03bbff-a2a1-4c70-9935-e281c221f433","[554, 835, 528]","completed","1","0","[]",NULL,NULL,"2026-01-11 06:19:29",NULL
+"56","fc47e6b0-c4b4-4a58-88de-3d75c30e8134","[834, 835, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T03:09:23.446Z"", ""provider_id"": 834}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:21:40.342Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:22:12.492Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:22:43.411Z"", ""provider_id"": 834}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:23:14.967Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:23:46.717Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:24:17.678Z"", ""provider_id"": 834}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:24:49.173Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:25:20.721Z"", ""provider_id"": 528}]","2026-01-12 01:24:50","2026-01-12 01:55:21","2026-01-12 00:08:09",NULL
+"57","simulated_1768188496942","[835, 554, 528]","failed","3","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:21:40.477Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:22:12.047Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:22:43.533Z"", ""provider_id"": 528}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:23:15.071Z"", ""provider_id"": 835}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:23:46.036Z"", ""provider_id"": 554}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:24:17.679Z"", ""provider_id"": 528}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:24:49.296Z"", ""provider_id"": 835}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:25:20.194Z"", ""provider_id"": 554}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T04:25:52.017Z"", ""provider_id"": 528}]","2026-01-12 01:25:21","2026-01-12 01:55:52","2026-01-12 00:28:18",NULL
+"58","d749dbf2-b2b0-4930-bd01-6658fdf8104c","[835, 554, 528]","completed","1","1","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T06:50:35.714Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-12T06:51:50.047Z"", ""provider_id"": 554}]","2026-01-12 03:51:15",NULL,"2026-01-12 03:49:59",NULL
+"59","5519193a-59cf-42f2-96f1-f6d26f875f40","[835, 554, 528]","cancelled_orphan","1","1","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T02:22:58.209Z"", ""provider_id"": 835}]","2026-01-12 23:22:05",NULL,"2026-01-12 23:21:27",NULL
+"60","b72be314-156d-497f-9478-848d695b3b07","[554, 835, 528]","completed","1","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:12:10.924Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:12:42.233Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:13:12.767Z"", ""provider_id"": 528}]","2026-01-13 10:12:42",NULL,"2026-01-13 10:08:12",NULL
+"61","2d30cea7-8c6d-49e4-a4d5-83a3f28c0057","[835, 554, 528]","completed","1","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:22:40.287Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:23:10.459Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T13:23:40.967Z"", ""provider_id"": 528}]","2026-01-13 10:23:10",NULL,"2026-01-13 10:22:09",NULL
+"62","bd8a54b3-6def-4400-8a9d-3d00da753728","[835, 554, 528]","completed","1","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T15:53:53.526Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T15:54:23.710Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-13T15:54:54.292Z"", ""provider_id"": 528}]","2026-01-13 12:54:24",NULL,"2026-01-13 12:53:22",NULL
+"63","ad39bb9c-e1eb-4207-8c97-2c11b797b29d","[835, 554, 528]","completed","1","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:55:37.163Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:56:07.336Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:56:37.840Z"", ""provider_id"": 528}]","2026-01-14 03:56:07",NULL,"2026-01-14 03:55:06",NULL
+"64","ad39bb9c-e1eb-4207-8c97-2c11b797b29d","[835, 554, 528]","completed","1","2","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:55:37.163Z"", ""provider_id"": 835}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:56:07.336Z"", ""provider_id"": 554}, {""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-14T06:56:37.840Z"", ""provider_id"": 528}]","2026-01-14 03:56:07",NULL,"2026-01-14 03:55:06",NULL
+"65","ac9ae1c2-5ad8-4b1c-ae21-26a77b2772d0","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:04:10.171Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:04:40.342Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:05:10.512Z"", ""provider_id"": 832}]","2026-01-18 18:04:40","2026-01-18 18:15:11","2026-01-18 18:03:39",NULL
+"66","ac9ae1c2-5ad8-4b1c-ae21-26a77b2772d0","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:04:10.171Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:04:40.342Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T21:05:10.512Z"", ""provider_id"": 832}]","2026-01-18 18:04:40","2026-01-18 18:15:11","2026-01-18 18:03:39",NULL
+"67","38d4d88a-8fb4-4141-9590-10e59b10b85b","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:19:49.303Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:20:19.474Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:20:49.642Z"", ""provider_id"": 832}]","2026-01-18 19:20:19","2026-01-18 19:30:50","2026-01-18 19:19:19",NULL
+"68","38d4d88a-8fb4-4141-9590-10e59b10b85b","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:19:49.303Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:20:19.474Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-18T22:20:49.642Z"", ""provider_id"": 832}]","2026-01-18 19:20:19","2026-01-18 19:30:50","2026-01-18 19:19:19",NULL
+"69","8b2b736f-8eba-4eb2-9f02-6ba04c7385f9","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T05:09:42.194Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T05:10:12.364Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T05:10:42.538Z"", ""provider_id"": 832}]","2026-01-19 02:10:12","2026-01-19 02:20:43","2026-01-19 02:09:11",NULL
+"70","0c822ae8-301e-4649-82d5-1f19909b5579","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T15:59:34.311Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T16:00:05.282Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T16:00:36.343Z"", ""provider_id"": 832}]","2026-01-19 13:00:06","2026-01-19 13:10:36","2026-01-19 12:59:03",NULL
+"71","9c6cea93-d725-48c5-82a0-4333cc18735c","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T18:52:57.938Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T18:53:29.052Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T18:54:00.057Z"", ""provider_id"": 832}]","2026-01-19 15:53:29","2026-01-19 16:04:00","2026-01-19 15:52:26",NULL
+"72","bd69095c-2f7c-4bd6-b064-436200db3bb6","[832]","cancelled_orphan","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T20:48:02.380Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T20:48:33.390Z"", ""provider_id"": 832}]","2026-01-19 17:48:03",NULL,"2026-01-19 17:47:31",NULL
+"73","9934c260-6af4-4416-9ceb-e72e08d135af","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T21:04:39.829Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T21:05:11.122Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-19T21:05:42.402Z"", ""provider_id"": 832}]","2026-01-19 18:05:12","2026-01-19 18:15:43","2026-01-19 18:04:08",NULL
+"74","441ae629-3fe2-4957-ac47-6ac6f6c13a4c","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T01:28:09.884Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T01:28:41.179Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T01:29:12.559Z"", ""provider_id"": 832}]","2026-01-21 22:28:42","2026-01-21 22:39:13","2026-01-21 22:27:38",NULL
+"75","f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T16:28:35.309Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T16:29:06.732Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-22T16:29:38.089Z"", ""provider_id"": 832}]","2026-01-22 13:29:07","2026-01-22 13:39:38","2026-01-22 13:28:03",NULL
+"76","888e7434-c181-4242-8ae4-a45cf291f9ee","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:36:46.411Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:37:17.376Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:37:48.286Z"", ""provider_id"": 832}]","2026-01-22 23:37:16","2026-01-22 23:47:48","2026-01-22 23:36:13",NULL
+"77","808386e1-42f5-4e5e-a6eb-958471c863a6","[832]","failed","3","0","[{""cycle"": 1, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:44:41.416Z"", ""provider_id"": 832}, {""cycle"": 2, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:45:12.359Z"", ""provider_id"": 832}, {""cycle"": 3, ""action"": ""timeout"", ""timestamp"": ""2026-01-23T02:45:43.884Z"", ""provider_id"": 832}]","2026-01-22 23:45:11","2026-01-22 23:55:44","2026-01-22 23:44:08",NULL
+"id","service_id","provider_id","reason","description","additional_value","platform_fee","images_json","video_key","status","created_at","decided_at"
+"id","service_id","media_key","media_type","created_at"
+"id","conversation_id","sender_id","content","created_at"
+"id","service_id","provider_id","created_at"
+"22","simulated_1768123047045","835","2026-01-11 06:17:59"
+"28","d749dbf2-b2b0-4930-bd01-6658fdf8104c","835","2026-01-12 13:20:12"
+"31","5519193a-59cf-42f2-96f1-f6d26f875f40","835","2026-01-12 23:23:58"
+"32","b72be314-156d-497f-9478-848d695b3b07","835","2026-01-13 10:14:41"
+"id","client_id","category_id","task_id","profession","provider_id","description","status","latitude","longitude","address","price_estimated","price_upfront","scheduled_at","created_at","location_type","arrived_at","payment_remaining_status","contest_reason","contest_status","contest_evidence","validation_code","proof_photo","proof_video","proof_code","status_updated_at","completed_at"
+"1ad1f9a6-58cc-4943-9529-d96132cb5178","531","1",NULL,"Barba (Barboterapia)","832","ServiÃ§o: Barba (Barboterapia)
+Agendamento de Barba (Barboterapia)","accepted","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","150.00","45.00","2026-01-23 16:00:00","2026-01-23 14:30:21","provider",NULL,"pending",NULL,"none",NULL,"6087",NULL,NULL,NULL,"2026-01-23 14:30:32",NULL
+"31097f51-4fb7-44d6-bf7b-c1f5ddeb4eb6","531","1","140","Barbeiro","832","ServiÃ§o: Pezinho (Acabamento)
+quero fazer o pezinho","accepted","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","18.00","5.40","2026-01-26 20:30:00","2026-01-26 13:48:27","provider",NULL,"pending",NULL,"none",NULL,"7804",NULL,NULL,NULL,"2026-01-26 13:48:36",NULL
+"441ae629-3fe2-4957-ac47-6ac6f6c13a4c","531","1","100","Barbeiro","832","ServiÃ§o: Barba Completa
+quero fazer a barba","pending","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","40.01","12.00","2026-01-22 09:00:00","2026-01-21 22:27:26","provider",NULL,"pending",NULL,"none",NULL,"4887",NULL,NULL,NULL,"2026-01-21 22:27:36",NULL
+"6b82f28c-0876-4ac1-a927-d34bce350cc0","531","1","140","Barbeiro","832","ServiÃ§o: Pezinho (Acabamento)
+quero fazer o pezinho","accepted","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","18.00","5.40","2026-01-26 16:30:00","2026-01-26 13:14:21","provider",NULL,"pending",NULL,"none",NULL,"2971",NULL,NULL,NULL,"2026-01-26 13:14:36",NULL
+"808386e1-42f5-4e5e-a6eb-958471c863a6","531","1",NULL,"Barba Simples (MÃ¡quina/Navalha)","832","ServiÃ§o: Barba Simples (MÃ¡quina/Navalha)
+Agendamento de Barba Simples (MÃ¡quina/Navalha)","pending","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","150.00","45.00","2026-01-23 12:00:00","2026-01-22 23:43:56","provider",NULL,"pending",NULL,"none",NULL,"1947",NULL,NULL,NULL,"2026-01-22 23:44:07",NULL
+"888e7434-c181-4242-8ae4-a45cf291f9ee","531","1",NULL,"4196","832","ServiÃ§o: Corte DegradÃª (Fade)
+Agendamento de Corte DegradÃª (Fade)","pending","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","150.00","45.00","2026-01-23 09:00:00","2026-01-22 23:36:00","provider",NULL,"pending",NULL,"none",NULL,"3029",NULL,NULL,NULL,"2026-01-22 23:36:12",NULL
+"9934c260-6af4-4416-9ceb-e72e08d135af","531","1","100","Barbeiro","832","ServiÃ§o: Barba Completa
+quero fazer a barba","pending","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","40.01","12.00","2026-01-19 19:00:00","2026-01-19 18:03:58","provider",NULL,"pending",NULL,"none",NULL,"4731",NULL,NULL,NULL,"2026-01-19 18:04:06",NULL
+"f30f8308-ded6-465f-a764-394d79a71bc0","531","1",NULL,"Corte Social","832","ServiÃ§o: Corte Social 
+Agendamento de Corte Social","accepted","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","150.00","45.00","2026-01-23 12:00:00","2026-01-22 23:55:11","provider",NULL,"pending",NULL,"none",NULL,"6987",NULL,NULL,NULL,"2026-01-22 23:55:21",NULL
+"f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8","531","1","100","Barbeiro","832","ServiÃ§o: Barba Completa
+quero fazer a barba","pending","-5.50757830","-47.46105500","Rua Imperatriz, Vila RedenÃ§Ã£o, Imperatriz, MaranhÃ£o","40.01","12.00","2026-01-22 14:30:00","2026-01-22 13:27:47","provider",NULL,"pending",NULL,"none",NULL,"1439",NULL,NULL,NULL,"2026-01-22 13:28:01",NULL
+"id","request_id","client_id","provider_id","rating","comment","created_at"
+"id","service_id","name","quantity","unit_price","subtotal","created_at"
+"4294","9934c260-6af4-4416-9ceb-e72e08d135af","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-19 18:03:58"
+"4295","9934c260-6af4-4416-9ceb-e72e08d135af","MÃ£o de obra","1.00","100.00","100.00","2026-01-19 18:03:58"
+"4296","441ae629-3fe2-4957-ac47-6ac6f6c13a4c","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-21 22:27:27"
+"4297","441ae629-3fe2-4957-ac47-6ac6f6c13a4c","MÃ£o de obra","1.00","100.00","100.00","2026-01-21 22:27:27"
+"4298","f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-22 13:27:47"
+"4299","f4074f0b-e7c9-4947-aec0-b1d8da7cc6e8","MÃ£o de obra","1.00","100.00","100.00","2026-01-22 13:27:47"
+"4300","888e7434-c181-4242-8ae4-a45cf291f9ee","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-22 23:36:00"
+"4301","888e7434-c181-4242-8ae4-a45cf291f9ee","MÃ£o de obra","1.00","100.00","100.00","2026-01-22 23:36:00"
+"4302","808386e1-42f5-4e5e-a6eb-958471c863a6","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-22 23:43:56"
+"4303","808386e1-42f5-4e5e-a6eb-958471c863a6","MÃ£o de obra","1.00","100.00","100.00","2026-01-22 23:43:56"
+"4304","f30f8308-ded6-465f-a764-394d79a71bc0","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-22 23:55:11"
+"4305","f30f8308-ded6-465f-a764-394d79a71bc0","MÃ£o de obra","1.00","100.00","100.00","2026-01-22 23:55:11"
+"4306","1ad1f9a6-58cc-4943-9529-d96132cb5178","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-23 14:30:22"
+"4307","1ad1f9a6-58cc-4943-9529-d96132cb5178","MÃ£o de obra","1.00","100.00","100.00","2026-01-23 14:30:22"
+"4308","6b82f28c-0876-4ac1-a927-d34bce350cc0","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-26 13:14:21"
+"4309","6b82f28c-0876-4ac1-a927-d34bce350cc0","MÃ£o de obra","1.00","100.00","100.00","2026-01-26 13:14:21"
+"4310","31097f51-4fb7-44d6-bf7b-c1f5ddeb4eb6","AvaliaÃ§Ã£o inicial","1.00","50.00","50.00","2026-01-26 13:48:27"
+"4311","31097f51-4fb7-44d6-bf7b-c1f5ddeb4eb6","MÃ£o de obra","1.00","100.00","100.00","2026-01-26 13:48:27"
+"key_name","value","description","updated_at"
+"dispatch_config","{""max_declines"": 2, ""cooldown_minutes"": 10}","Configuration for dispatch logic (declines, cooldowns, etc.)","2026-01-10 18:00:19"
+"theme_config","{""client"": {""primary"": ""#FFE600"", ""secondary"": ""#EF6C00"", ""background"": ""#FFE600"", ""text_primary"": ""#2E5C99""}, ""provider"": {""primary"": ""#FFE600"", ""secondary"": ""#EF6C00"", ""background"": ""#FFE600"", ""text_primary"": ""#2E5C99""}}","App theme colors for client and provider apps","2026-01-10 20:03:34"
+"id","profession_id","name","pricing_type","unit_name","unit_price","keywords","active","created_at"
+"98","4196","Corte Social ","fixed",NULL,"42.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 35-50 | Corte clÃ¡ssico feito na tesoura ou mÃ¡quina","1","2026-01-02 09:05:53"
+"99","4196","DegradÃª (Fade)","fixed",NULL,"45.00","DuraÃ§Ã£o: 45-55 min | Faixa: R$ 40-60 | Estilo moderno com transiÃ§Ã£o suave (mÃ¡quina)","1","2026-01-02 09:05:53"
+"100","4196","Barba Completa","fixed",NULL,"40.01","DuraÃ§Ã£o: 30 min | Faixa: R$ 30-45 | Alinhamento com navalha e hidrataÃ§Ã£o","1","2026-01-02 09:05:53"
+"101","4196","Barboterapia","fixed",NULL,"50.00","DuraÃ§Ã£o: 45 min | Faixa: R$ 45-65 | Barba com toalha quente, massagem e Ã³leos","1","2026-01-02 09:05:53"
+"102","4196","Pezinho (Contorno)","fixed",NULL,"15.00","DuraÃ§Ã£o: 15 min | Faixa: R$ 10-20 | Limpeza rÃ¡pida apenas nos contornos","1","2026-01-02 09:05:54"
+"103","4196","Combo: Cabelo + Barba","fixed",NULL,"80.00","DuraÃ§Ã£o: 75 min | Faixa: R$ 70-90 | O serviÃ§o completo para quem tem pouco tempo","1","2026-01-02 09:05:54"
+"104","4196","Camuflagem de Fios","fixed",NULL,"40.00","DuraÃ§Ã£o: 20 min | Faixa: R$ 35-50 | Cobertura rÃ¡pida de cabelos brancos","1","2026-01-02 09:05:54"
+"105","4196","Sobrancelha (Navalha)","fixed",NULL,"20.00","DuraÃ§Ã£o: 15 min | Faixa: R$ 15-25 | Limpeza e desenho da sobrancelha masculina","1","2026-01-02 09:05:54"
+"106","4202","Corte Masculino (Simples)","fixed",NULL,"40.00","DuraÃ§Ã£o: 30-45 min | Faixa: R$ 30-50 | Muito comum o uso de degradÃª","1","2026-01-02 12:04:55"
+"107","4202","Corte Feminino","fixed",NULL,"70.00","DuraÃ§Ã£o: 60 min | Faixa: R$ 50-90 | Geralmente inclui lavagem","1","2026-01-02 12:04:55"
+"108","4202","Escova (Brushing)","fixed",NULL,"60.00","DuraÃ§Ã£o: 50 min | Faixa: R$ 40-80 | Valor varia pelo comprimento","1","2026-01-02 12:04:55"
+"109","4196","Barba (Barboterapia)","fixed",NULL,"40.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 30-50 | Uso de toalha quente","1","2026-01-02 12:04:56"
+"110","4202","Progressiva / Selagem","fixed",NULL,"185.00","DuraÃ§Ã£o: 2h-3h | Faixa: R$ 120-250 | Alta demanda devido ao clima","1","2026-01-02 12:04:56"
+"111","4202","ColoraÃ§Ã£o (SÃ³ aplicaÃ§Ã£o)","fixed",NULL,"60.00","DuraÃ§Ã£o: 45 min | Faixa: R$ 50-70 | Cliente geralmente leva a tinta","1","2026-01-02 12:04:56"
+"121","4202","HidrataÃ§Ã£o Profunda","fixed",NULL,"70.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 50-90 | Tratamento","1","2026-01-02 12:15:24"
+"122","4202","Luzes / Mechas","fixed",NULL,"425.00","DuraÃ§Ã£o: 4h 00min | Faixa: R$ 250-600 | DescoloraÃ§Ã£o","1","2026-01-02 12:15:24"
+"123","4202","Botox Capilar","fixed",NULL,"120.00","DuraÃ§Ã£o: 1h 30min | Faixa: R$ 100-150 | ReduÃ§Ã£o de volume e frizz","1","2026-01-02 12:15:24"
+"124","4202","MatizaÃ§Ã£o","fixed",NULL,"50.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 40-70 | NeutralizaÃ§Ã£o de tons amarelados","1","2026-01-02 12:15:25"
+"125","4202","Corte Masculino (Simples/Social)","fixed",NULL,"40.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 30-50 | Corte clÃ¡ssico tesoura ou mÃ¡quina","1","2026-01-02 18:07:25"
+"126","4202","Corte DegradÃª (Fade)","fixed",NULL,"50.00","DuraÃ§Ã£o: 50 min | Faixa: R$ 45-60 | Estilo moderno com transiÃ§Ã£o suave","1","2026-01-02 18:07:25"
+"127","4196","Barba (Barboterapia/Toalha Quente)","fixed",NULL,"40.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 30-50 | Uso de toalha quente e massagem","1","2026-01-02 18:07:25"
+"128","4202","Combo Corte + Barba","fixed",NULL,"80.00","DuraÃ§Ã£o: 1h 15min | Faixa: R$ 70-90 | ServiÃ§o completo","1","2026-01-02 18:07:25"
+"135","4196","Corte DegradÃª (Fade)","fixed",NULL,"53.00","DuraÃ§Ã£o: 45 min | Faixa: R$ 45-60 | TÃ©cnica degradÃª","1","2026-01-02 18:07:33"
+"137","4196","Corte Masculino (Social)","fixed",NULL,"38.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 30-45 | Foco em agilidade","1","2026-01-02 18:27:21"
+"138","4196","Barba Simples (MÃ¡quina/Navalha)","fixed",NULL,"30.00","DuraÃ§Ã£o: 20 min | Faixa: R$ 25-35","1","2026-01-02 18:27:21"
+"139","4196","Barboterapia (Toalha Quente)","fixed",NULL,"53.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 45-60 | Relaxamento com toalha quente","1","2026-01-02 18:27:22"
+"140","4196","Pezinho (Acabamento)","fixed",NULL,"18.00","DuraÃ§Ã£o: 15 min | Faixa: R$ 15-20","1","2026-01-02 18:27:22"
+"141","4196","PigmentaÃ§Ã£o de Barba/Cabelo","fixed",NULL,"40.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 30-50","1","2026-01-02 18:27:22"
+"142","4196","Combo: Corte + Barba","fixed",NULL,"80.00","DuraÃ§Ã£o: 1h 10min | Faixa: R$ 70-90","1","2026-01-02 18:27:22"
+"143","4202","Corte Feminino (Lavado)","fixed",NULL,"80.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 60-100 | Inclui lavagem","1","2026-01-02 18:27:22"
+"144","4202","Escova + Chapinha","fixed",NULL,"65.00","DuraÃ§Ã£o: 50 min | Faixa: R$ 45-85 | FinalizaÃ§Ã£o","1","2026-01-02 18:27:22"
+"145","4202","Selagem / Progressiva","fixed",NULL,"225.00","DuraÃ§Ã£o: 2h 30min | Faixa: R$ 150-300 | Alisamento/ReduÃ§Ã£o de volume","1","2026-01-02 18:27:23"
+"146","4202","ColoraÃ§Ã£o (AplicaÃ§Ã£o)","fixed",NULL,"70.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 60-80","1","2026-01-02 18:27:23"
+"147","4202","CauterizaÃ§Ã£o Capilar","fixed",NULL,"150.00","DuraÃ§Ã£o: 1h 20min | Faixa: R$ 120-180 | ReconstruÃ§Ã£o","1","2026-01-02 18:27:23"
+"153","4220","Design de Sobrancelha","fixed",NULL,"43.00","DuraÃ§Ã£o: 30 min | Faixa: R$ 35-50","1","2026-01-02 18:27:24"
+"154","4220","Sobrancelha com Henna","fixed",NULL,"60.00","DuraÃ§Ã£o: 45 min | Faixa: R$ 50-70","1","2026-01-02 18:27:24"
+"155","4220","Limpeza de Pele Express","fixed",NULL,"85.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 70-100","1","2026-01-02 18:27:24"
+"156","4220","Limpeza de Pele Profunda","fixed",NULL,"165.00","DuraÃ§Ã£o: 1h 30min | Faixa: R$ 130-200","1","2026-01-02 18:27:25"
+"157","4220","DepilaÃ§Ã£o de BuÃ§o (Cera)","fixed",NULL,"20.00","DuraÃ§Ã£o: 15 min | Faixa: R$ 15-25","1","2026-01-02 18:27:25"
+"158","4220","ExtensÃ£o de CÃ­lios (Fio a Fio)","fixed",NULL,"150.00","DuraÃ§Ã£o: 2h 00min | Faixa: R$ 120-180","1","2026-01-02 18:27:25"
+"159","4220","Drenagem LinfÃ¡tica (SessÃ£o)","fixed",NULL,"115.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 80-150","1","2026-01-02 18:27:25"
+"167","3731","Troca de Fechadura ou MaÃ§aneta","fixed",NULL,"49.50","DuraÃ§Ã£o: 30-45 min | Faixa: R$ 40-70 | Pequenos Reparos","1","2026-01-02 19:08:54"
+"168","3731","InstalaÃ§Ã£o de Trinco ou Olho MÃ¡gico","fixed",NULL,"36.00","DuraÃ§Ã£o: 20-30 min | Faixa: R$ 30-50 | Pequenos Reparos","1","2026-01-02 19:08:54"
+"169","3731","Troca de Porta (Apenas a folha)","fixed",NULL,"126.00","DuraÃ§Ã£o: 1h 30min - 2h | Faixa: R$ 100-180 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"170","3731","InstalaÃ§Ã£o de Porta Completa (Kit porta pronta)","fixed",NULL,"315.00","DuraÃ§Ã£o: 3h - 5h | Faixa: R$ 250-450 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"171","3731","Ajuste de Porta (Raspando no piso/marcenaria)","fixed",NULL,"58.50","DuraÃ§Ã£o: 40 min | Faixa: R$ 50-80 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"172","3731","Reparo de Buraco em Alvenaria (Gesso ou Massa)","fixed",NULL,"81.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 60-120 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"173","3731","Troca de Telhas Quebradas (Pequeno trecho)","fixed",NULL,"202.50","DuraÃ§Ã£o: 1h - 2h | Faixa: R$ 150-300 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"174","3731","InstalaÃ§Ã£o de Prateleiras, Quadros ou Suportes","fixed",NULL,"27.00","DuraÃ§Ã£o: 20 min | Faixa: R$ 20-40 (por unidade) | Pequenos Reparos","1","2026-01-02 19:08:55"
+"175","3731","InstalaÃ§Ã£o de Painel de TV (AtÃ© 55"")","fixed",NULL,"103.50","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 80-150 | Pequenos Reparos","1","2026-01-02 19:08:55"
+"176","3731","Assentamento de Piso CerÃ¢mico (Comum)","fixed",NULL,"40.50","PreÃ§o por mÂ² | Faixa: R$ 35-55 | Revestimento","1","2026-01-02 19:08:55"
+"177","3731","Assentamento de Porcelanato","fixed",NULL,"63.00","PreÃ§o por mÂ² | Faixa: R$ 50-90 | Revestimento","1","2026-01-02 19:08:56"
+"178","3731","Reboco de Parede (Acabamento liso)","fixed",NULL,"31.50","PreÃ§o por mÂ² | Faixa: R$ 25-45 | Revestimento","1","2026-01-02 19:08:56"
+"179","3731","Assentamento de Tijolo/Bloco (Levantamento)","fixed",NULL,"36.00","PreÃ§o por mÂ² | Faixa: R$ 30-50 | Revestimento","1","2026-01-02 19:08:56"
+"180","3731","Troca ou InstalaÃ§Ã£o de RodapÃ© (Linear)","fixed",NULL,"18.00","PreÃ§o por metro | Faixa: R$ 15-25 | Revestimento","1","2026-01-02 19:08:56"
+"181","3731","Rejunte de Piso (Limpeza e aplicaÃ§Ã£o)","fixed",NULL,"20.25","PreÃ§o por mÂ² | Faixa: R$ 15-30 | Revestimento","1","2026-01-02 19:08:56"
+"182","3731","InstalaÃ§Ã£o de Soleira ou Pingadeira","fixed",NULL,"72.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 60-100 | Revestimento","1","2026-01-02 19:08:56"
+"183","3731","Troca de SifÃ£o, Torneira ou Engate","fixed",NULL,"49.50","DuraÃ§Ã£o: 30 min | Faixa: R$ 40-70 | HidrÃ¡ulica","1","2026-01-02 19:08:56"
+"184","3731","Reparo de Vazamento em Vaso SanitÃ¡rio (Descarga)","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 70-130 | HidrÃ¡ulica","1","2026-01-02 19:08:56"
+"185","3731","InstalaÃ§Ã£o de Chuveiro ElÃ©trico","fixed",NULL,"63.00","DuraÃ§Ã£o: 40 min | Faixa: R$ 50-90 | HidrÃ¡ulica","1","2026-01-02 19:08:57"
+"186","3731","Limpeza de Calhas","fixed",NULL,"27.00","PreÃ§o por metro linear | Faixa: R$ 20-40 | HidrÃ¡ulica","1","2026-01-02 19:08:57"
+"187","3731","Desentupimento Simples (Pia ou Ralo)","fixed",NULL,"103.50","DuraÃ§Ã£o: 1h 00min | Faixa: R$ 80-150 | HidrÃ¡ulica","1","2026-01-02 19:08:57"
+"188","3731","Limpeza de Caixa d'Ãgua (AtÃ© 1000L)","fixed",NULL,"193.50","DuraÃ§Ã£o: 2h 00min | Faixa: R$ 150-280 | HidrÃ¡ulica","1","2026-01-02 19:08:57"
+"189","3731","Reparo de Rachadura em Parede (Tratamento)","fixed",NULL,"103.50","PreÃ§o por metro | DuraÃ§Ã£o: 1h 30min | Faixa: R$ 80-150 | Acabamentos","1","2026-01-02 19:08:57"
+"190","3731","ImpermeabilizaÃ§Ã£o de RodapÃ© contra Umidade","fixed",NULL,"60.75","PreÃ§o por metro | DuraÃ§Ã£o: 1h 30min | Faixa: R$ 45-90 | Acabamentos","1","2026-01-02 19:08:57"
+"191","3731","Pintura de Teto de Banheiro (Contra mofo)","fixed",NULL,"103.50","DuraÃ§Ã£o: 1h 30min | Faixa: R$ 80-150 | Acabamentos","1","2026-01-02 19:08:57"
+"192","3731","Nivelamento de Piso (Cimentado)","fixed",NULL,"38.25","PreÃ§o por mÂ² | DuraÃ§Ã£o: 2h - 4h | Faixa: R$ 30-55 | Acabamentos","1","2026-01-02 19:08:57"
+"193","3732","InstalaÃ§Ã£o de Portas","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h-2h | InstalaÃ§Ã£o de porta interna ou externa","1","2026-01-02 19:21:48"
+"194","3732","Montagem de MÃ³veis","fixed",NULL,"72.00","DuraÃ§Ã£o: 1h | Montagem de guarda-roupa, armÃ¡rio, etc.","1","2026-01-02 19:21:48"
+"195","3732","Reparo de Telhado","fixed",NULL,"135.00","DuraÃ§Ã£o: 2h | Troca de telhas, eliminaÃ§Ã£o de goteiras","1","2026-01-02 19:21:48"
+"196","3732","ConstruÃ§Ã£o de Deck (mÂ²)","fixed",NULL,"180.00","DuraÃ§Ã£o: 4h | PreÃ§o por mÂ² estimado","1","2026-01-02 19:21:48"
+"197","3732","InstalaÃ§Ã£o de RodapÃ©","fixed",NULL,"45.00","DuraÃ§Ã£o: 1h | InstalaÃ§Ã£o de rodapÃ© de madeira ou poliestireno","1","2026-01-02 19:21:48"
+"203","3736","Abertura de Porta Residencial","fixed",NULL,"54.00","DuraÃ§Ã£o: 20min | Sem troca de fechadura","1","2026-01-02 19:21:49"
+"204","3736","Troca de Fechadura","fixed",NULL,"63.00","DuraÃ§Ã£o: 30min | MÃ£o de obra (fechadura Ã  parte ou inclusa se simples)","1","2026-01-02 19:21:49"
+"205","3736","CÃ³pia de Chave Simples","fixed",NULL,"15.00","DuraÃ§Ã£o: 10min | PreÃ§o por unidade","1","2026-01-02 19:21:49"
+"206","3736","Abertura de Carro","fixed",NULL,"108.00","DuraÃ§Ã£o: 30min | Abertura tÃ©cnica sem danos","1","2026-01-02 19:21:50"
+"207","3736","ConfecÃ§Ã£o de Chave Codificada","fixed",NULL,"225.00","DuraÃ§Ã£o: 1h | Chave automotiva com chip","1","2026-01-02 19:21:50"
+"208","3728","Troca de Chuveiro","fixed",NULL,"81.00","DuraÃ§Ã£o: 40min | InstalaÃ§Ã£o elÃ©trica de chuveiro","1","2026-01-02 19:51:17"
+"209","3728","InstalaÃ§Ã£o de Tomada/Interruptor","fixed",NULL,"45.00","DuraÃ§Ã£o: 20min | PreÃ§o por ponto","1","2026-01-02 19:51:17"
+"210","3728","Troca de Disjuntor","fixed",NULL,"120.00","DuraÃ§Ã£o: 30min | SubstituiÃ§Ã£o no quadro","1","2026-01-02 19:51:17"
+"211","3728","InstalaÃ§Ã£o de LuminÃ¡ria/Lustre","fixed",NULL,"63.00","DuraÃ§Ã£o: 45min | Montagem e instalaÃ§Ã£o","1","2026-01-02 19:51:17"
+"212","3728","Visita TÃ©cnica (Curto-circuito)","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h | DiagnÃ³stico de falha elÃ©trica","1","2026-01-02 19:51:17"
+"213","3728","InstalaÃ§Ã£o de Ventilador de Teto","fixed",NULL,"108.00","DuraÃ§Ã£o: 1h 30min | Montagem e fixaÃ§Ã£o","1","2026-01-02 19:51:18"
+"214","3729","Troca de Torneira/Misturador","fixed",NULL,"45.00","DuraÃ§Ã£o: 30min | Troca simples","1","2026-01-02 19:51:18"
+"215","3729","Conserto de Vazamento (Simples)","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h | Cano exposto ou fÃ¡cil acesso","1","2026-01-02 19:51:18"
+"216","3729","Desentupimento de Pia/Ralo","fixed",NULL,"108.00","DuraÃ§Ã£o: 1h | DesobstruÃ§Ã£o mecÃ¢nica","1","2026-01-02 19:51:18"
+"217","3729","InstalaÃ§Ã£o de Vaso SanitÃ¡rio","fixed",NULL,"135.00","DuraÃ§Ã£o: 1h 30min | Com vedaÃ§Ã£o","1","2026-01-02 19:51:18"
+"218","3729","Limpeza de Caixa d'Ãgua (atÃ© 1000L)","fixed",NULL,"162.00","DuraÃ§Ã£o: 2h | HigienizaÃ§Ã£o completa","1","2026-01-02 19:51:18"
+"219","3730","Pintura Parede Lisa (mÂ²)","fixed",NULL,"18.00","PreÃ§o por mÂ² | MÃ£o de obra (tinta Ã  parte)","1","2026-01-02 19:51:18"
+"220","3730","Pintura de Porta","fixed",NULL,"72.00","DuraÃ§Ã£o: 2h | Lixamento e pintura","1","2026-01-02 19:51:18"
+"221","3730","AplicaÃ§Ã£o de Massa Corrida (mÂ²)","fixed",NULL,"22.50","PreÃ§o por mÂ² | PreparaÃ§Ã£o de parede","1","2026-01-02 19:51:18"
+"222","3730","Pintura de Teto (mÂ²)","fixed",NULL,"22.50","PreÃ§o por mÂ² | Tinta lÃ¡tex/acrÃ­lica","1","2026-01-02 19:51:18"
+"223","4242","Corte de Grama (atÃ© 50mÂ²)","fixed",NULL,"63.00","DuraÃ§Ã£o: 1h | RoÃ§agem e limpeza","1","2026-01-02 19:51:19"
+"224","4242","Poda de Ãrvore/Arbusto (Pequeno)","fixed",NULL,"45.00","DuraÃ§Ã£o: 45min | Por unidade","1","2026-01-02 19:51:19"
+"225","4242","Limpeza de Jardim (DiÃ¡ria)","fixed",NULL,"180.00","DuraÃ§Ã£o: 6h | ManutenÃ§Ã£o geral","1","2026-01-02 19:51:19"
+"226","4242","Plantio de Mudas","fixed",NULL,"27.00","DuraÃ§Ã£o: 20min | Por muda (mÃ£o de obra)","1","2026-01-02 19:51:19"
+"227","3735","Troca de Vidro Janela (Comum)","fixed",NULL,"72.00","DuraÃ§Ã£o: 1h | MÃ£o de obra (vidro Ã  parte)","1","2026-01-02 19:51:19"
+"228","3735","ManutenÃ§Ã£o de Box","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h | Regulagem e vedaÃ§Ã£o","1","2026-01-02 19:51:19"
+"229","3735","InstalaÃ§Ã£o de Espelho (Pequeno)","fixed",NULL,"54.00","DuraÃ§Ã£o: 40min | FixaÃ§Ã£o na parede","1","2026-01-02 19:51:19"
+"230","3740","Solda em PortÃ£o/Grade","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h | Reparo com solda elÃ©trica","1","2026-01-02 19:51:19"
+"231","3740","Troca de Roldana de PortÃ£o","fixed",NULL,"63.00","DuraÃ§Ã£o: 1h | MÃ£o de obra","1","2026-01-02 19:51:19"
+"232","3740","InstalaÃ§Ã£o de Fechadura de PortÃ£o","fixed",NULL,"72.00","DuraÃ§Ã£o: 1h | Solda e fixaÃ§Ã£o","1","2026-01-02 19:51:19"
+"233","3737","Reparo em Forro de Gesso (Buraco)","fixed",NULL,"81.00","DuraÃ§Ã£o: 1h | Fechamento de buracos e acabamento","1","2026-01-02 19:51:20"
+"234","3737","Parede Drywall (mÂ²)","fixed",NULL,"45.00","DuraÃ§Ã£o: 1h/mÂ² | ConstruÃ§Ã£o de parede divisÃ³ria em drywall","1","2026-01-02 19:51:20"
+"235","3737","InstalaÃ§Ã£o de Moldura (metro)","fixed",NULL,"13.50","DuraÃ§Ã£o: 30min/m | InstalaÃ§Ã£o de molduras de gesso no teto","1","2026-01-02 19:51:20"
+"236","3742","Faxina Completa (DiÃ¡ria)","fixed",NULL,"162.00","DuraÃ§Ã£o: 8h | Limpeza pesada","1","2026-01-02 19:51:20"
+"237","3742","Faxina Meio PerÃ­odo","fixed",NULL,"99.00","DuraÃ§Ã£o: 4h | Limpeza de manutenÃ§Ã£o","1","2026-01-02 19:51:20"
+"238","3742","Passar Roupa (Cesto)","fixed",NULL,"72.00","DuraÃ§Ã£o: 3h | AtÃ© 30 peÃ§as","1","2026-01-02 19:51:20"
+"239","3737","InstalaÃ§Ã£o de Sanca Aberta (m)","fixed",NULL,"45.00","DuraÃ§Ã£o: 1h/m | Sanca com iluminaÃ§Ã£o indireta","1","2026-01-02 20:05:33"
+"240","3737","InstalaÃ§Ã£o de Sanca Fechada (m)","fixed",NULL,"36.00","DuraÃ§Ã£o: 45min/m | Sanca rebaixada simples","1","2026-01-02 20:05:33"
+"241","3737","Forro de Gesso Acartonado (mÂ²)","fixed",NULL,"54.00","DuraÃ§Ã£o: 1h/mÂ² | Forro liso estruturado","1","2026-01-02 20:05:33"
+"242","3737","Forro de Gesso Plaquinha (mÂ²)","fixed",NULL,"36.00","DuraÃ§Ã£o: 45min/mÂ² | Forro tradicional de placas 60x60","1","2026-01-02 20:05:33"
+"243","3737","DivisÃ³ria de Drywall com Porta (mÂ²)","fixed",NULL,"90.00","DuraÃ§Ã£o: 2h/mÂ² | Parede com requadro para porta","1","2026-01-02 20:05:34"
+"244","3737","AplicaÃ§Ã£o de Gesso 3D (mÂ²)","fixed",NULL,"45.00","DuraÃ§Ã£o: 1h/mÂ² | InstalaÃ§Ã£o de placas decorativas 3D","1","2026-01-02 20:05:34"
+"245","3737","InstalaÃ§Ã£o de Cortineiro (m)","fixed",NULL,"27.00","DuraÃ§Ã£o: 30min/m | Acabamento em gesso para cortinas","1","2026-01-02 20:05:34"
+"246","3737","Closet de Gesso (unidade)","fixed",NULL,"450.00","DuraÃ§Ã£o: 4h-8h | Estrutura bÃ¡sica para closet (prateleiras)","1","2026-01-02 20:05:34"
+"247","3737","Estante ou Nicho de Gesso (unidade)","fixed",NULL,"180.00","DuraÃ§Ã£o: 2h-4h | Nichos decorativos ou funcionais","1","2026-01-02 20:05:34"
+"248","3742","limpeza de comodo ","per_unit"," mÂ²","10.00","limpeza casa faxina geral ","1","2026-01-09 10:21:46"
+"250","3744","ManutenÃ§Ã£o de ar condicionado de 09 a 12 Btus","fixed",NULL,"200.00","DuraÃ§Ã£o: 1hr/ HigienizaÃ§Ã£o Completa unidade Interna e externa ","1","2026-01-13 13:09:29"
+"251","3744","ManutenÃ§Ã£o de ar condicionado de 18 a 24 Btus","fixed",NULL,"350.00","DuraÃ§Ã£o: 1hr/ HigienizaÃ§Ã£o Completa unidade Interna e externa ","1","2026-01-13 13:12:47"
+"252","3744","ManutenÃ§Ã£o de ar condicionado de 30 a 36 Btus","fixed",NULL,"400.00","DuraÃ§Ã£o: 1hr/HigienizaÃ§Ã£o Completa unidade Interna e externa ","1","2026-01-13 13:15:43"
+"253","3744","ManutenÃ§Ã£o de ar condicionado de 48 a 60 Btus ","fixed",NULL,"700.00","DuraÃ§Ã£o: 1hr/ HigienizaÃ§Ã£o Completa unidade Interna e externa ","1","2026-01-13 13:19:24"
+"254","3744","InstalaÃ§Ã£o de 09 a 12 Btus","fixed",NULL,"500.00","DuraÃ§Ã£o: 2hr/ ambiente esfriando por completo ","1","2026-01-13 13:26:43"
+"255","3744","InstalaÃ§Ã£o de 18 a 30 Btus","fixed",NULL,"680.00","DuraÃ§Ã£o: 2 hrs/ Ambiente esfriando por completo ","1","2026-01-13 13:43:08"
+"256","3744","InstalaÃ§Ã£o de 36 a 60 Btus ","fixed",NULL,"1.20","DuraÃ§Ã£o: 2hr/ Ambiente esfriando por completo ","1","2026-01-13 13:44:51"
+"257","3744","Recarga de GÃ¡s r22","fixed",NULL,"300.00","DuraÃ§Ã£o: 30 minutos/ ambiente gelando bem, em poucos minutos.","1","2026-01-13 13:53:47"
+"258","3744","Recarga de GÃ¡s r32","fixed",NULL,"500.00","DuraÃ§Ã£o: 30 minutos/ Ambiente gelando bem, em poucos minutos ","1","2026-01-13 13:56:17"
+"259","3744","Recarga de GÃ¡s r410","fixed",NULL,"380.00","DuraÃ§Ã£o: 30 minutos/ Ambiente gelando bem, em poucos minutos ","1","2026-01-13 13:57:45"
+"260","3744","Troca de Capacitor ","fixed",NULL,"180.00","DuraÃ§Ã£o: 1hr","1","2026-01-13 15:13:02"
+"261","3744","Troca de Sensor ","fixed",NULL,"180.00","DuraÃ§Ã£o: 1hr.","1","2026-01-13 15:13:56"
+"262","3744","Recarga de GÃ¡s Geladeira ","fixed",NULL,"380.00","DuraÃ§Ã£o: 1hr e meia..Sua Geladeira gelando Bem.","1","2026-01-13 19:43:12"
+"263","3744","Troca de relÃ© da Geladeira ","fixed",NULL,"180.00","DuraÃ§Ã£o: 30 minutos.","1","2026-01-13 19:44:37"
+"264","3744","Troca de Sensor da Geladeira ","fixed",NULL,"250.00","DuraÃ§Ã£o: 1hr.","1","2026-01-13 19:46:08"
+"265","4274","ServiÃ§os no Geral","fixed",NULL,"280.00","DuraÃ§Ã£o: 1hr ","1","2026-01-14 14:14:49"
+"266","4274","Escolta de Valores ","fixed",NULL,"300.00","DuraÃ§Ã£o: 1hr ","1","2026-01-14 14:15:38"
+"267","4274","SeguranÃ§a Particular ","fixed",NULL,"250.00","DuraÃ§Ã£o: 1hr ","1","2026-01-14 14:16:15"
+"268","4274","SeguranÃ§a Privada ","fixed",NULL,"300.00","DuraÃ§Ã£o: 1hr.","1","2026-01-14 14:17:21"
+"269","4275","ManutenÃ§Ã£o fugÃ£o Industrial ","fixed",NULL,"365.00",NULL,"1","2026-01-14 14:22:35"
+"270","4275","ManutenÃ§Ã£o fugÃ£o 5 Bocas","fixed",NULL,"220.00",NULL,"1","2026-01-14 14:24:15"
+"271","4275","FogÃ£o Cooktop","fixed",NULL,"165.00",NULL,"1","2026-01-14 14:24:47"
+"276","4278","Motorista particular ","fixed",NULL,"100.00","DuraÃ§Ã£o:1 hr","1","2026-01-15 14:51:11"
+"277","4278","Motoqueiro Particular ","fixed",NULL,"40.00","DuraÃ§Ã£o: 1hr","1","2026-01-15 14:52:11"
+"278","4279","G. Roupas MÃ©dio ","fixed",NULL,"85.00","DuraÃ§Ã£o: 1 hr","1","2026-01-15 15:04:01"
+"279","4279","G. Roupa Casal","fixed",NULL,"165.00","DuraÃ§Ã£o: 3hr","1","2026-01-15 15:05:14"
+"280","4279","Cozinhas","fixed",NULL,"135.00","DuraÃ§Ã£o: 3hrs","1","2026-01-15 15:06:02"
+"281","4279","Quite","fixed",NULL,"115.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:06:38"
+"282","4279","CÃ´modo P.","fixed",NULL,"75.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:07:28"
+"283","4279","CÃ´moda G.","fixed",NULL,"115.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:08:14"
+"284","4279","BerÃ§o normal ","fixed",NULL,"65.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:09:12"
+"285","4279","Americana","fixed",NULL,"95.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:09:53"
+"286","4279","PainÃ©is M.","fixed",NULL,"115.00","DuraÃ§Ã£o: 2hr","1","2026-01-15 15:10:37"
+"287","4279","PainÃ©is G.","fixed",NULL,"165.00","DuraÃ§Ã£o: 2hrs","1","2026-01-15 15:12:09"
+"288","4279","Reparos de portas AssistÃªncia BÃ¡sica ","fixed",NULL,"65.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:13:28"
+"289","4279","Reforma mÃ©dia ","fixed",NULL,"135.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:14:17"
+"290","4279","Cortinados","fixed",NULL,"55.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:15:06"
+"291","4279","Suporte de TV 60 P.","fixed",NULL,"120.00","DuraÃ§Ã£o: 2hr","1","2026-01-15 15:24:18"
+"292","4279","Suporte de TV 65 P.","fixed",NULL,"150.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:25:20"
+"293","4279","Suporte de TV 70 P.","fixed",NULL,"150.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:26:00"
+"294","4279","Suporte de TV 85 P.","fixed",NULL,"165.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:26:47"
+"295","4279","Suporte de TV 98 P.","fixed",NULL,"170.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 15:27:55"
+"296","4280","Design com pinÃ§a ","fixed",NULL,"30.00","DuraÃ§Ã£o: 1hr","1","2026-01-15 18:55:17"
+"297","4280","Design com cera","fixed",NULL,"25.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 18:56:00"
+"298","4280","Design com henna","fixed",NULL,"35.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 18:56:36"
+"318","4282","Interfone","fixed",NULL,"220.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:18:38"
+"319","4282","Cerca elÃ©trica 30 reais o metro ","fixed",NULL,"30.00","DuraÃ§Ã£o: 3hrs","1","2026-01-15 20:19:36"
+"320","4282","Motor rosse ","fixed",NULL,"800.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:21:12"
+"321","4282","Motor jetflex rÃ¡pido ","fixed",NULL,"1500.00","DuraÃ§Ã£o: 3hrs","1","2026-01-15 20:22:25"
+"322","4282","CÃ¢mera ","fixed",NULL,"130.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:22:54"
+"323","4282","ManutenÃ§Ã£o da cÃ¢mera ","fixed",NULL,"150.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:23:37"
+"324","4282","Visita tÃ©cnica ","fixed",NULL,"100.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:24:26"
+"325","4283","VulcanizaÃ§Ã£o ","fixed",NULL,"80.00","DuraÃ§Ã£o: 2h | Reparo em corte lateral","1","2026-01-15 20:25:51"
+"326","4283","Remendo","fixed",NULL,"35.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:26:18"
+"327","4283","Troca de Ã³leo ","fixed",NULL,"10.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:26:51"
+"328","4283","Taxa deslocamento ","fixed",NULL,"25.00","DuraÃ§Ã£o: 1hr ","1","2026-01-15 20:27:47"
+"329","4284","Volume Brasileiro ","fixed",NULL,"100.00","DuraÃ§Ã£o:1hr ","1","2026-01-20 14:10:02"
+"330","4284","Volume 3D","fixed",NULL,"110.00","DuraÃ§Ã£o: 1hr.","1","2026-01-20 14:11:07"
+"331","4284","Efeito Fox","fixed",NULL,"120.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:11:43"
+"332","4284","Efeito Serena","fixed",NULL,"95.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:12:11"
+"333","4284","Volume EgÃ­pcio 4D","fixed",NULL,"110.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:12:55"
+"334","4284","Volume Glamourosa 5D","fixed",NULL,"120.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:13:42"
+"335","4284","Volume 6D","fixed",NULL,"125.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:14:15"
+"336","4284","Mega camping 4D","fixed",NULL,"140.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:15:31"
+"337","4284","Volume Russo 6D Copping","fixed",NULL,"150.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:16:38"
+"338","4284","RemoÃ§Ã£o ","fixed",NULL,"30.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:17:20"
+"339","4284","ManutenÃ§Ã£o Volume Brasileiro ","fixed",NULL,"85.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:18:17"
+"340","4284","ManutenÃ§Ã£o Volume 3D","fixed",NULL,"95.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:18:55"
+"341","4284","ManutenÃ§Ã£o Efeito Fox ","fixed",NULL,"100.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:19:39"
+"342","4284","ManutenÃ§Ã£o Efeito Serena ","fixed",NULL,"80.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:20:23"
+"343","4284","ManutenÃ§Ã£o Volume EgÃ­pcio 4D","fixed",NULL,"100.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:21:13"
+"344","4284","ManutenÃ§Ã£o Glamourosa 5D ","fixed",NULL,"100.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:21:56"
+"345","4284"," ManutenÃ§Ã£o Volume 6D","fixed",NULL,"110.00","DuraÃ§Ã£o: 1hr ","1","2026-01-20 14:22:56"
+"346","4285","Troca de Ã“leo e Filtro","fixed",NULL,"180.00","DuraÃ§Ã£o: 40min | Incluindo filtro simples","1","2026-01-26 14:49:40"
+"347","4285","RevisÃ£o de Freios (MÃ£o de obra)","fixed",NULL,"150.00","DuraÃ§Ã£o: 1h 30min | VerificaÃ§Ã£o de pastilhas e discos","1","2026-01-26 14:49:41"
+"348","4285","Troca de Bateria","fixed",NULL,"45.00","DuraÃ§Ã£o: 20min | Apenas instalaÃ§Ã£o","1","2026-01-26 14:49:41"
+"349","4285","DiagnÃ³stico Computadorizado","fixed",NULL,"120.00","DuraÃ§Ã£o: 30min | Scanner de erros","1","2026-01-26 14:49:41"
+"350","4285","Reparo de SuspensÃ£o (Lado)","fixed",NULL,"200.00","DuraÃ§Ã£o: 2h | Troca de amortecedor ou buchas","1","2026-01-26 14:49:41"
+"351","4283","Remendo de Pneu (Simples)","fixed",NULL,"30.00","DuraÃ§Ã£o: 15min | MacarrÃ£o ou frio","1","2026-01-26 14:49:41"
+"352","4283","Balanceamento (Roda)","fixed",NULL,"25.00","DuraÃ§Ã£o: 10min | PreÃ§o por roda","1","2026-01-26 14:49:41"
+"353","4283","Troca de Estepe","fixed",NULL,"40.00","DuraÃ§Ã£o: 15min | Atendimento local","1","2026-01-26 14:49:41"
+"354","4287","FormataÃ§Ã£o com Backup","fixed",NULL,"150.00","DuraÃ§Ã£o: 3h | Windows + Drivers + Programas","1","2026-01-26 14:49:41"
+"355","4287","Limpeza Interna e Pasta TÃ©rmica","fixed",NULL,"120.00","DuraÃ§Ã£o: 1h 30min | Notebook ou Desktop","1","2026-01-26 14:49:41"
+"356","4287","ConfiguraÃ§Ã£o de Roteador Wi-Fi","fixed",NULL,"80.00","DuraÃ§Ã£o: 30min | ConfiguraÃ§Ã£o de rede e senha","1","2026-01-26 14:49:41"
+"357","4287","RemoÃ§Ã£o de VÃ­rus/Malware","fixed",NULL,"100.00","DuraÃ§Ã£o: 1h | OtimizaÃ§Ã£o de sistema","1","2026-01-26 14:49:42"
+"358","4287","Troca de Tela de Notebook","fixed",NULL,"180.00","DuraÃ§Ã£o: 1h | MÃ£o de obra (peÃ§a Ã  parte)","1","2026-01-26 14:49:42"
+"359","4288","Consultoria Mensal (Online)","fixed",NULL,"250.00","Treino + Suporte via app","1","2026-01-26 14:49:42"
+"360","4288","Aula Particular (SessÃ£o)","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h | Presencial ou outdoor","1","2026-01-26 14:49:42"
+"361","4288","AvaliaÃ§Ã£o FÃ­sica Completa","fixed",NULL,"120.00","DuraÃ§Ã£o: 45min | BioimpedÃ¢ncia + Medas","1","2026-01-26 14:49:42"
+"362","4248","Maquiagem Social","fixed",NULL,"180.00","DuraÃ§Ã£o: 1h | Com cÃ­lios inclusos","1","2026-01-26 14:49:42"
+"363","4248","Maquiagem de Noiva","fixed",NULL,"500.00","DuraÃ§Ã£o: 2h 30min | Inclui teste prÃ©vio","1","2026-01-26 14:49:42"
+"364","4248","Design de Sobrancelha (PinÃ§a)","fixed",NULL,"45.00","DuraÃ§Ã£o: 30min | Limpeza e desenho","1","2026-01-26 14:49:42"
+"365","4248","Curso de Automaquiagem","fixed",NULL,"300.00","DuraÃ§Ã£o: 4h | Individual","1","2026-01-26 14:49:42"
+"366","4290","Banho e Tosa (Porte P)","fixed",NULL,"90.00","DuraÃ§Ã£o: 1h 30min | Inclui corte de unha","1","2026-01-26 14:49:42"
+"367","4290","Tosa HigiÃªnica","fixed",NULL,"50.00","DuraÃ§Ã£o: 40min | Apenas Ã¡reas crÃ­ticas","1","2026-01-26 14:49:42"
+"368","4290","Adestramento (Aula)","fixed",NULL,"120.00","DuraÃ§Ã£o: 1h | Com comportamento bÃ¡sico","1","2026-01-26 14:49:43"
+"369","4290","Hospedagem Pet (DiÃ¡ria)","fixed",NULL,"80.00","PreÃ§o por dia/animal","1","2026-01-26 14:49:43"
+"370","4291","Carreto Simples (AtÃ© 5km)","fixed",NULL,"150.00","DuraÃ§Ã£o: 1h | Apenas motorista (sem ajudante)","1","2026-01-26 14:49:43"
+"371","4291","MudanÃ§a Residencial Completa","fixed",NULL,"800.00","Estimativa inicial | CaminhÃ£o + 2 ajudantes","1","2026-01-26 14:49:43"
+"372","4291","Transporte de EletrodomÃ©stico","fixed",NULL,"120.00","Geladeira, fogÃ£o ou mÃ¡quina de lavar","1","2026-01-26 14:49:43"
+"id","service_id","user_id","amount","type","status","provider_ref","created_at"
+"id","firebase_uid","email","password_hash","full_name","role","phone","avatar_url","created_at","is_verified","avatar_blob","avatar_mime"
+"528","dUrEku9zsaSMQL9CGAnR2dB7nIA2","103@gmail.com","firebase_oauth","test1","provider","(86) 86786-7867",NULL,"2025-12-30 14:58:26","0","RIFF
+  WEBPVP8 þ  Ð5 *€ € >m*E¤""!—Ëžä@Ä¶ fIp?'>¿ù{íRþÇø«ÕŸp±žíùÿs¿5}~ö ýHégæö·ÖwÑ7öÏPOë_ízÉý <µ¿rþ±ÿ½ý©øýyÿó­Ö>ÕÿØøƒä‡àÜòSéß2þ¦ceþ{Xÿ¡Þï´>Óý3ýç¨üÌ•w óðžˆ¹òú‹öoàõ¿þw®°ßÜ¯goÚ¥Ž[|ðþD)P‚$·?$=gµØ&³Úü	¹ÎFlÊ6çîäW,*ì+ƒU«2sd
+¶“3BÏˆn¡.aÔõóÓÌ°ÿfµ	ÃŠg8ªF	h¸”MÌ­ÜóÒ&€“òW~>ËØ`½£¿„³^ÉŸûþÏÎQíøÙÎê¶CÔ\†z5x¹ì.—3
+åz¨À¡—,Tó3uT
+kØq3[Ÿ<Õ¦“©Žµïw""]ŸŸÉ‘#Ã“—ý4$°pÈã†’âµ”Žh@ C»o³ˆÂˆéÜ2 ú½RZ¹üz4sÓUß¹J9¾lÏ§áì—±ðÿF?B7˜»›X  þývz¸…E*Äc¯]øPÆzƒ¶­˜¬<„à@†¼	Ü®áŠÅ©Ï€TÇaòAÍä*‚ÿhÇÊ7÷ßvË ¨ëcÝ†å¥ÒWÎu4~tÄòNÍðcUkmÿÊãFÑÌˆl÷ËÏ™ð írëq$À„gÓ³ÿ#À&«4dÐ1Y/òCƒ\jé5ã¬3hö|°¦r@«ArÇû5¶.ï8µyaU6QSßÜô™*º2Ù¨ÊÑuHmVª‚{KÍŽÙ¼v‘¬s0ø³öX­RXcM*à6ã«b‡«á‡þBC‘:=ÚkË£ýÊ}«¿ýÖ‹Y<bnÝêx˜_,ÓÌ÷è]ï®}U©y±§Í° Ö_íÐ:Á?Ã˜aøwZ€„Ãò”;G}ýpso¬8¸kˆásQÉA[ÒÃžòžzf'#;E‡ð¸§5²Y{¯<¯ƒ’3«þ*²ÍË³FdLbBónÆi
+Ò¶‰•yÔ__y®Ð.ÓVïEô`àRÒ!jï%e¾¤‡ D¨}Q(7d.ŽzV§ÏèTÿÂÑÉE.<¹Ì83já«ÿyç§Ù‚Ûµa""xm—KäÝº8	†å]Ó/Z†*8®€2Ó q<VÃ(î¯Ì$„À¡”õ˜Ï2gò¥Ñ}Bè Ý12ë={ŸãeÔÊ+yŒ®B£æ>
+_Â*¨³_2¾ÑÎ?ª³0ÞÛ^ãå¨`¨àw»úÁƒÏáè‹%^Hë¢4Ær}"">×ŸË¾éIÐPñQôvñßaŠÜxtqaiÞÊ0Ä¤wŒ v9\d>{!¥V*z×3gJÛO¶Ü´xÚý™vCêÚ›©MthiçxNà¶¼*ñp£üÈç0âBøZŸšõ…£éŽ7 K+Ê °¾š ïÐËôfL|YCJó°Iüº±†ŠôØ¶×eùi@çrT1âWl‹QKÉ7Gp¾5–¼%øúžÝã ?Å6¼\=Øv™Pät¯ÎÃtÃa7„Ì=$/ÅÁZ¶ÏQã;ðÖüÒ&„˜ÿÃÈÐd¿–ÝuÄ¥Ó[`Æ‹óÔ~®©Âþ©X\a8m,""‚Jp¬›•­O	Ê<A¥ar¦²9,Œ±¬	½q•HúKu¾M«QD!þrÔ?U©äÕE'½2ƒÓY_ÁðÔFÑB’ë¬ÄL–f4V~IûÇ‹p¹¤<ê ÷¢g‰”¥8Ñ1’iþÜ¹v¤7>XÄ³?™hØËY¾²<¶#c½ß†ÿ·Ú±""»ºMdÇT§éc	Å~ˆiüÓýªÜ,C–`¡žÉ=ÿ}å6""?Óž;Ö¡Ûò“>ºÇ¿ÉË£ì÷Oößé³ §D•„e‚ŸáaÚÒù çwÔÑ(Ünj[CÜëP,››\y¸öÁÝ¾ƒÍq¹*ë•å3fÊ¸Ìs¨X'|Â`æ–šRoGË*n…bÞ={<Ï†O¬b¾¶Tb†_E‡¡Åò72Ö/õÊõ­¢f©ñ™Ñf³
+ß÷/( ÚÈAvìjcØ>áMÞäáußºiýQ#>ã0 GöÂ€>¯Ì;gW°Ú Çí¹\¯Ä{!Â¾±êˆLøÊBF¤þ""t`’Ï¯N\	›ý~ð¹32['býÍšŠJÕ úz.5•ÒS¸5‡å·>©) |•ç¶‡Ô¢½íØÏä;yŽí]³3Ã6	FîÅ`‘Êšüzñ1ãÇxÿ°‡xzxÏñËÖÙ a}¾»—Õà…Ûýqê—dÁåïú²ÀpvGö`œcýŒ;ÅQ¤9:ä>Ÿÿ,VY©üZw1eJ2óÞÙ2çj·åð1¥–QÉ^HA*Ÿù×}œRûÁ'ÂÙ4‰á+ÿê„ß“¯ÄïÔ_ñ­ì]ÃëÌÛ	ÒÿF¡2_‹«œçÃè'ªæ¬…ªÞ5v·YÌ`A@‘eïÌ>8Xñ-k^~Ys”6°ñð_®¨ÀçT{êÈa á²ˆÊ^Ä¼–íóqNïZ`$OÀj	±>6ó h( ""¶Ø‚`{:¹Òð½¡™võfÓb9$OÛFsÆÅXý•ÈË8ø""Ê=ã²r=__ÞNLÀÁÁ‹P ²~¿ØqVîCíOˆôˆg»:eþ¿Íg³°D6x±Žùà24%ðNT½¾g\1½:Ó´-´ðôá¡&|[³Vâ.ùñ[\ÃZ-¸¾º¢š®ÍÛvÃ1ÑŸ/çÿ8HjpÇÜt’µy“5—:Vµãþ6V‚ß-#Ì†œðÞ""‚'þ8®Kìi…’ÿõgÆ©Ø×B>îÆ0w˜4¬€íâ£ímÄÏÄß’2ç4#wÈÞ„©´âÇÛÏmMs¨:G¨ž¾åÆ¹1¿›Sñ¼,¸tå?¦àô&]ü=+}7ÇË	‡QZ¼(#Ê—•›wa""ê=b3Ž•›ÄÄ#¡ŸknÖLJÐzÍ‘¥Û6ik÷²¿£Va;@ë©‘“Ù¨Ì}ª‰¼x¸ŒÈ<eõØáiÁ t«7æ¯‘îSïf¥îÂëÇa8?·2¯¿‹‰Jw²O…~HñÄ	DÙƒÍä'žÍÞ8›Úá? À¸	–WŠÅ8zŽ£MI,¿/UÚIÿà ’õ?óì®Hu¼ü WàçŽé5ê¹güNZ
+Ž&ÖiùW8Ÿ?mÛ""pp÷~¥‚>¼§^mÁ`
+Wå'‡¸³ºÂà®9ú	›´‰ð0ÅÞÂY®np×^Ó`BºÔ¯?,D8a%&d+Lñ¼X£hñbnoü „‡Q¬Ûû""/éyÚÊ¬KrF¯ö `â8n…Y}Éúèê©'¨`ê®`×ˆ¹W¡s""uÙLÎ_}=„‹ †[ÅP„”æH¨×JÓ9)@4RŠì6ºjç‡7^‹Òs?ä[Ð´ù¥eà sP·Ó<Pkq”#ìä®›èÐ<Ø•ýmÕef«Ý.î¾×“Áðü¼¿m!{Fàá<4d–Žà¡‹“¡T¶+ûM˜\DDãƒ? EÝká¬\EÇU¨óSÂJç4Éì¢–.ÐF¢ûk"" ,ÒB@K
+ÕÝgÕSç<Ï¨§ä0ž|0ˆ³ÚZ8:c¢›dÝ:—à@ˆjÒO›¨Ó¹&qPÂL­Tâ‚X’œòivU—WG˜ñ¯ >Z’Z×†ßþ•÷DØì{€@Ð„5‡Ch¼ø 2á²/L^¼Ý–<°5ÒKÚÂâá~ z/æxF´$Åb?ÿM_–• e+jæä*Rók-bLT(¤žCÐ½O~ÿ±Ë˜Žü×¡ÍIç7ZïÔÍûÍÉ²jöÀx¡9~·!40«6ÎåyúÆ,àF‘]\ÄWÛéeÀÿ;äñì±‘3IvIˆ¦uœ¨‹Eª[[GüIþ¨ E;½vWÄ;|•[ÙÞÆ±yðMã™2¿v!Œ$Ãêo`ˆ!øÍóÍö_ZD·ç£óÍÈú'Qéüã…‡´ùÿÜêðUÜ¥6GGÛ0å†K«6‚ÊLh=•Â×H½­ÁÐñþÃôÍôß~A^m±´ƒÿ(”Â§©cù»?`£‡Ž$Ïj÷¦‰ÇêÃ<:[ÌÃw	C”mé¨šv	æ""Y~î\HµI¿‘eåØ€Ç,|`4ëÐ[à%í²{ªéit¸@4t«§j«qömA¼vGXÜ)[ËÐí Yl˜àý“iÈ~†áŽ¯ˆV“§7_·ñ›aº4Ö5àƒãiº9ZB·%x ë˜5TÒb+)4á¹F{‚€øŠ¾‡   ",NULL
+"531","UuyiIFbDJbawbK39mC7MMYHybIj1","105@gmail.com","firebase_oauth","lima","client","(95) 98989-8959",NULL,"2025-12-30 21:09:39","0",NULL,NULL
+"543","UfreOG3mYcaGlOHwLrSlzDk2QEI3","lidianosantos12345@gmail.com","firebase_oauth","lidiano Santos Barbosa","client","(99) 98482-9608",NULL,"2025-12-31 19:12:32","0",NULL,NULL
+"832","7kjf2J62g5a7Ki9SiXZaKwS8ORg1","barba@gmail.com","FIREBASE_AUTH","dono do barba","provider","(88) 88888-8888",NULL,"2026-01-09 18:32:10","0","RIFF¬  WEBPVP8    p *€ € >m.”G$""""!,‘Kx€‰c Òæa6Ültõk^—ù_(;ñ•c8Ñïæðï<¾ùÍzkØõ¿ÓØ?¡.¿/­—½uGÆÕÛâH5<ý(@;0½Ì™UÌa¸ÑÚ -ËŠY;þúÐ~\Œ:A~`ÀÆ¯d‰IÓ'`(›Ð-žÿë0U>¨NÍ­pÞßÏQ@áúÚ]ÉøG¶BœnìQoQücª¨[ý,H)s /2ãÐd„ˆ(fõPm‹½w’„®óF½ ´2¥10Ð¸ÄwŒg>Œ9  þðÄÿ˜'õûõûÓv(%T  @‡é´ŽãH&Øà)ÇŠ’ùuõ,N|I‡ô{‹(!aHk¬—E-³|,º5GÉá|åx[¢²º‹Øí‘7hswxÈ1uæ_[Ìû¢¸ÕøaÓ·£ÃTáƒôQ‡z¡.>ç…åþëôs‚@	§rÐLW<TöÇ·o±à¨Œ™æQ_¾ª”jòZÚÁºÿôŒûTKô6È‚þU¡÷s*“µÂäp2¨npðÛµv–c6³}ÜØÔãL÷£arË;³Z·(p\¸ÞïJ•öédôÅçÀd	ð¶ðXtæ=ÂZCiOï”»âÑŒ^LðdUÛ¾íâv:w ßï2Ùˆžgû÷×Sh`êÁþ9«Ø¶g¢øDWSì WÁwø“£B¼âaþ$ïÚBrû¶?€þeÌsYŽ†Hxìóó€¤Ëë]oÇq+á}øo¾ö×½Å£Ïl©47K¡­ÔÁÆw¸¸ªdâ–H3wEbY:•òü˜[Å˜ÚÕ1×Æn‘L¤{vÌññÙÀ4Õ²_u‡ÝÊôÒ³…îqEe©2Qp½Ð?ãfÑ¯ÁNO<oþ‘ôÝÑ~]0Åœç”èÒêa'tòRIŒ‡Ÿ,‹j˜Ð‰Ì½ÔYeyR6óìð·o²½vØòg‡¿ÎÖÔg¯ˆ:v¦aáÈF žäò„E9Z¹øœLÇ%©Ð¬Ão…™õ¨¦[éð“zõyø$ÅÄ¯jŒÑë÷J¾{:{%Sx""BKû·«–g[´1*0m¿Yò©îèZðŠHøín'>}ÿÝOhc«HU›Ê1iœ¯¥AGkVøŠïŸÆ>áb¸Þßi öÙPx
+òö€â|äq}ÔËI,ï|9Ú5*A~¹ºz	…Ã ÀŒ`‚Ù–6ßúü$ç`'¼›ŸFÊÏ¥cbq9m–\@øY;¦3=û`¸“!rè‘òž¿Y ŽÍÆzgE_g„u""x±,•¿hZdZ¼«I6õµíƒÁYý{vQWA.Ç:x}÷N‰£³E&°
+L7».9‹e5ŸÕ“ „l]{eßŽ—Ì‹NÐúïL…†Ž7aäUæJlý<¬ïlu¼RäüHÑÄ$ÍðËÀ3[ð¦f}v¨¨ó`Êwþ»÷¦j\ÙU,´Œ(ÄÔ-ÑÔ`11ÈØÑ ÓÒ€^Júíò;™”ýP¹ÒH`fUÓ±âMÑEÒò19Ò    ",NULL
+"833","NDU3llLYndOdKs4neDfqh37PGyr2","cabelo@gmail.com","FIREBASE_AUTH","cabelo","provider","(98) 09090-9809",NULL,"2026-01-09 21:30:00","0",NULL,NULL
+"834","hxnrP7t0MvSupIURtHsYS1x7meC3","refri@gmail.com","FIREBASE_AUTH","tecnico refrige","provider","(85) 93847-5938",NULL,"2026-01-09 21:46:41","0",NULL,NULL
+"835","aQ6YeJRWwCTPiBLbTTl9PCp1ahk2","chave@gmail.com","FIREBASE_AUTH","chaveiro silva","provider","(89) 87987-9879",NULL,"2026-01-09 21:47:55","1","RIFFü	  WEBPVP8 ð	  / *€ € >m0“G¤""¡¡*“Ûˆ€‰d,Àˆ÷|ú‰úO9ûWö½Ü“…a?T{i<ÀÿûEîÏþ‹ögÜ_“«ïûbïí_ï}€?\}6¿q>ÿÃÿÄýÉøý©ÿçìèÔÎ¬¿µ~:õÜyÙïÆLÑ/üþ‰íWúxz«üå7€ üoù/û/·?IOè¿}Àú»èOùÇøN?O ö þ{ýoýß÷Äÿ¤ÿåücþqþgØùÏõÿû}†½%N‚çãöþeÇ“C*^Î¥(ý*žÕÄ¶Y:ÁìyqUß-3Þ53tíPÈ•¸x±P†1àóõï!±sSŠ1oT#ìŒ~í:bGÍÐÞš×_ú ÝNëŒKÖ™`…Au=¯?6a)i bï«kyêïk„V#ð¦ð+iÿD­ÌMß™˜ïÃ1ìëé°Ät/ +Vg˜Â¹n¤åuÒÖy§,€Ò0þ“ Øx›Á‘œ#|iEöp þðÑZ¹quÚïü?q”È¯ÿ—{ÿÃ÷LŠÿ—{ÿÉ¦2WÂoeÜŠG  ´ÂpYm†BÒ¶šcNË¼'¿ËÏãœxŽnzMG/ƒ•(ÏÃ™µ–¼uy‚Lê×1ÿÝÐó…9‚••‡æ¢¡“|âÍ¬”U2gà>šªÓDRn·µÍ8‘q·s¯ÿb6M…’õÍ¥‚û
+”lHêŠ€~‚»¬½^ôv6Ê]'9w±õ{ÁF>la£›Î¾Ar¥-^è/Ì/@	ŸP€27Bð/AÀƒ0¯‘Œ¼y¨Jz¥&½áÈã_µ¶S8n8gl%T/€÷µ˜»\E‘!¹¿)¦KÀÇÍm_—ä‹…‚ùëòïùÐþ˜P~’<šúíµÑç}eJ€­×ìf\PMÇÐ‰æº<¿„È—¸ãðŠ‚ÅoÑ_ÌÂäÿ‚¼îø•^>Ãoÿàˆí^@•ðJƒ“jK¯®[gàRTþISþé²Pè[¯Ëï„òæ±D³qð#@6î22¦·BŒ\_YèM®­ÁœuÖÐÆ¹kM­ª¸;%Œ¸Pt©$)ïÏ*­ÍO¼]1ßR\BžæºŒÊŽÈ?ÌXðõÐð¦7Ÿ""ÝO©šS¥ºü…Ût"" |¨p'ÓSû“.œª]¢ÿåBb«Ëüù@£„ž…2]q³Rg""qV( šÙÛpƒT±ùn²¸0òú‹ÑFÄðPâ
+ÁÝ˜$,Ÿ¿#+¥­$-Ì*nƒÕYbþf˜B×ñÒZÄK&¬uèçå³^Òògq
+ŸƒºÊÿMüD†sLã®ïQ iFá±Cl”jÉa…<2ˆfþötï
+™ÑªpC1ï÷hqX¬gd¨xÝkïš'Š{G8ý€§€bQîOrì(gpÜ/o""Æ¾æïÊŽ´Ý{µ~„A®ûñÒ®(ÆÄ(hÄ‰-¿Õ%ì¦¤¸óò°Ç€4ÉV¬ÛÅÏÓ‡&D¢Åfµ™Úu“¥ù»O(×k+®Ühðu‹þ:ËÄ@Ä‡ðä·ŠòdVº¦*tÂK¿QJŒ¸›{Põ¾„²°åô¨¼{	Ü÷Ý""
+ÇdkNínßøþ='	dâBo	°åÑ³,}Þ,“ÛÚPKO©%K1kþC³mVHÒ,ÊAï;Gà‰,'Þ¼ý >¿òõã*¬’!ži÷ ˆÀ/m¤™:¹®	d˜L^h­þ‘±§DqÒSÊ—¦‚£¯†tìÞ.Œ‘sjñlÊLÕðµcõœábCÎ¬ˆRS’zíGi‘äòïíçßCÆù·÷˜›ò8Ögfô¾W""›‰/©ÖÁAq'O“mîJ’K`*±IZ—ßd½Á=ÆºTÕ¾-ä¯à'Ÿ·OEïñRp‚:+ÝÔ~>Í(]l•£Ïµ0“Ûè¦:9Ú]°'Ù÷ß®¶¼IÝ3ÿ•;;¾|PðÐö0•áßé‰ÏÐE}}‹g ÏÔBSƒã^î¿GŸãXF&I‘_Y¦«WÓl/©G‚ú<øÅêµàx…¦”_Z_
+;š*éuuËÞµøË96NYžIA¿È«V'F²[–mSÙ-¶–-x,‡HWŠjMKôDVæ÷ý.0±pEŸÅÚéw8U~kÓ˜ÇíG> ¤:H%Æ/÷ïåV¥aæñq³AoÃ®N­Œ,\­%â%é„‡{á—g¼4Ç8§ñVÎ\Ôˆ·æ»w¿Pï“à)ÓåÊa?(ZÓßQ÷""ÿCdÓjo¨ážíd æWBNÇ u{„í&ÌÄ¨Ôð(G¤z…þ¿öRßó2¹#|]öÝŽGìåívâ¿yfAœäg]â‹?ä¥Wò®›þÊzZäZü`ISûÛÇÿùo}ò£™P qG&>–W-”1]ŸïòÀdNüM»Z8ß©8²$ZÂŽLØ=SŽØ‹­Ö”ù®s,ãØîLÀçŽ}Ù+ÕùE‰Ó'ö¿ï¬ª¡Æ`ÔÌ>’kp‹FLÉIAúXR´A€›®.Žõž÷Øô>Å>c©Nèô8d×8ŠVÕÕ;ÙóÜZwjÀª}/htËš5Œ”qJ0¨©O´k=%YR<€ÊžI_4å&»¼ÅäÁñ¸:ýƒ-GÕNÆ½RÈ]1LhçÖpé£k2 _/‚\ºÔräAžÀ6z<&AŒÊÑ=x=ã‡U¾R´pâ?8
+ÌˆaûY é8 äú>æS‰Ë¥8—£QÑ–ïž
+&z7˜>¡æ4ŠÕ«Ëü£ÂÛƒa˜åÝç/SD'–Yv÷[Æ7»èMò?w)¢Íñ©ð•Ô#HzN
+žÔïqòŒô
+³‚(3«¾x÷¹1¸uMin+çnª@×JäÕ§Á÷Ã±ü‹ÖYÖ .0‰f;²VG…ÓâÒtgª
+ZÖ¥X„6©Èlõ4/ ,·}ÁË¶ÇŽGíó\àSVÿâÏöú?ˆ¹£-ní¼Û¹ÒÒhá1Š)ùØ‹Òíéù;ç¸L÷ÐÆI¢Z!1ß¶ÀVTèuž·5ÝìØÍçÖLð½L{ÿ«!~<Ö§X.Æ•ÿ¢sÇ‘”cÏÿü53Û›jŽÁHB•Ã¬?J0Xã°^–èmŸù‰oLJÆ z¢y,;±ïYGŽä lßoýUËLÉ–Ë¿^Œí ÉºBæ(è‰¶Ã!óã}Ÿpº©§aÛ’4uViE??¸¶/ˆ.y_*ö´ÖB†OUê÷K•'ÇbôUw,€â¾¢Ã–p4;ˆÇÞó‚áB}ÌÅµ¾6®6ÊK=cJÁÜÿ³^ÒŠ    3ò—ÐÖTps>™( à  ",NULL
+"836","NI9XZK7LIATdk8nTjYQo1LvqjnO2","cliente@gmail.com","FIREBASE_AUTH","cliente novo","client","(98) 95686-8656",NULL,"2026-01-10 05:05:06","0","RIFF   WEBPVP8 ”  °< *€ € >m0‘F¤#!¡*– €‰f°}øîÇ­ñã(ý¡­Ïæø
+K¥ƒÿåû*üûÿ;}‡˜OÚ¯Xø°ó¿Àz€cóˆöIô(òåöXÿ	‚»ýWµðÞøþ÷¾~9'ëûBÿ—ýûýÇ˜ýòüUÔ#Ù?ç½'~Wðç¿óeóö‡ëð¹ùjƒà`æŸÔý$ÿoþßÇ·íð=€?ÿˆÿ™ê‹ÿo—O«?òûƒþ¹õôNýªqÄM?šZª@©å‚ükÛ	;Ûý‰""?ññ9ò·!Ð–ä­ù¢¢Ái¸m8êFŸÉº«os‹Þ?âÚe¬!Á8?¿U€rï\¾7ÎDÂ*ìª¸{¾µñˆ4°Ø©ÄÅ³øöm¿˜e>Õ›>ƒ^r]¾Õ„á®3¿±K¢Ç¼Te÷,ý+Í¥ãˆíª›–‚üríI§ÀÌ¥ÄÔqpgžôí »ôAÿ˜—p9£9""„†3-ÒïÛ¿UCQ·wiÐ²¤FÐ+ª‡Ê-çT›²/÷ožHy™Å°¤J[£Æü‘mØˆíe Ù?Ôd¥wÌK®ª–DÅÓ¶>ÍåÓ>4`@þ-çgÊ#F8Å/ªOL7 ÿ Ã .mE§X  þòÈz£„kµÏÈ”:{‡^ýX;±:æ“wÞ#—ø*'Ý¨ð{A™£«bñ?ÑiÚ³§wµ¯Öl+æ+Mµª¶\eðUÍŸþSy‚–¹nzÈöœÞ9Ž¬Õu'‹[¥n1/PgO*ž¤á»—œÇX¼¨¼³g+õCxKõjsËáŸôüƒ,Œ7oö™Ä.}¡ßë‰}Ï÷\–ÂèÂ]ÔLÆqµ’÷4VÜ40£Ñ±Äœ²Ü` /ÃÑË@².ªÜ.[ï5ùÔáÊJìN¼$
+³W§´å£®'8—9‡.bÚ_²ŠW7—:ŽÑ4ôJ/\æÕÎb'¤foÁ‹RML‘¸™Ô›yl.›AØ;\·†šàÆÕïÕOBgÂÝ*ý®òs±Lz£<ò1Ôµùè[M&f“ž‘0JYX,L³ÊRQ%Y«nûÒÒpÀhh.› Ã]…÷li£¯tOµª˜HNŠz±BøfkºŠñ_Çðgêï?!¼×yž©gËR	uÁ›œÆ¼ó2Ü—C_¿ý#[~bWë[M(ß8 d@d¸É29‡ÕJÆ?çÞ®Ï Öö4)¨ŸSscÿ“ßhzÌ7ÈÆŒcÏÕaÜh™|NãÊàLSõ|ð5ÃL‘öTÒ£Õ€7È­w§=!¥—Ä ª±÷\¤!ÓïÖwµÒŽÐj<jEöõtÙÿ„c+FH:A²Á`žÒýý•¿¢>Mîv1ß$~4*8zN¯DÿL!£Lú>Q’7ü © ¸âi'ñxýˆãeôWõáà'x>-x•­–èX*ƒ.wÙæ$º;}@ +&J³08½Éœñ$Í0_3³yÚ?$Üh¸§«XU¯ÏùÂ1ýšvae5ÐgZº¶VDT¢À)ˆòitÅýƒìOËeÃ Zä¡Gc5L£7\1Z.[?«Vqþ%X#çVÃm‹«3¨È|t3Kiæ'@}õÇ|<JúÂ6Ïu÷{¿ø þB@¼Àn(Û~Û~ˆiU±c«>Ëþü Øë<PyzÉ£ÌjKh	š¯Ÿ3á˜¨Â_KáXOŸ]Ö0î;YLØ²K\$9—Æ0ºÃWÐn)ç²›ŠÉt«pƒ'«Œ¶•8‰oî'\÷yÎŒ%, ‰@i¡ÒÃ; I8t
+ÁºÒ™Å#j¼÷Ì½fò«_â´&+*õ£ýAO©+nï	Šf¹_28Ž ²J’@Lï@/Ôä†ßisÁWj!¤j""WuJq¢ÊiÂ›5²ð…9uaÖ}Þš}Âw„j°ûÕ¨•+ 8ŠaJÚ§wnuÏ8 ÝŠ?ÛÃØ${¦cíuå}…Ê¿¦Ð¥†)ŸÕëÇòÓØÍjQ [yÿæ½B’í­ev¨¸'ìÔš@˜ië{6—™£©U2Ã>æ­ÃÙ±¡#Ú&4—Ô× oô>F¡,¼¤Ç{“G§YLÊìŽ„¼(l”œ¦üÀŸŠÿ‡â¢ÍàØD¿ø7ùþ~¦ÕŽ„R}ðÕU•A»àÙb|–íÏÍìž˜´§nODü;,xšôèA€j6ÒÛ‘Ï¸6‰]oŒï·â¯í}çë³ü ûw’oÛ0-3•6t–¾~ý»YüÇlÖÚÜWE_Ùòëå/ž@ÍÜ§Q·‹¦`OqƒˆNK‚“Ìtw¯ ÑJói2„j¼.6G–>8ÀSœÖÜ""»3âr`$DK™h@ù£7Éd‹ƒ£ñÿÄ'M³ŠÞ>•ÖÂh
+&à0Z1pÑuABüç²EO&¤§®æÏü9Ó1e}N…B.† •™ž¼4µ>DMÆÃ¤ÇÕÐÁàà¦!V5Ç>ËQ¹¬ÿÃ""ªnDÖÎ€DÈZ$´\.’ŠÕzFÄN$RÌÁ“…S^~NªœÂR5†¬â—¥5u¢ÏgÖÝEÂó\´~Ó RõŸïÌîŸ©7tš»g¾½a“Œ$Ÿz®	‘Ÿ ¾«*DÆ™V'!¢­v`Àˆ@mü1“Kïjƒmõ®£Êò. ÀÜQ{Ê€E¤¡cIœ.fû/rÊ;ÇyÍÈñÝv.ï——@.k[lP£ø‡¾è¹ÔÙG?t“MC½AG¶›«‘SÄÇäõmŽvä—gCƒg]#ð6Å»/Ô·[á8üóáIJF‹/2ûB5v„™xFþ	Þ`s2µ¦#wCJó>éñuóW""›qÄHÞÔ†¦Iß Ï]?ÔÄqÓjJñdßÂc1nš;.L&Ã‡¸´¦½µ/¥t ×p=ÿªÖÍÓWŸ
+¶rˆßíLGÚoQýù×
+7Ýƒæ´e¼pÏ°¶£¨¥8(rñâ¹IHÝd¨•]§7pÑÛå?&êõM1èäOQÜ´rXC÷p&1aðÛâ‰6æû_É~hÅ²ã·%dp<KÇÊô/[ŒéçÑoÊpŸg¸î/.ó;§
+#+Âäg]ŸÉ)Ÿišà\?/¼­Þ¶8œV½ºìüìÝn·¥õÂñ(;m¸btûˆÜ¥.Ø1Iþ+,Â Dž|
++P`þ¤pV¶""tr†ü!@ä1ðz'ã	Ÿ¢cÕð¬Ü¥¾ÄÒ_OSÖZN™âÁjGqÏÆäuIüIäO™[Eà›,ßõ»÷{¯¾ÐÈk3 –ß
+TPvGóo5DÁÝñšön«©Ù¦F4¯ôøÊ¸1“Jž¡iµÊ”D—ËUFóëçÿD‚‚,¹ ÀsÅi«‹ò€£]«©EÎjiF²)“èÜã""²myA®Ò´^½‹X 1·Aªº
+šñ=¿€x„‰®¡:&OEF]INŒÉh)„!·×XHÆÙ@†œ2ýòQ\ïæ­‚„9ž_pSh¨x'Ä'Uð
+¼éùhHŸñ íWÇù_Òpˆ°Mèu!ÒånËˆ&ÌI2 ÓîÉ4§›öÀ9r¿
+crSŸZRx€=*ÃØÀÔÂ‡o€Œ³¥¥EwØ?°Î‰¡{-î¸cÙ?‚øTáe&ZQfÔNè©‚:|.ÎR }lE/ñ.çýd-¹1ˆjÄS²WLÁX·°Èó+L‡Òpz²QË*:xœnˆ³sm‹)q(Tÿ—FŠ5ËfÛ£^ÿ6#rzÏùq:³…ŽŒ·e¤ô²ßÓaôÿˆé†ÜÓdoræ€¾Pð!z#=x¯Ì½›
+o Ï½)ØËlöC­3Y p‹Q’GIi“¼é¦„ÉºNDvîØMr4#ø1""äKÉ1+‹A…Êíøg@Hø¿kBÑh¶Á3âã‡©'YN»öcü†H“s`í4± Ä¨%¦›i³U³®¸ÆTåäçÁdÓû^y(„ô¥Ö'5º—Kv;é¥>¤Y•cêK/ìT¦V*AP ûð˜0Ô‘†©cVJ:”Ìˆ ›øÿ?ð¦ßO¨Ûôð±&i¾5Ê(÷ 'Äm
+>ðÁòëQÃh êTô€¿'êfì¼¶Gþl‰•–ð§”t\½#©Ú­œ+Žÿ1¤ævE‹=ð@ª|ùZ•
+BCŒuÕ)“¿{GK–ÿöaå3ÅÞ­±M{N5ý­qNæ¾&|9-…,„_BÄ® ]?_Üš6ÍÅ4j¨@´ûEN)áÝ±¥ùƒY
+1ËƒÄä`¼ÏÙñÝcêyØÂZ""M{O`SâJqˆ>…'
+¥ôÅApÀdÑBÚ_AÌnj>i/{ôþó€çhNãgƒ¸oTÇxÛ‘ê’IîyƒÅ¿­eÚ®Ö”ÂL~ÜÛI|Õ­TiGOúšƒ,jtãã´ÿÒì Æ^’EéA?;ù
+y³ß‰ï…½d/’¿MýRéÍŒ)›œ ×íy¼ 'ÃÝ««sÅN-S‰ÿgWÙÜø/KGÁæŠ¯j FÎ® Õ[Ü‰³d}®Ÿ)[üÊ6!‰Xœ„`»Ný¡š@t›?¶¿áz†§#V&«´y&€pÒöZ0ŽuÁB,=søÙ°‘ìj³žZöHb|‹·ƒ´	Gä ÿÃ	ÓÝHüÍpÅrgí¶gvï¯ôA…çà™,?¯eu”*¶R¿ô  Žwm$ç”´G@07©»xrDÀ½ÅVg¥öø-¶ê?0[Åª0°={•(À’+ÑùåŸ±Rñà ª(‘\œ³6ÌW†™A¹Ã›høøYúOËtÎ}­˜Ù³Ò„‚¿Mƒf¹ó¼´   ",NULL
+"837","mock_client_test_1768037335947@example.com","client_test_1768037335947@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 06:28:55","0",NULL,NULL
+"838","mock_client_test_1768037717637@example.com","client_test_1768037717637@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 06:35:17","0",NULL,NULL
+"839","mock_client_test_1768037752232@example.com","client_test_1768037752232@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 06:35:51","0",NULL,NULL
+"840","mock_client_test_1768037787838@example.com","client_test_1768037787838@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 06:36:27","0",NULL,NULL
+"841","mock_client_test_1768037928517@example.com","client_test_1768037928517@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 06:38:48","0",NULL,NULL
+"842","mock_client_test_1768040024903@example.com","client_test_1768040024903@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 07:13:44","0",NULL,NULL
+"843","mock_client_test_1768040103551@example.com","client_test_1768040103551@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 07:15:03","0",NULL,NULL
+"844","mock_client_test_1768040451407@example.com","client_test_1768040451407@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 07:20:50","0",NULL,NULL
+"845","mock_client_test_1768040754573@example.com","client_test_1768040754573@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 07:25:54","0",NULL,NULL
+"846","mock_client_test_1768041340228@example.com","client_test_1768041340228@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 07:35:39","0",NULL,NULL
+"847","mock_client_test_1768043658287@example.com","client_test_1768043658287@example.com","FIREBASE_AUTH","Cliente Teste Local","client","11999999999",NULL,"2026-01-10 08:14:21","0",NULL,NULL
+"848","test_firebase_uid_123","client@test.com","mock_hash","Cliente de Teste","client","11999999999",NULL,"2026-01-10 11:19:41","0",NULL,NULL
+"849","VrCDPYvjZSXpdyF4aUlwbX2V7Fa2","lucas@gmail.com","FIREBASE_AUTH","Lucas","provider","(87) 58456-4656",NULL,"2026-01-11 10:17:45","0",NULL,NULL
+"850","wRVHm83aq4cK5q4CoUm4IOEuR5l1","djfjsj@gmail.com","FIREBASE_AUTH","jdjsjdje fifkfkfk","provider","(95) 64656-4646",NULL,"2026-01-11 10:21:23","0",NULL,NULL
+"851","mock_client_1768173873949@test.com","client_1768173873949@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 20:24:34","0",NULL,NULL
+"852","mock_provider_1768173873949@test.com","provider_1768173873949@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 20:24:34","0",NULL,NULL
+"853","mock_client_1768174113012@test.com","client_1768174113012@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 20:28:33","0",NULL,NULL
+"854","mock_provider_1768174113012@test.com","provider_1768174113012@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 20:28:33","0",NULL,NULL
+"855","mock_client_1768174513946@test.com","client_1768174513946@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 20:35:14","0",NULL,NULL
+"856","mock_provider_1768174513946@test.com","provider_1768174513946@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 20:35:14","0",NULL,NULL
+"857","mock_client_1768174554985@test.com","client_1768174554985@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 20:35:55","0",NULL,NULL
+"858","mock_provider_1768174554985@test.com","provider_1768174554985@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 20:35:55","0",NULL,NULL
+"859","mock_client_1768174718309@test.com","client_1768174718309@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 20:38:38","0",NULL,NULL
+"860","mock_provider_1768174718309@test.com","provider_1768174718309@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 20:38:38","0",NULL,NULL
+"861","mock_client_1768177247831@test.com","client_1768177247831@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:20:48","0",NULL,NULL
+"862","mock_provider_1768177247831@test.com","provider_1768177247831@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:20:48","0",NULL,NULL
+"863","mock_client_1768177380871@test.com","client_1768177380871@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:23:01","0",NULL,NULL
+"864","mock_provider_1768177380871@test.com","provider_1768177380871@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:23:01","0",NULL,NULL
+"865","mock_client_1768177428046@test.com","client_1768177428046@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:23:48","0",NULL,NULL
+"866","mock_provider_1768177428046@test.com","provider_1768177428046@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:23:48","0",NULL,NULL
+"867","mock_client_1768177469937@test.com","client_1768177469937@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:24:30","0",NULL,NULL
+"868","mock_provider_1768177469937@test.com","provider_1768177469937@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:24:30","0",NULL,NULL
+"869","mock_client_1768177512041@test.com","client_1768177512041@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:25:12","0",NULL,NULL
+"870","mock_provider_1768177512041@test.com","provider_1768177512041@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:25:12","0",NULL,NULL
+"871","mock_client_1768177578660@test.com","client_1768177578660@test.com","FIREBASE_AUTH","Client Test","client","11999999999",NULL,"2026-01-11 21:26:18","0",NULL,NULL
+"872","mock_provider_1768177578660@test.com","provider_1768177578660@test.com","FIREBASE_AUTH","Provider Test","provider","11988888888",NULL,"2026-01-11 21:26:18","0",NULL,NULL
+"873","cfUXKwQYccc39TR8yb5SIkgQmr13","stany@gmai.com","FIREBASE_AUTH","eududud","provider","(46) 44545-4545",NULL,"2026-01-11 22:53:51","0",NULL,NULL
+"874","O0wy9N7oQ5gzX0NMPMA4DqsN4td2","lidianosantos1234@gmail.com","FIREBASE_AUTH","Lidiano Santos Barbosa","provider","(99) 98482-9608",NULL,"2026-01-13 14:57:39","0","RIFF,  WEBPVP8    °6 *€ € >i,‘E¤""¡—É`@„±€aÒ/&òûDº¥”¿qá?– ×µ¸IfcÛ¸Í;5«}¢gEÏÛ(]ñÁ¢©N¡„è%ÝgJü+ó~ÊBÉLàð;žÝ/MA+b±øOÁÆ¸+Ö8öàÖÖOÍ]$Ä²+ÙIZ¶ä¼–QkG]ea¶+6NïØ~áª¬D#±„µ;4Ç‰2OÒ#¶ÈªÝNûþ¡|tjÀ""‡éqèœþ_É‹ˆûÝÕlìz°	Ü¤³QiiU3+äð›ñ°£;""‘1GvNC]ÁÂúqºJÉ€’Ä²Ç©Juƒct­Jê1ùiÅ[×Ò}'¿¦»Œµ™çžŒ
+¦oÀ}ýÃ¦ø‡üLÚŽh.B¾ ÿ^î—•Ö˜5""—¨òôBúó ¨ËŠ1àv†–¨žÈÍ%¥Ü<¨õ|fÁ³Y<k!}
+N>6a^ù©ï+ÉÒÚ<mÝmïQ1²ÏMq¸ÛÊàßû³|PãÕ·ß€Ä½mú¾ã°®¶Î´<åº³¬š\n»]u	ˆx4LJ?û·º³ïZÓü™ßIwƒP þ½Ÿ¤Ô¤•@=¹M´[5˜ìsñrS{ÃÁ¼hØ§JÞETè‘ä²·Ý“÷kää+
+«ì4×ŒÂ[óxÊJR÷I.çÛLƒ‚*${N¯ˆ–ØíTÈ-Ææ!.ç®¬~õn%ŠºhX®Ž¹;#ÿ_j¥9yß¶<ún¯Qu€uT#ÝmrÈ4=FH÷úÒ¾?_0YsË&±‹öaêìb.!¹Ž0Óèl×hñY•Ú¢ÄÞ>è6‡Y.3¥ÍŽtjº=¬³k÷âÒ
+íœ‹ÁþëªÂP
+Ü™sÍ¬c ¿‘zŸWvÊ:Q_jw-iS ô*ö…\f®d!C å&çÜ‚nüTÖàÏÍy•Ö1lR	´CÑŽp€³åR<c{TFªŠUkË
+CÓ?pO2vÓØõÄŸñ]}G¾yÆþ	Í¹Ó¢ž-«š;œ×Â1tÛg?Xñ;üäŸSÀ!%ô{#]a© ·­Ö…ý#nŸ°š¦[_c¤’h_VÎ&¶ÁÍÆ‚vBìƒˆî$µ¢©f­çñ>öý.Þb'È¼AâJ)wœ÷øfxÆ¤§îê¨\ŽhÇ'L{±ÔýDLOø·Ÿ6xöy8šŽòÇ$£îøÏªF µøÁýÚÇ”…¨—1B¡‹Ež4˜¶ë}—ËÒ¬7z>$míÕl'o¾¹÷aE —­dTâ¡ÝœÔ’0<®<·»Ãóuü+d¯rIÙà Åãöæ¬'$üi«:vƒèâ&©ÜÞ=éSt`^¬x©èRùÔêÙpç&³ž‡9XNÐ‡•“9Ž®¡-N  {Òo¿×†Ñu±äƒï&j‰ÚÊwû¿ÜšñTÈNwº¶=úY²â£±O­o
+£»S~ÅÁ¹›|ÉÉØ®‡’Tz^ÓàÂÄOzÜ*•¥!ioæß´¡ˆž–ëGç¬<uQÕKµ¶ŒyQ²0]s|_pÅ¦xÝ¸xKE—Ãû9?vvZÜNA=’ïËZªa†ÁÛ»²s+[45É—q‰Z®,(1n[ãèAËß­½~Š‘g¶¢–Ê’eeSäz¤Vøï~Ö¯Àvûá\ÆÈHØB.ŸXšrg%ÔG?¡™ü4Æ¯ÇþìÔñVî×ÛKwÁ3É÷Õ;w´nª%Ö¼t:5­ÉËW¸6H@ELè.1é&ú=ä{¬W2@»
+""Ì]Áv`ã—›{wÂä†RfÓ7»·kWçÕcûE¬èOí…ÍxLåFz§îgÄ”šW¤QE3÷¿‚n˜fe5’mÍæÇ·¸øé;}nÿ•Òœò˜? jAõ>Cš“ÒÒÈo!&¸±gp|úR?ÛÀ‰*§¥BòáÒªE«ÕÓ{ØN%gqï¹	œ2|¯ÂóU­ ÁPÞLËåYùû‰s<™½øX¦‡\pPó®A^öëòRÖlœˆdÏ[Rãªk:{ƒx;jØ¦¾üÿVçá t†95ã­ÅðÅps»8bÞ‚ì½Ã2¿ÂÍ˜Ç¼àoÏ¡@=¸LTeš1ù¢“ž'Nnó7kô‡Dú›Þ±”¯""ÁÐ ¹óNÓÐlç«„æþDÑ¦k6“(S·£ñ”¥‘0”Ì\MkàsM»×òÐ'Ü,±ç>Pa_dû<Ã,jÜWJñ†óqAjÅÀÊKm–¨À);ÙS¡P½‹É~ƒôUPe¨ Þ¸jô¸àÚÛ„WžlúšÃ6¾1 ¸[)4YÕðˆ@È4kéa	1ß<\gtµ#6…¡’å\SÌpç×!$ÑÆþ,Ýõ(—~?ÜN½Êšû/;†T¶æÎ¸*N¿CSÞ¤zìtÁd²•#P[›öÿ9¨R_K^6X À+•…#åD\Ö¬ÊÜô05ð®èæ£vo!Æ8ôÚÌî}­™¿<÷)#ô?–Õ’¬-/`™ˆˆë½“Dý‰½oï~&;JúSqbtèXž|V ›tEÅ¤À\""ü}¸K7È²<9†h*PÖ¥€½\²R¯¸õ=f/¥a
+Ój|¿bvÅš(a]m¿¬SÃå4¯1ºÙÐ¿å	@š¥«¶ í‚ö¨ë
+k‚ûkB»c)§ÿ2 y±¨_bˆWºâh’ ~zˆóêL>?Å V2ßï%*Ž÷*•»Ê†BØnÍ‘/³ô'«¹)B/0ñÄî·- tAÃp*¹€¢ËM›Çl¯ZI*RòIÑ?4Ímô’Q÷p7Žè³ 8ÎÃµ«ÇBÑæ¨Ù}†RÄïC÷5'ýµ36ð¹ù0{YÑÿGž”€*¬ÎJëØ>¨4á†%ìüÑ‡#ç8¸¹È#¦Oê1›\Ãé…¡I}î'V+é(Œ¸Ÿ­Í=8­´;¢÷Ù´dZ¨Œñ$ÞsiûLm‘éï$´
+)[ÍÜ7ûa{ÐüSn•g/¼Vl$;!ªpUªJU×©¡]º›„	&eìÇÉ¾£¯Yº6Ã\IY÷dð2—ÞÇ›êOs9Š•½ßVßy‚""+ø³ÂBñAŒ7¾±ÆÓCcæ¹`
+7Ê>™ìëès­Ÿ	yöHNßDÅ£%Å8âŸÇ
+PÒè¨êúwEÕížÎ)`€kÁÚ‡JL¾ºŠóŸMiáÚ]%LR´rce#ÈöZeÛ—Ý@yp<Ê¤a%.EGÞ,¤yR‡9šœ£<“©ú=PçCÜß¾\áHÅ£á"")¾çS1'·¨åðq»‚ÐYŒhH&½Ãú°×D8uúø­‡õ4œ’=<p(Þ_ÚøÈ¦ãc+¢A‰Ö²Ù÷‘õH	,>ëØRÅ]˜˜€céÞqTæž#ö•¥@K†ýõ‘}î3ïøÕÁÅrç‰kU1ÿYÞ÷HGËÅærû”Ü‚§ôíí	ËÙ„¢ö:'¶×É	ødÃ¦æ¹˜!Ë6JÑ›ñ+ãüéP[$ê­ÅÆý*ºÕ‚ÝÙ|„œ±“È‰«Q;K%R
+ZHQâãeˆ€×î¹à9ü±šØ­>_®±®~>Épx>j—ÑáœðTkõF]n·ºU¡È§9)Íôÿ‘ÔvÜÔaoT@©VäŽqØReÅ¹ó¬¹†ø†<;à\5§æ1¥@ÀA’›U¶=Î¬§ãòÅ²˜8.òNXÔ¬xD;:‚\±¿²›bß#Ìþ„Vj Uî+õº[âOÕàë•R¹fÝFè™è6_¤}–~Cpuvûß«7rÈÊ72û""ïGf÷+rñe<ñ`¥@à™àûyIôy&ýMRÂ[Tmè<äÂÌ®Þ°vÁ  ®’¯±`xî2i×¢üœ""öË?¾‰Šçbº“ÙûÒ|¥>BOÔ§hËbeåGxNŒ'$ý®1ókÄ¢“k¡O ÎÀµ½½´3äÚL×Ÿ§bËk«¿\†äÊÿš½Ÿq3åøk¾äh;yzÉ[˜G÷x²Iy  ",NULL
+"875","dJhx9AORhXNTgBHqtJubVOh7mTQ2","pregadorcicerosafira@gmail.com","FIREBASE_AUTH","CÃ­cero santos Barbosa","client","(62) 99955-9186",NULL,"2026-01-13 16:25:23","0","RIFFn  WEBPVP8 b  Ð2 *€ € >m0“F$#!¡«Ü`€‰@U˜jf•Ç-ÒjtçÐôÛ·s«£ªoÐ¦Ò‹ß‹ðgÇÀ4Ç}£ýý¯®?ç»ûù¨»ùOèÞÿóýû7ÿ'ÕoõŸH¿çxˆ}ïþ¯°'óïîžŒzúûØ;¦
+Ü†wä²y–IÞUñcºé´.§±ZMç3½êC$¨×P”|~±=£]	Žš¡åOþwûc„×áMöþ±œÆÞ%Xü	6î+2ƒ»&¶ØT‡Ó)úX!—xn$±äï.R¼Ù±)ÕÿÕHŒWÙ#¾ãÓ]Ž¿ŠßÖ×Yœ½1ÀÃÅ¬/®~åïU±LNØÆMlž%nqÇŒ
+ª‡²³ øß›f ¿É×XÏ3û…ï±g„±¡òcÄWÌÆ(dT û>¦a6Þ0ÕòIn'¢wÛy4-¹¶µ*ù^`ýdªAŽ£IÃysnÖCÿh×úgÓ^Å<–ŸÍàm.ïßpHF£R’OýøQq$  þù0Õþdé>ÌŸË€MQZòý·°ƒï¹ÈÆì1œú‘A f*Éûvbáà­÷'.o“!×î9àža®ÀæÞút`­üX«ñÐŠJàAa<Jx†¦†šS¯Œœ0øyF¿0LNµ“éÊOvˆ7Ï}¦*ßF 6f-ÇžIpQåD‡j%Œ'HÁN[ÜÖQÖº†c-LlÔá%,©©[ÃnÇ»ý dSkÁÛ<NY~P@gZ]²ÿÇ—™u„ê8e²³µh^ÈÑ""•‰œ8©‹H–4PÇpFg6Æ¸eîRw!©P[?-ëén6ÔT<»i(ô+1Övª¿×¯°ÛZÖÖrJÕj9"":£B n÷<º¦RóYe¬/bÊ¨U@@Á;wqx£M×gŸœ·à½;¨ò7±ÉÖ	í¼	_^'´²Ö´uAG1$é~í""Ãðþ7 É¯ ’.lÆ#»ºúëíaËÿø@”""¡Œ¼.€|–Ç'I²ü­ëÆž†¼”™Ü]Rë,7tZF(‹oÖeâ·wƒp›ìc¸7E&ÓØ©Ò”ìF|0Ãé¤rø¨z‹õs]vàKèàØD³átiG–ENÊßTÓÔ¿¯|µz$ ”š·'ÿ·úÙ~‘}òZVjƒÙ–¬„²è¿O;pv×sþãR¾ôqÿÉ€=á­#í…,ùhWn¥z ±)Ý‚ÆS=OŒ­Ã6ñÉnwÉóGFHAp(Bï¹òÚ9ßßž¦®›æ¦8.L #~o""›3 _Ö¹@áo5³è…k•TÄ""-Ø”>Rž¸S±½GÜe|ðšqO‰fceõ¡1¨¥¸kh8Ña÷‚{r3Í‡êD  ƒ9Dxµ6lÎ•Fª”JP¹îÿo• caÕ/d¾Æ¤°ÄÄ°HjkrÙ¼Ï¸bKŸëHÌƒ„ÔñhR!4©·®œ6sHÃPÉfdÍÚ¼ª*.ìÚd¥Xó{Õ(^ü¾²Ä«]þ7S„†î.·[(­yqgM¸¯Ñ¿6?;CÝt³ø&ùôó´_ÎƒW” ˆŠC¶“*ÒrÃ‘&J¼ëç(­3¶—$HjÉ—ÅÐëî$‡ŠA°czñTèvAoÅNŠÏyþíñ…U¹¨Æ%ÏSTq‡‡&©gû6ÖÝ4Kü”¦Èë©gN'ií¶eŽ0²UÞGXDŠ›ú!ÝÒJhÀ©¾¿ÌLŒ­|wÆ€D¨ä¨®‚Vª™ÃÀÖ½EK|£ÄvŽ«æ•r¼·F|&mÜ‘Ö«ÿ
+¾ ¹xD¯˜#¬@´ÿ‘V©×éYV™yú…õ“?Qó—xòúpïð:Kµe²žÞÌ»(èÂw½yQ©Á³""54:Šx×´ñ¾g>7+ì^Iosç(±É“±7†n`Å«œ2ÝŒµ)­ŒðÜx“£ðV™‚*`}14éLx3MÚÝhñû¿cz­Ãä¹‰‘Ý/NÛú[ƒrí[#q‚¤í¸Ï/ÏŽtµ`²ò»¦ê[›¶-ÈäŽý;Ö®ß&þ¶ÅðÂõïê¿=7†q˜CHý¹8Ÿªg.KG®oåŠN<-„ªª›—Æz<M2àsk3§¼p#¹Ó2q“k˜½G³Ýþ""£eV”äÆnjÍn¯èN¯zëár&û$‘,aØ¥ÐËêS5%:UJó¯ë*¼Pb®šUÃí“]YTÅæO}Éâ;“ÕÉiŸ˜¬ &Å3i’Ä§7­ãÃçŒ…7û—¦í‘spOcBg²ÅKÆˆ–Æ2€t!	k$¢}¨bõÛÙ®YÇÔa;L:þ4…nì7œU­\ã˜g‚@0nauûMýÎ)W´Î1¶«›U¡®ÃÎc‹µx1|xªWåH
+)üà•‘¤åz¶ÆkÀ…²œÖ9áç$æk£5OHxGÁ)‚î.¡–d€¥À›*-|`þCOYŸHw¾¹µ(náËPãd¡>–ˆªL×‰gð£C+Èâº‹+´—Gýl‘&…åªô»°#xNÜ- Ìåj}ÝÆpñ
+ÒŸGäv}C}¸;€äyÀ×Kƒ8—ô
+k÷!Nù¯¢ü6w–†U÷í7½ôó~}“ìnß±€Ú¾í¤2su?èßßœW>müC½b,²×¼ß°‚üÓ‚–Ÿ›:ÆSîU¸­lãŸ¤œÓæÁiYy€°uíÿ™8ËØE›ê4ˆbuy©mCîØ+qeÌKttŽqÏS
+ÿ‘v´HÿÏ°†%;	5êÙÅÐqý°ÊÆrS 2ÞsÃ;m¦Rvôu“w‚nZ{RQ„	_9(®‚ybÎ*÷qýÐT«7ã<¸b!æ¬ËL&lp?•ü×¡×µÆ†Þ?ä÷é´Ÿ }õæâhKyn}ºðí]^ƒÃë ÈÏ=î'¢ulrrõvCOæ™³ÉC†º(.Fº©ôv6’¿´X4Å¶lÎ×]ÚKœ·p°ŒoÆÊ§ü¸Œ6sž¥¼ž^Ðs‹‹Ò?\%e¥Éþ÷¹¢Êý«2¶•F‹A’ôuUŽ}Þ¼ÚìÙ.t“G/¡‘¾þâ>J­hÞƒj¢ïVf“ÞH/ÉLE÷Å>›QâáR/šêdŒ»($£ÍvIR~ñÂ `õª\ò/ó„\©=]l¥|Ïd¨kA±ËAVÇßûûêé6 FÜð¾©Ï«%Æ9æ%p.ûªÄöiÛ!«`¢é·Uyë?°xIhlªS{sÏÍÊj86äên‚:uXhÊUE¤áK>˜2ÿÆaùãkÃÏ¸¯BPÓØCQê4UûZkõxti`©/^£‹ôN®T Å4qöœ×n™<‚²®W@¿ªåTäžýy×Ôc-…IrÄÛ˜=cˆ-ÁTüûÊêÙ®AT@ÂnOîg2­Ém'Ì5)VÔÆ
+Ô""  ,Gß¥×[ÀŒ%<@ô‰ß[}q `ÿibÿ÷3@úSEÛŒ²|àÑ+ÄyØ9MÝÂ;Z=%Ä¢HGÜÅ„f9f'F¯úm±š– ¿E¼×g ñ¨wÌºÌÓ2VICb{/¤|Là£Å1M>ð‰¶+î'rò£.*R¥)	 Å…|¤ÏŸT?:÷+a­’¥ƒ5Ñ¥ÎªEt¢ÌÕÆñÿgS™]X.ˆ–‡ñŠ_eÿ$÷’zË±þÔÌÎœÁ:P]òÔpª`éò¯ÌÙyÄo Áœtõ\ì®¤Ï™!À>4	a*õØLftN.]æ»4›²J=|õ’›8z|Ï‹Ä—Fw5_3döÁ…=z5M\Ô{óûšoƒ„Õßß”óÒ1<^j	wÓEOf‚_qQ˜»°—Ê8ãÖd&!2Ï¯VÂ(Úzð=ñQÏè³t&ýî_B?ÉÛ¥ò•ö‡–Ÿ®~""¡lËÃ;aC |""¯	/žLŠoœšÑ¿^2œÆ™ë¥.ÍåâÍ([	»™‘¥Ï¥ly‰f-`åRäÇRµÕUKJ
+$˜Íôûˆï8&ÀØíÆ}[%êÓÞ«Ô+ðº¦<‰ƒg²²Ï×èV-L=~Ñ9û«Ì+5\ïmØp+Uìš`#pÏi/+Ç'mÆëåÜW ï¾þI× ~K^]ÝoŸ¡Ð¦™RJ|S¯•‘“L)=ãyAþMà±$vÃ]A""}{dßâ—à±Kda³Ü¹øõæ–fO×v vô¶]JÈg1Æ_-e˜'TƒU®ÝþÚ”ë<äÓ'mÅFñi¶û3éòÿ}tîI]1þŸ=˜¬&ôáÊ6i'ÂIFùcïÔŸT0å„É®ÌÝêØ8œ&¤m*¼3)‰ëár¯Ìs:jfÄæ{ÕÆ
+iv½  à’\GÔ´Á¶5¡ñyj€Àºà·°Nú!*åÌ–æ•².Q   ",NULL
+"876","b2nVj263cSR8sbcEMOmuNreEWvL2","lyaluana31@gmail.com","FIREBASE_AUTH","Luana Silva Pereira","client","(99) 98509-8129",NULL,"2026-01-13 17:19:37","0",NULL,NULL
+"877","SvQvV9gNsiP8JX1G6ohRzWHr3SV2","ismaelsilva12licilene@gmail.com","FIREBASE_AUTH","luana Silva Pereira","provider","(99) 98509-8129",NULL,"2026-01-13 21:13:54","0","RIFFæ  WEBPVP8 Ú  Ð5 *€ € >m0“G$""¡¡'œÈ€‰@õþJÁ–ñ¿Lˆ¡ñ¸Fï3zKÆKº[áO›°ç´ÞË]¹Í'†<~ø—ž/¿ùçX®}+×+Ì–!­%Äbu£'hØÁÿü”À÷éé^é¶èàdäGÎH+±ÇÆÌ_:•¯ €G1·OÏ®ö:wÛ_anY96ñ§7íçi‰¶–“n;x:ÝÛ€Y‡H§¨‡–ƒa°W%>vÜ*Ê]Ö¾ä³¤ç¨d*çz–žt\á’Ší=~<?ÊšmÿA´²[eÒ9þCíŠ‡=¹Ê]ðA‹'i""7Åê•¼ì3Ð""*’E^Õ-!F¿
+otäÏ‰ÉÍ)¹ >ê¢[…”UiVnÊ\WJåÄÃ\ÉLbƒ3nMAù»ì*eÑ\mäÅn“Ÿ&æ¼”óä«1ÄNk\my eÃ=ÌxÅqØ€ˆ0ÿÞ—Já—Öu>9g¿ñ°‹0ì³ýºwÛö)ì®CZóËd[˜mÈj½˜À½Éë¶ ¢éZ""ñÓÆa¾hi<C§þÏû¨¾»pÈpº Ä]ºTŠuD/Èòœ]¦L,3u@ Û	ÊÐ¥Ýi™!¦±¸–õ·†Žâ‘gIPÀ8Àâ½Kyh¹<Sd˜éÛ¸S§¹¦¶ü=Jcôw,ƒ¥·.PƒöïúM|³„âvÓ²ãÎé•^Ó4_RQ’«4ŠŸî3O­”z+r9Ä¡Cˆ«Ø%ß	äPz{–ô]¶‹ƒß¹t%ù«bî·p°éZöö(Zð_	`!áo¹/£´	Ù¿`èÉüý“æÔ!÷±JÎª%Äîc)ç*’´?è-ü[Ô©šÎg	¥@g
+8áiðkæÇ¸©fÄ4 À¶gnêP ÊÚDÌ^%¼iôµØÁNájÝv;ÃAº¦â¸„{Nà;Uífˆ7Õ\”V
+Z¬”(–­•¢ðêë×©Áp
+à¹ªÚ¶ÿEúv×O#éÉÔØôƒ¡ZkŸñAàÑ†t0raŠ4ÅÉU¯ÙúÿÐî’ ¹‰“ÅŸ2c¬>ùƒ‚hÚR×Ï[ãî®t¾êã™S¨ê´èš¿0éº3TøiÐÁËs4ÚKC/¤Bí'ÐŠ…q'ÝYŠ.%«ë¦ºa7)ÏÚœûßSÀPr	Áx@¿@
+ê§¯Çvo ®+=ÕË1bò´üö¸ŒU:ÑgË˜gÚ'•©UÓÏ‹†ÿ¦I»uxÂéï¦ü•WÐÊu_]ÿ&ÂR
+Ñº¿tn‰:Qƒf ó'£úYßÀ ë[®ÈÊSé:vP¶ž™ÅD°
+¬¨º‹pa‰¦–ÅR;ÅCêËlCÈzÊ]»""„£E*Îõ”$CëêÉ8yÝ‰{?M4ª¿ ø~ˆøK¬³-ª}öÄžÆÈc.æIB¸œ;ŒyGàé&ÐÉ	.zÎUö	4Òr’ÁÍ_4ÂüŠ·MC""2ý£Åó^Jßx ½1þB	¡/¦hI™5-$¬ójRªp…ª› ñ’Õ Iq´´˜bâFÍ§wÌó¢¾…A?–ä÷5]¾æ6³ ,D¤ÚMøY/€awðOÎ—ºúÜþPËþd`©öåÒô üŠjN^,>qC˜!(„wŠ¿¨ÈÆ—QvIboGœ'“Að>j´ùW~ky¤‘#5Ê¿ÓhisÖžž;b!yª‡D=Ö`ê êb“hz³Ï†úJóoÈÒø”`›I RX$ä49-þw£ùúìkË@#- ?1CÉ3JÓèÒ›°T‘æL«&¿«'‡ÀhÍ·4'*jÓ:=à¸½v‰î·J¦hé¦»)±¸›.¥ßLØj§n6ß±„Ë˜lÖ+ó•<@ØÚ<1Ì U`/BÔëÄÁ.ôÑ;¬xÐObUÍ‚…A°z´];ÌËéGõ
+?ì,|\°˜Ø5ÑbOïC+Î.QÛØ'Xi¬´æ›ƒÈ‡9nÙš© U@öÃô>õÄ$¤x—ß×Ø1üà¢ëtaë`´éŒ’É6¨¬ˆüªê|÷C]	¾›áÄ¬ã6ÊJQšTš‘YÚÕ•ÛwúXa»¿µW‹«Úí_ ïýûG”ñ´ý¾BŽÅ`#G‹p4“4ºq+´†QÌIj¼Ö`ÆzÔ?ß¡ý»ÅÖúÈ?Ð¦7Ù?o†	_õ¹|Þµýkp—ã½„¤ðÅ’/e‚»åñÇÁ0!À½©_nôøÛ'ì~›‘³¿ :TÍäÈfò®ë:ÂËð™czÜzÛÀ5?è•—ó“Ó]hùqû‚ð÷^ÉTøwÇñ®Å´¡ëB»Ñ#ikÑv)’bñÇÁ/°ä´Å0ãŒ®K§±cBgÙFÌ$i@ÜLèš‰¦p»n>_°±¹à0âÚb½âw^×”>‚‰ÑÕ;ÅÌX®^À¶þ-ñÚ‚*¶f­Ww~Sjè</*˜5""sˆÑ'/ÍâîY#)•c{ö^*HœÌL…O¾˜y³¤.„Âed¸Æˆè†¬3íâÀÖáP«÷TÅ¼«üËhò\5C™ q˜3œï»V&Š«ðeÌ®ÊÍšl@=Cey~D0Á¡•„¾¦üÅ§õÚ|k‰ -ò$³ÓJÉý½ïÝƒ0HÛ©RZ]§<\x¹4V^À|`¹Ã‹~|õ›„	m¡1¶sëö<ˆP®ÞÌ“@¬ÀNþÕ'OˆôLý´§/>rûŠ—hj‚)´¨H¨pÂûT³/‚¥¦Ìè‘eþöSUˆ)Ö‰\?ÖÈ95É7ËFeAÿ³¯ui«‹×o¾ÔOæ¡A¬""9¥Rü­Ëñ”ÏþqªØ‹Êñ[mGÕÙ` •†Ë|Ød;j#Cµ¶AXØBf+¦éÞÖø>­“¹À]å;²2ûNÄoð—Æpžbd%xI
+<¢k+žÕÊ¦íÖIèoü7¾„˜´ÇAô˜ëp%:U([Œø7m°o¿Ï¸Ô¤£³7s2Ÿ6VŒ¾àyùØµ4éøB3Ä÷Ìê²øù>Dí:3O)rÏ›v;™K¼ºótåkÜ‚,¤;ÁWF*Tˆ§/0óSf£~Ö6æp’Y”¨º
+—]oÀýÏEPJ ã3d¯iëÖ»#O©:xéÚN’‹gj*¢fÈB`Mf×A“i…¤¼¢""£ð«kc)þ±C(3bF IC™ ³ 'ìWôáZäÙÉ	t¼¼|Æ½M_ê:g¬£ìTÁ†3ð€Ä„zLx6-Tõ>GÈ—¡<'V—È[øO¬ð2'pÔI§ÙNm©uÙ¶X×\µ¢‡Cº)••Ð‹ml !¡
+jï©¸»l'J/¦}µÐ³äÀ½aßÒTƒÎïq]N¶œß‰¬lvýŒÇ¨Üzž-tt`”w¼¾Ž€¼•d¹óh""„òE3vbõUs•CÊ°GZêb•sæ|ÜYIÖª	aö.L?Ñð5á€„wyDËz¦FoïK¢WÓwÛ?^äðV ˆ}ô}’›÷à‡
+ùy° Ï2ñåžj×Xð9Æ ÇÛ¬ÝKòžp˜ï—AÕ¨‡bnˆÇ)ÒKÊZ:šã‚‹íì†{S/%dÑ<ïMù‡¨Läú9élÚ;õz¥#1ø˜à·m8¬Nðøº•ý°?ÂœrWÀ%‡£Xÿs¹†U°.…´ÊÉøk£v¿áîì¿†-Ûdk·ÓâÑô±LÁ!ûô<•/¿4¹Ç8ûª£Sýy=ZíiÙ ÉžpŽm5c‰:@VZÎn†‰ªÜ?ÆŸ³ÈÃ=§j68A}z¢P€·Ä¬å¢Mc]Žè8þ—ºl.Fƒ¹ª§#W¸1E0H[1FBœÖóešÍDÔ•3TÖWåA¤g•¼ÒhÇ‡<$Ú¡'«†‡&Ou«£CSä}’»ÉÃdÜËî%;ÞÁwðù‡¥hJ2ä#gÇÌDÍ °%0ÅDEP°%sÝ—Œœ|UŸêCô­»Z|cËŠ  ",NULL
+"878",NULL,"ana.manicure@example.com","demo_seed_hash","Ana Manicure","provider","11999998888",NULL,"2026-01-26 16:39:55","1",NULL,NULL
+"id","user_id","token","platform","last_active","created_at"
+"1307","531","csUTuJ-7QMq3weMzNZ5_nS:APA91bHwonGot6U_tN2Yibd7Hyhb9W4fSbAQwn8OSEcRkrjiUaPy5h3ewOgVDZ9_3NMpEIcQT3F5YklidfF7LlhfOfvO4SpNQiTwyXra3HfvLPk9zAgfGNo","android","2026-01-26 12:55:32","2026-01-22 13:27:14"
+"1385","531","eujzWWkfRjCJjjoqkGopgA:APA91bH7OrEiE8qIvwzzc4ibyBJTeXBbkpMi_XTN3tYHplpD1mUJeB9uA3iAA6N2BLnnLdx37E_B__X0otQjjLCz_gRSX9KYfmmBNkiZ4TZ9XE6TDod7Sao","android","2026-01-26 13:12:22","2026-01-26 13:12:22"
+"1386","531","d4v6kuIQTrepK1ie6vYKX3:APA91bEzGMsJJu4QB4uaD0cJO0aPKceD2Fj8p3waUxxT5zjbbM9Xpq6YH427yLCCqUEzfuRXdOhWy4jxrT1GFDjbIbIMb-J0WojNYXfO3W_kpU35WpPMw2w","android","2026-01-26 17:16:13","2026-01-26 13:34:55"
+"id","otp_hash","expires_at","used","created_at"
+"1","$2b$10$oaWU.Dxq86vgF4vCiUuPLeGxASTk.5T1e5C92yH9j5PrqX969ZlZW","2026-01-09 10:15:03","1","2026-01-09 10:05:03"
