@@ -22,3 +22,27 @@ ai_service/knowledge.json
 
 !.vscode/settings.json
 *.apk
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Custom Backend/Service
+backend/node_modules/
+backend/dist/
+backend/serviceAccountKey.json
+
+# Mac
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+*.sw?
+
+# Google Drive Sync
+.tmp.drivedownload/
+.tmp.driveupload/

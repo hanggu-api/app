@@ -1,26 +1,0 @@
-[dotenv@17.2.3] injecting env (42) from .env -- tip: ÔÜÖ´©Å  enable debug logging with { debug: true }
-Firebase Admin inicializado com sucesso.
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ­ƒøá´©Å  run anywhere with `dotenvx run -- yourcommand`
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ­ƒøá´©Å  run anywhere with `dotenvx run -- yourcommand`
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ­ƒöÉ encrypt with Dotenvx: https://dotenvx.com
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ÔÜÖ´©Å  write to custom object with { processEnv: myObject }
-C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:859
-    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
-           ^
-TSError: Ô¿» Unable to compile TypeScript:
-src/controllers/paymentController.ts(75,11): error TS2322: Type 'bigint' is not assignable to type 'number'.
-src/controllers/paymentController.ts(78,11): error TS2322: Type 'bigint' is not assignable to type 'string'.
-src/controllers/paymentController.ts(86,51): error TS2322: Type 'bigint' is not assignable to type 'string | StringNullableFilter<"payments"> | null | undefined'.
-
-    at createTSError (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:859:12)
-    at reportTSError (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:863:19)
-    at getOutput (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:1077:36)
-    at Object.compile (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:1433:41)
-    at Module.m._compile (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:1617:30)
-    at node:internal/modules/cjs/loader:1893:10
-    at Object.require.extensions.<computed> [as .ts] (C:\Users\thela\.gemini\antigravity\scratch\projeto_figma_app\backend\node_modules\ts-node\src\index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1481:32)
-    at Module._load (node:internal/modules/cjs/loader:1300:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
-  diagnosticCodes: [ 2322, 2322, 2322 ]
-}

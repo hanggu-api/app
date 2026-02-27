@@ -1,0 +1,12 @@
+Initialising login role...
+Connecting to remote database...
+Do you want to push these migrations to the remote database?
+ ÔÇó 20260224150000_seed_ai_tasks.sql
+
+ [Y/n] 
+Applying migration 20260224150000_seed_ai_tasks.sql...
+ERROR: more than one row returned by a subquery used as an expression (SQLSTATE 21000)                                                                                                                    
+At statement: 36                                                                                                                                                                                          
+INSERT INTO public.task_catalog (profession_id, name, unit_price, keywords, pricing_type, active)                                                                                                         
+                                       VALUES ((SELECT id FROM public.professions WHERE name = 'Chaveiro'), 'Abertura de Porta Residencial', 54, 'Dura├º├úo: 20min | Sem troca de fechadura', 'fixed', true)
+Try rerunning the command with --debug to troubleshoot the error.

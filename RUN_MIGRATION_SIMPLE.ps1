@@ -1,0 +1,11 @@
+Write-Host "Migration: aplique manualmente via Supabase Dashboard" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "1. Abra: https://supabase.com→Projeto→SQL Editor"
+Write-Host "2. Cole o conteudo de: supabase/migrations/20260224120000_add_rls_patches.sql"
+Write-Host "3. Execute (Run)"
+Write-Host ""
+Write-Host "Nao tem acesso ao DB? Use supabase db connect"
+Write-Host "  supabase login"
+Write-Host "  supabase link --project-ref mroesvsmylnaxelrhqtl"
+Write-Host "  supabase db connect"
+Write-Host "  \i supabase/migrations/20260224120000_add_rls_patches.sql"

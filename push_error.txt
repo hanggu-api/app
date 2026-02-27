@@ -1,0 +1,14 @@
+Initialising login role...
+Connecting to remote database...
+Do you want to push these migrations to the remote database?
+ ÔÇó 20260224150000_seed_ai_tasks.sql
+
+ [Y/n] y
+Applying migration 20260224150000_seed_ai_tasks.sql...
+ERROR: column "keywords" of relation "professions" does not exist (SQLSTATE 42703)                                                                                 
+At statement: 0                                                                                                                                                    
+-- Auto-generated from TS seeds                                                                                                                                    
+                                                                                                                                                                   
+INSERT INTO public.professions (name, keywords, service_type) VALUES ('Barbeiro Masculino', 'barbeiro,corte,barba,cabelo', 'on_site') ON CONFLICT (name) DO NOTHING
+                                      ^                                                                                                                            
+Try rerunning the command with --debug to troubleshoot the error.

@@ -1,9 +1,64 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 
-// Google/Firebase Service Account needs to be set in Edge Function secrets or handled via HTTP v1 API
-// For simplicity, we assume we will hit the FCM Legacy API using FIREBASE_SERVER_KEY 
-// or the user sets it up in the Supabase Dashboard.
+/**
+ * Helper: Generate OAuth 2.0 Access Token from Service Account (JWT)
+ */
+async function getAccessToken(serviceAccount: any): Promise<string | null> {
+    try {
+        const { client_email, private_key } = serviceAccount;
+
+        const header = { alg: 'RS256', typ: 'JWT' };
+        const now = Math.floor(Date.now() / 1000);
+        const claims = {
+            iss: client_email,
+            scope: 'https://www.googleapis.com/auth/firebase.messaging',
+            aud: 'https://oauth2.googleapis.com/token',
+            exp: now + 3600,
+            iat: now
+        };
+
+        const encodedHeader = btoa(JSON.stringify(header)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+        const encodedClaims = btoa(JSON.stringify(claims)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+        const signatureInput = `${encodedHeader}.${encodedClaims}`;
+
+        const keyData = private_key
+            .replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----/g, '')
+            .replace(/\\n/g, '')
+            .replace(/\s+/g, '');
+
+        const binaryKey = Uint8Array.from(atob(keyData), c => c.charCodeAt(0));
+        const cryptoKey = await crypto.subtle.importKey(
+            'pkcs8',
+            binaryKey,
+            { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+            false,
+            ['sign']
+        );
+
+        const encoder = new TextEncoder();
+        const signature = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', cryptoKey, encoder.encode(signatureInput));
+        const encodedSignature = btoa(String.fromCharCode(...new Uint8Array(signature)))
+            .replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+
+        const jwt = `${signatureInput}.${encodedSignature}`;
+
+        const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+                assertion: jwt
+            })
+        });
+
+        const tokenData = await tokenResponse.json();
+        return tokenData.access_token;
+    } catch (error) {
+        console.error('Error getting access token:', error);
+        return null;
+    }
+}
 
 serve(async (req) => {
     try {
@@ -13,27 +68,23 @@ serve(async (req) => {
         const record = payload.record;
         const oldRecord = payload.old_record;
 
-        // Check if the trigger is what we expect
         if (!record || !record.id) {
             return new Response("No record found in payload", { status: 400 });
         }
 
-        // Initialize Supabase client
         const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
         const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
         const supabase = createClient(supabaseUrl, supabaseKey);
 
-        // Get FCM Server Key
-        const fcmServerKey = Deno.env.get("FCM_SERVER_KEY");
-        if (!fcmServerKey) {
-            console.log("FCM_SERVER_KEY not set");
-            return new Response("FCM keys missing", { status: 500 });
+        const serviceAccountJson = Deno.env.get("FIREBASE_SERVICE_ACCOUNT");
+        if (!serviceAccountJson) {
+            return new Response("FIREBASE_SERVICE_ACCOUNT not set", { status: 500 });
         }
+        const serviceAccount = JSON.parse(serviceAccountJson);
 
-        // Determine notification logic based on table changes (e.g. status)
         let title = "Atualização de Serviço";
         let body = "O status do seu serviço foi atualizado.";
-        let targetUserId = null; // Who receives the notification
+        let targetUserId = null;
 
         if (payload.table === 'service_requests_new') {
             const status = record.status;
@@ -56,56 +107,65 @@ serve(async (req) => {
                     title = "Serviço Concluído";
                     body = "Obrigado por usar nossos serviços!";
                     targetUserId = record.client_id;
+                } else if (status === 'open_for_schedule' && !oldStatus) {
+                    title = "Novo Serviço Disponível";
+                    body = "Há uma nova solicitação na sua região.";
+                    // This would normally be broadcasted, for now we skip or log
                 }
             }
         }
 
         if (!targetUserId) {
-            return new Response("No target user for notification", { status: 200 });
+            return new Response("No target user mapping", { status: 200 });
         }
 
-        // Fetch User's FCM Token from users table
-        const { data: userData, error: userError } = await supabase
+        const { data: userData } = await supabase
             .from('users')
             .select('fcm_token')
             .eq('id', targetUserId)
             .single();
 
-        if (userError || !userData?.fcm_token) {
-            console.log("FCM Token not found for user", targetUserId);
-            return new Response("Token not found", { status: 200 });
+        if (!userData?.fcm_token) {
+            return new Response("FCM Token not found for user", { status: 200 });
         }
 
-        const fcmToken = userData.fcm_token;
+        const accessToken = await getAccessToken(serviceAccount);
+        if (!accessToken) {
+            return new Response("Failed to get FCM access token", { status: 500 });
+        }
 
-        // Send Push Notification via FCM
         const fcmPayload = {
-            to: fcmToken,
-            notification: {
-                title: title,
-                body: body,
-                sound: "default",
-            },
-            data: {
-                serviceId: record.id,
-                status: record.status,
-                click_action: "FLUTTER_NOTIFICATION_CLICK"
+            message: {
+                token: userData.fcm_token,
+                notification: { title, body },
+                data: {
+                    serviceId: record.id.toString(),
+                    status: record.status,
+                    click_action: "FLUTTER_NOTIFICATION_CLICK"
+                },
+                android: {
+                    priority: "HIGH",
+                    notification: {
+                        channel_id: "high_importance_channel_v3",
+                        sound: "default"
+                    }
+                }
             }
         };
 
-        const fcmResponse = await fetch("https://fcm.googleapis.com/fcm/send", {
+        const fcmResponse = await fetch(`https://fcm.googleapis.com/v1/projects/${serviceAccount.project_id}/messages:send`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `key=${fcmServerKey}`
+                "Authorization": `Bearer ${accessToken}`
             },
             body: JSON.stringify(fcmPayload)
         });
 
-        const fcmResult = await fcmResponse.json();
-        console.log("FCM send result:", fcmResult);
+        const result = await fcmResponse.json();
+        console.log("FCM V1 send result:", result);
 
-        return new Response(JSON.stringify({ success: true, result: fcmResult }), {
+        return new Response(JSON.stringify({ success: true, result }), {
             headers: { "Content-Type": "application/json" }
         });
 
