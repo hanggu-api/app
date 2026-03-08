@@ -2,12 +2,12 @@ importScripts("https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js");
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBtd21-6nzNuTAS5r-J033FT43Dg-hWgHw",
-  authDomain: "service-f352b.firebaseapp.com",
-  projectId: "service-f352b",
-  storageBucket: "service-f352b.firebasestorage.app",
-  messagingSenderId: "583722156328",
-  appId: "1:583722156328:web:e1008a3b7cf90b76ea501d"
+  apiKey: "AIzaSyAOzSbKAwfmtQCQ4FLGVEb8vkK2ljDQpxs",
+  authDomain: "cardapyia-service-2025.firebaseapp.com",
+  projectId: "cardapyia-service-2025",
+  storageBucket: "cardapyia-service-2025.firebasestorage.app",
+  messagingSenderId: "478559853980",
+  appId: "1:478559853980:web:8b4091e2236a5133cc7c59"
 });
 
 const messaging = firebase.messaging();

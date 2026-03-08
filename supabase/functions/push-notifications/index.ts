@@ -84,7 +84,8 @@ serve(async (req) => {
 
         let title = "Atualização de Serviço";
         let body = "O status do seu serviço foi atualizado.";
-        let targetUserId = null;
+        let targetUserId: number | null = null;
+        let dataPayload: Record<string, string> = {};
 
         if (payload.table === 'service_requests_new') {
             const status = record.status;
@@ -94,28 +95,90 @@ serve(async (req) => {
                 if (status === 'accepted') {
                     title = "Serviço Aceito!";
                     body = "Um prestador aceitou sua solicitação.";
-                    targetUserId = record.client_id;
+                    targetUserId = Number(record.client_id);
                 } else if (status === 'in_progress') {
                     title = "Serviço Iniciado";
                     body = "O prestador iniciou o serviço.";
-                    targetUserId = record.client_id;
+                    targetUserId = Number(record.client_id);
                 } else if (status === 'waiting_payment_remaining') {
                     title = "O Prestador Chegou!";
                     body = "Por favor, libere o pagamento restante.";
-                    targetUserId = record.client_id;
+                    targetUserId = Number(record.client_id);
                 } else if (status === 'completed') {
                     title = "Serviço Concluído";
                     body = "Obrigado por usar nossos serviços!";
-                    targetUserId = record.client_id;
+                    targetUserId = Number(record.client_id);
                 } else if (status === 'open_for_schedule' && !oldStatus) {
                     title = "Novo Serviço Disponível";
                     body = "Há uma nova solicitação na sua região.";
                     // This would normally be broadcasted, for now we skip or log
                 }
             }
+            dataPayload = {
+                type: 'status_update',
+                service_id: record.id?.toString() ?? '',
+                status: record.status?.toString() ?? '',
+                click_action: "FLUTTER_NOTIFICATION_CLICK",
+            };
+        } else if (payload.table === 'chat_messages') {
+            const serviceId = record.service_id?.toString();
+            const senderId = Number(record.sender_id);
+            if (!serviceId || Number.isNaN(senderId)) {
+                return new Response("Invalid chat payload", { status: 200 });
+            }
+
+            let recipientId: number | null = null;
+            let senderName = 'Nova mensagem';
+
+            const { data: senderUser } = await supabase
+                .from('users')
+                .select('full_name')
+                .eq('id', senderId)
+                .maybeSingle();
+
+            if (senderUser?.full_name) {
+                senderName = senderUser.full_name;
+            }
+
+            const { data: trip } = await supabase
+                .from('trips')
+                .select('client_id, driver_id')
+                .eq('id', serviceId)
+                .maybeSingle();
+
+            if (trip) {
+                recipientId = Number(trip.client_id) === senderId
+                    ? Number(trip.driver_id)
+                    : Number(trip.client_id);
+            } else {
+                const { data: serviceReq } = await supabase
+                    .from('service_requests_new')
+                    .select('client_id, provider_id')
+                    .eq('id', serviceId)
+                    .maybeSingle();
+
+                if (serviceReq) {
+                    recipientId = Number(serviceReq.client_id) === senderId
+                        ? Number(serviceReq.provider_id)
+                        : Number(serviceReq.client_id);
+                }
+            }
+
+            if (recipientId && !Number.isNaN(recipientId)) {
+                targetUserId = recipientId;
+                title = senderName;
+                body = (record.content?.toString() ?? 'Nova mensagem').slice(0, 180);
+                dataPayload = {
+                    type: 'chat_message',
+                    service_id: serviceId,
+                    message_id: record.id?.toString() ?? '',
+                    sender_id: senderId.toString(),
+                    click_action: "FLUTTER_NOTIFICATION_CLICK",
+                };
+            }
         }
 
-        if (!targetUserId) {
+        if (!targetUserId || Number.isNaN(targetUserId)) {
             return new Response("No target user mapping", { status: 200 });
         }
 
@@ -138,11 +201,7 @@ serve(async (req) => {
             message: {
                 token: userData.fcm_token,
                 notification: { title, body },
-                data: {
-                    serviceId: record.id.toString(),
-                    status: record.status,
-                    click_action: "FLUTTER_NOTIFICATION_CLICK"
-                },
+                data: dataPayload,
                 android: {
                     priority: "HIGH",
                     notification: {

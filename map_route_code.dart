@@ -1,13 +1,13 @@
 // Código completo para o mapa com rota (linhas 241-265)
                                     children: [
                                       TileLayer(
-                                        urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                                        userAgentPackageName: 'com.play101.app',
+                                        urlTemplate = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                        userAgentPackageName = 'com.play101.app',
                                       ),
                                       // Polyline Layer - Rota do prestador ao serviço
                                       if (_providerLocation != null)
                                         PolylineLayer(
-                                          polylines: [
+                                          polylines = [
                                             Polyline(
                                               points: [
                                                 _providerLocation!,
@@ -22,7 +22,7 @@
                                           ],
                                         ),
                                       MarkerLayer(
-                                        markers: [
+                                        markers = [
                                           // Marcador do prestador (verde)
                                           if (_providerLocation != null)
                                             Marker(
