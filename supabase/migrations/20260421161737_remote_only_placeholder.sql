@@ -1,0 +1,1 @@
+-- Placeholder local para migration já aplicada no banco remoto.

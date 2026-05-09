@@ -111,7 +111,7 @@ serve(async (req) => {
         // Se aprovado, atualizar status do serviço
         if (mpData.status === 'approved') {
             await supabase
-                .from('service_requests_new')
+                .from('service_requests')
                 .update({ payment_status: 'paid', status: 'accepted' })
                 .eq('id', String(service_id));
         }
@@ -211,12 +211,12 @@ serve(async (req) => {
         if (serviceId) {
             if (status === 'approved') {
                 await supabase
-                    .from('service_requests_new')
+                    .from('service_requests')
                     .update({ payment_status: 'paid', status: 'accepted' })
                     .eq('id', serviceId);
             } else if (status === 'rejected' || status === 'cancelled') {
                 await supabase
-                    .from('service_requests_new')
+                    .from('service_requests')
                     .update({ payment_status: 'failed' })
                     .eq('id', serviceId);
             }

@@ -32,7 +32,7 @@
 
                 // 2. Fetch provider_id from service
                 const { data: service } = await supabase
-                    .from('service_requests_new')
+                    .from('service_requests')
                     .select('provider_id')
                     .eq('id', service_id)
                     .single()

@@ -1,103 +1,184 @@
+
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts'
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
+import { corsHeaders, getAuthenticatedUser, json } from '../_shared/auth.ts'
+import { CerebrasService } from '../_shared/cerebras.ts'
 
-// AI features are available via Supabase.ai in Edge Functions (certain regions/versions)
-// Alternatively, we can use Transformers.js via esm.sh
-// For maximum stability, we use the match_tasks RPC assuming embeddings are generated here.
-
-const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-}
+// Configurações do Cerebras
+const CEREBRAS_API_KEY = Deno.env.get('CEREBRAS_API_KEY') || '';
+const CEREBRAS_MODEL = 'llama3.1-8b';
 
 serve(async (req) => {
-    if (req.method === 'OPTIONS') {
-        return new Response('ok', { headers: corsHeaders })
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })
+  }
+
+  try {
+    const auth = await getAuthenticatedUser(req)
+    if ('error' in auth) return auth.error
+
+    const { query } = await req.json()
+    if (!query) throw new Error('Query não fornecida')
+
+    // Inicializa Supabase e Cerebras
+    const supabase = createClient(
+      Deno.env.get('SUPABASE_URL') || '',
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+    )
+    const cerebras = new CerebrasService(CEREBRAS_API_KEY, CEREBRAS_MODEL)
+
+    // 0. Normalização da Query para Cache
+    const normalizedQuery = query.trim().toLowerCase();
+    
+    // 1. Tentar ler do Cache (TTL: 7 dias)
+    const SEVEN_DAYS_AGO = new Date();
+    SEVEN_DAYS_AGO.setDate(SEVEN_DAYS_AGO.getDate() - 7);
+
+    const { data: cacheRecord, error: cacheError } = await supabase
+      .from('ai_classification_cache')
+      .select('response_data')
+      .eq('query_hash', normalizedQuery)
+      .gt('created_at', SEVEN_DAYS_AGO.toISOString())
+      .single();
+
+    if (cacheRecord && !cacheError) {
+      console.log(`Cache HIT para: "${normalizedQuery}"`);
+      return json({ 
+        ...cacheRecord.response_data, 
+        cache_hit: true 
+      }, 200);
     }
 
-    try {
-        const { text } = await req.json()
-        if (!text) {
-            return new Response(JSON.stringify({ error: 'Missing text' }), { status: 400, headers: corsHeaders })
-        }
+    console.log(`Cache MISS para: "${normalizedQuery}". Processando via Cerebras...`);
 
-        const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? ''
-        const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
-        const supabase = createClient(supabaseUrl, supabaseKey)
+    // 2. Coleta profissões para contexto
+    const { data: professions } = await supabase
+      .from('professions')
+      .select('id, name')
+      .order('name');
+    
+    // 2. Classifica a profissão via Cerebras
+    console.log(`Classificando query: "${query}"`);
+    const professionId = await cerebras.classifyProfession(query, professions || []);
+    console.log(`Profissão ID detectada: ${professionId}`);
+    
+    // 3. Expande a query (Pedindo formato limpo)
+    const expandedRaw = await (async () => {
+      try {
+        const prompt = `Liste 5 palavras-chave curtas (apenas as palavras) relacionadas a: "${query}". Responda apenas com as palavras separadas por vírgula.`;
+        return await cerebras.chat(prompt, 0.1, 50);
+      } catch (e) {
+        return query;
+      }
+    })();
+    
+    // Limpa a lista de termos (remove hífens, espaços extras e quebras de linha)
+    const terms = expandedRaw
+      .split(/[\n,;]+/)
+      .map(t => t.replace(/^[-\s*]+/, '').trim())
+      .filter(t => t.length > 2);
+    
+    console.log(`Termos de busca limpos:`, terms);
 
-        // 1. Gerar Embedding para o texto de consulta via Gemini API
-        let queryEmbedding: number[];
-
-        try {
-            const geminiKey = Deno.env.get('GEMINI_API_KEY');
-            if (!geminiKey) throw new Error('GEMINI_API_KEY is not set in Edge Function');
-
-            const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key=${geminiKey}`;
-            const geminiResponse = await fetch(geminiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    model: 'models/gemini-embedding-001',
-                    content: { parts: [{ text: text }] },
-                    outputDimensionality: 768
-                })
-            });
-
-            if (!geminiResponse.ok) {
-                const errBody = await geminiResponse.text();
-                throw new Error(`Gemini API error: ${geminiResponse.status} - ${errBody}`);
-            }
-
-            const geminiData = await geminiResponse.json();
-            queryEmbedding = geminiData.embedding.values;
-        } catch (e: any) {
-            console.error('Gemini Embedding error:', e);
-            throw new Error('Falha ao gerar embedding com Gemini API: ' + e.message);
-        }
-
-        // 2. Chamar o RPC match_tasks
-        const { data: matches, error: matchError } = await supabase.rpc('match_tasks', {
-            query_embedding: queryEmbedding,
-            match_threshold: 0.5, // Similaridade mínima
-            match_count: 5        // Top 5 resultados
-        })
-
-        if (matchError) {
-            console.error('Match error:', matchError);
-            throw matchError;
-        }
-
-        const bestMatch = matches && matches.length > 0 ? matches[0] : null;
-
-        return new Response(JSON.stringify({
-            encontrado: !!bestMatch,
-            profissao: bestMatch ? bestMatch.profession_name : 'Geral',
-            id: bestMatch ? bestMatch.profession_id : 0, // Adicionado para compatibilidade com o app
-            name: bestMatch ? bestMatch.profession_name : '', // Adicionado para compatibilidade
-            category_id: bestMatch ? bestMatch.category_id : 1,
-            category_name: 'Geral', // Placeholder
-            task_id: bestMatch ? bestMatch.id : null,
-            task_name: bestMatch ? bestMatch.task_name : null,
-            price: bestMatch ? bestMatch.unit_price : 0,
-            pricing_type: bestMatch ? bestMatch.pricing_type : 'fixed',
-            unit_name: bestMatch ? bestMatch.unit_name : 'unidade',
-            service_type: bestMatch ? bestMatch.service_type : 'at_client',
-            score: bestMatch ? bestMatch.similarity : 0,
-            candidates: matches ? matches.map(m => ({
-                id: m.profession_id,
-                name: m.profession_name,
-                task_name: m.task_name,
-                price: m.unit_price,
-                service_type: m.service_type,
-                score: m.similarity
-            })) : []
-        }), { headers: { ...corsHeaders, 'Content-Type': 'application/json' } })
-
-    } catch (error: any) {
-        console.error('Edge Function Error:', error);
-        return new Response(JSON.stringify({ error: error.message }), {
-            status: 500,
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
-        })
+    // 4. Busca no catálogo de tarefas
+    let searchQuery = supabase.from('task_catalog').select('*, professions(name)');
+    
+    // Filtro por profissão (Prioridade)
+    if (professionId) {
+      searchQuery = searchQuery.eq('profession_id', professionId);
     }
+
+    // Criamos um filtro OR dinâmico para os termos
+    // Ex: name.ilike.%barba%,keywords.ilike.%barba%,name.ilike.%corte% ...
+    const orFilter = terms.flatMap(term => [
+      `name.ilike.%${term}%`,
+      `keywords.ilike.%${term}%`
+    ]).join(',');
+
+    const { data: results, error: searchError } = await searchQuery
+      .or(orFilter)
+      .eq('active', true)
+      .limit(10);
+
+    if (searchError) throw searchError;
+
+    // 5. Reranking Simples
+    const sorted = results?.sort((a, b) => {
+       const aScore = (a.name.toLowerCase().includes(query.toLowerCase()) ? 2 : 0) + 
+                     (a.profession_id === professionId ? 1 : 0);
+       const bScore = (b.name.toLowerCase().includes(query.toLowerCase()) ? 2 : 0) + 
+                     (b.profession_id === professionId ? 1 : 0);
+       return bScore - aScore;
+    });
+
+    if (!sorted || sorted.length === 0) {
+      return json({
+        found: false,
+        ambiguous: false, 
+        message: 'Nenhum serviço encontrado',
+        query,
+        terms
+      }, 200);
+    }
+
+    const bestMatch = sorted[0];
+
+    const response = {
+      ...formatResponse(bestMatch),
+      candidates: sorted.map(task => ({
+        id: task.id,
+        task_id: task.id,
+        name: task.name,
+        task_name: task.name,
+        unit_price: task.unit_price,
+        price: task.unit_price,
+        profession_name: task.professions?.name,
+        profession_id: task.profession_id
+      }))
+    };
+
+    // 6. Salva no Cache para futuras requisições
+    // Não aguardamos o insert (fire-and-forget) para não aumentar a latência
+    supabase.from('ai_classification_cache')
+      .upsert({
+        query_hash: normalizedQuery,
+        query_text: query,
+        response_data: response,
+        created_at: new Date().toISOString()
+      })
+      .then(res => {
+        if (res.error) console.error('Erro ao salvar cache:', res.error);
+        else console.log('Resultado salvo no cache com sucesso.');
+      });
+
+    // Formata a resposta com o melhor match + lista de candidatos
+    return json(response, 200);
+
+  } catch (err: any) {
+    console.error('Edge function error:', err);
+    return json({ 
+       error: 'Internal Server Error', 
+       details: err.message,
+       found: false 
+    }, 500);
+  }
 })
+
+function formatResponse(task: any) {
+  return {
+    encontrado: true,
+    found: true,
+    profissao: task.professions?.name || 'Geral',
+    profession_name: task.professions?.name || 'Geral', // Compatibilidade UI
+    profession_id: task.profession_id,
+    task_id: task.id,
+    name: task.name,
+    task_name: task.name,
+    price: task.unit_price,
+    pricing_type: task.pricing_type,
+    unit_name: task.unit_name,
+    engine: 'cerebras_llama3.1',
+    score: 0.95, // Dummy score para a UI
+    cache_hit: false
+  };
+}
